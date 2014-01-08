@@ -1,0 +1,31 @@
+// global styles
+
+html, body, .off-canvas-wrap, .inner-wrap {
+  height: 100% !important;
+}
+ul, ol, dl {
+  &.off-canvas-list {
+    font-size: remCalc(12px) !important;
+  }
+  li {
+    &.heading a {
+      color: #333;
+    }
+  }
+}
+// ul.off-canvas-list {
+//   font-size: remCalc(14) !important;
+//   ul {
+//     font-size: remCalc(12) !important;
+//     font-weight: normal !important;
+//   }
+// }
+form input {
+  margin: 0 !important;
+}
+.sidebar {
+  padding-top: 1rem;
+}
+.content-container {
+  margin-top: 2rem;
+}
