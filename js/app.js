@@ -21,17 +21,13 @@ app.config( function ($routeProvider) {
 			.when('/',
 			{
 				title: 'Home',
-				templateUrl: 'partials/layout-tmpl.html'
+				templateUrl: 'partials/layout-tmpl.html',
+				controller: routeCtrl
 			})
-			.when('/layout',
+			.when('/:slug',
 			{
-				title: 'Layout',
-				templateUrl: 'partials/layout-tmpl.html'
-			})
-			.when('/default-colors',
-			{
-				title: 'Default Colors',
-				templateUrl: 'partials/default-colors-tmpl.html'
+				templateUrl: 'partials/url-router.html',
+				controller: routeCtrl
 			});
 
 
@@ -46,4 +42,8 @@ app.controller('navCtrl', function($scope, $location) {
 
 });
 
+var routeCtrl = function($scope, $routeParams) {
+
+    $scope.templateUrl = 'partials/'+$routeParams.slug+'-tmpl.html';
+};
 
