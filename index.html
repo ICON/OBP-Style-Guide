@@ -10,18 +10,20 @@
 <body>
 <div class="off-canvas-wrap">
   <div class="inner-wrap">
-    <nav class="top-bar docs-bar hide-for-small" data-topbar="">
-      <ul class="title-area">
-        <li class="name">
-          <h1><a href="http://foundation.zurb.com/">Gaming Docs Style Guide - v1.0 Manatee</a></h1>
-        </li>
-      </ul>
-      <section class="top-bar-section">
-        <!-- <ul class="right">
-          <li class="divider"></li>
-        </ul> -->
-      </section>
-    </nav>
+    <div class="fixed">
+      <nav class="top-bar docs-bar hide-for-small" data-topbar="">
+        <ul class="title-area">
+          <li class="name">
+            <h1><a href="http://foundation.zurb.com/">Gaming Docs Style Guide - v1.0 Manatee</a></h1>
+          </li>
+        </ul>
+        <section class="top-bar-section">
+          <!-- <ul class="right">
+            <li class="divider"></li>
+          </ul> -->
+        </section>
+      </nav>
+    </div>
     <nav class="tab-bar show-for-small">
       <section class="left-small">
         <a class="left-off-canvas-toggle menu-icon" ><span></span></a>
@@ -85,8 +87,8 @@
               <nav>
                 <dl class="accordion" data-accordion>
                   <dd>
-                    <a href="#panel1">Layout</a>
-                    <div id="panel1" class="content active">
+                    <a href="#layout" ng-click="navSection('layout');">Layout</a>
+                    <div id="layout" class="content active">
                       <ul class="side-nav">
                         <li><a ng-click="navSection('default-colors');">Default Colors</a></li>
                         <li><a ng-click="navSection('top-bar');">Top Bar</a></li>
@@ -95,8 +97,8 @@
                     </div>
                   </dd>
                   <dd>
-                    <a href="#panel2">Typography</a>
-                    <div id="panel2" class="content">
+                    <a href="#typography" ng-click="navSection('typography');">Typography</a>
+                    <div id="typography" class="content">
                       <ul class="side-nav">
                         <li><a ng-click="navSection('type-headers');">Headers</a></li>
                         <li><a ng-click="navSection('type-content');">Content</a></li>
@@ -104,8 +106,8 @@
                     </div>
                   </dd>
                   <dd>
-                    <a href="#panel3">Components</a>
-                    <div id="panel3" class="content">
+                    <a href="#components" ng-click="navSection('components');">Components</a>
+                    <div id="components" class="content">
                       <ul class="side-nav">
                         <li><a ng-click="navSection('headers');">Headers</a>
                           <ul>

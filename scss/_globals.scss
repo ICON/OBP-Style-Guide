@@ -1,11 +1,12 @@
 // global styles
 $dark-grey: #333;
 $medium-grey: #ccc;
-
-html, body, .off-canvas-wrap, .inner-wrap {
-  height: 100% !important;
+body, html {
+  height: 100%;
 }
 .content-container {
+  height: 100%;
+  max-height: 100%;
   overflow: auto;
 }
 ul, ol, dl {
@@ -27,6 +28,9 @@ ul, ol, dl {
 // }
 form input {
   margin: 0 !important;
+}
+.position-fixed {
+  position: fixed;
 }
 .sidebar {
   padding-top: 1rem;
