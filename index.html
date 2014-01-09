@@ -80,52 +80,67 @@
           <div class="hide-for-small">
             <div class="sidebar">
               <form>
-                <label>Search Documentation</label> 
                 <input tabindex="1" id="autocomplete" type="search" placeholder="Search Docs: e.g. forms" autocomplete="off">
               </form>
               <nav>
-                <ul class="side-nav">
-                  <li class="heading">Layout</li>
-                  <li><a href="#">Default Colors</a></li>
-                  <li><a href="#" data-search="">Top Bar</a></li>
-                  <li><a href="#" data-search="">Table of Contents</a></li>
-                  <li class="divider"></li>
-                  <li class="heading">Typography</li>
-                  <li><a href="#">Headers</a></li>
-                  <li><a href="#">Content</a></li>
-                  <li class="divider"></li>
-                  <li class="heading">Components</li>
-                  <li><a href="#">Headers</a>
-                    <ul>
-                      <li><a href="#">A-Head</a></li>
-                      <li><a href="#">B-Head</a></li>
-                      <li><a href="#">Body Head</a></li>
-                    </ul>
-                  </li>
-                  <li><a href="#">Content</a>
-                    <ul>
-                      <li><a href="#">Bulleted List</a></li>
-                      <li><a href="#">External Link</a></li>
-                      <li><a href="#">Paragraph</a></li>
-                    </ul>
-                  </li>
-                  <li><a href="#">Control Item</a></li>
-                  <li><a href="#">Modals</a>
-                    <ul>
-                      <li><a href="#">Modal Carousel</a></li>
-                      <li><a href="#">Modal Image</a></li>
-                      <li><a href="#">Modal Video</a></li>
-                    </ul>
-                  </li>
-                  <li><a href="#">Table</a></li>
-                  <li><a href="#">Inline</a>
-                    <ul>
-                      <li><a href="#">Inline Gif</a></li>
-                      <li><a href="#">Inline Image</a></li>
-                      <li><a href="#">Inline Video</a></li>
-                    </ul>
-                  </li>
-                </ul>
+                <dl class="accordion" data-accordion>
+                  <dd>
+                    <a href="#panel1">Layout</a>
+                    <div id="panel1" class="content active">
+                      <ul class="side-nav">
+                        <li><a href="#">Default Colors</a></li>
+                        <li><a href="#">Top Bar</a></li>
+                        <li><a href="#">Table of Contents</a></li>
+                      </ul>
+                    </div>
+                  </dd>
+                  <dd>
+                    <a href="#panel2">Typography</a>
+                    <div id="panel2" class="content">
+                      <ul class="side-nav">
+                        <li><a href="#">Headers</a></li>
+                        <li><a href="#">Content</a></li>
+                      </ul>
+                    </div>
+                  </dd>
+                  <dd>
+                    <a href="#panel3">Components</a>
+                    <div id="panel3" class="content">
+                      <ul class="side-nav">
+                        <li><a href="#">Headers</a>
+                          <ul>
+                            <li><a href="#">A-Head</a></li>
+                            <li><a href="#">B-Head</a></li>
+                            <li><a href="#">Body Head</a></li>
+                          </ul>
+                        </li>
+                        <li><a href="#">Content</a>
+                          <ul>
+                            <li><a href="#">Bulleted List</a></li>
+                            <li><a href="#">External Link</a></li>
+                            <li><a href="#">Paragraph</a></li>
+                          </ul>
+                        </li>
+                        <li><a href="#">Control Item</a></li>
+                        <li><a href="#">Modals</a>
+                          <ul>
+                            <li><a href="#">Modal Carousel</a></li>
+                            <li><a href="#">Modal Image</a></li>
+                            <li><a href="#">Modal Video</a></li>
+                          </ul>
+                        </li>
+                        <li><a href="#">Table</a></li>
+                        <li><a href="#">Inline</a>
+                          <ul>
+                            <li><a href="#">Inline Gif</a></li>
+                            <li><a href="#">Inline Image</a></li>
+                            <li><a href="#">Inline Video</a></li>
+                          </ul>
+                        </li>
+                      </ul>
+                    </div>
+                  </dd>
+                </dl>
               </nav>
             </div>
           </div>
