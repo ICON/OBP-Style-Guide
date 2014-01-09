@@ -33,7 +33,7 @@
     <aside class="left-off-canvas-menu">
       <ul class="off-canvas-list">
         <li><label>Layout</label></li>
-        <li><a href="#/default-colors">Default Colors</a></li>
+        <li><a href="#/">Default Colors</a></li>
         <li><a href="#">Top Bar</a></li>
         <li><a href="#">Table of Contents</a></li>
         <li><label>Typography</label></li>
@@ -89,8 +89,8 @@
                     <div id="panel1" class="content active">
                       <ul class="side-nav">
                         <li><a ng-click="navSection('default-colors');">Default Colors</a></li>
-                        <li><a href="#">Top Bar</a></li>
-                        <li><a href="#">Table of Contents</a></li>
+                        <li><a ng-click="navSection('top-bar');">Top Bar</a></li>
+                        <li><a ng-click="navSection('toc');">Table of Contents</a></li>
                       </ul>
                     </div>
                   </dd>
@@ -98,8 +98,8 @@
                     <a href="#panel2">Typography</a>
                     <div id="panel2" class="content">
                       <ul class="side-nav">
-                        <li><a href="#">Headers</a></li>
-                        <li><a href="#">Content</a></li>
+                        <li><a ng-click="navSection('type-headers');">Headers</a></li>
+                        <li><a ng-click="navSection('type-content');">Content</a></li>
                       </ul>
                     </div>
                   </dd>
@@ -107,34 +107,34 @@
                     <a href="#panel3">Components</a>
                     <div id="panel3" class="content">
                       <ul class="side-nav">
-                        <li><a href="#">Headers</a>
+                        <li><a ng-click="navSection('headers');">Headers</a>
                           <ul>
-                            <li><a href="#">A-Head</a></li>
-                            <li><a href="#">B-Head</a></li>
-                            <li><a href="#">Body Head</a></li>
+                            <li><a ng-click="navSection('headers#ahead');">A-Head</a></li>
+                            <li><a ng-click="navSection('headers#bhead');">B-Head</a></li>
+                            <li><a ng-click="navSection('headers#bodyhead');">Body Head</a></li>
                           </ul>
                         </li>
-                        <li><a href="#">Content</a>
+                        <li><a ng-click="navSection('content');">Content</a>
                           <ul>
-                            <li><a href="#">Bulleted List</a></li>
-                            <li><a href="#">External Link</a></li>
-                            <li><a href="#">Paragraph</a></li>
+                            <li><a ng-click="navSection('content#blist');">Bulleted List</a></li>
+                            <li><a ng-click="navSection('content#extlink');">External Link</a></li>
+                            <li><a ng-click="navSection('content#paragraph');">Paragraph</a></li>
                           </ul>
                         </li>
-                        <li><a href="#">Control Item</a></li>
-                        <li><a href="#">Modals</a>
+                        <li><a ng-click="navSection('control-item');">Control Item</a></li>
+                        <li><a ng-click="navSection('modal');">Modals</a>
                           <ul>
-                            <li><a href="#">Modal Carousel</a></li>
-                            <li><a href="#">Modal Image</a></li>
-                            <li><a href="#">Modal Video</a></li>
+                            <li><a ng-click="navSection('modal#carousel');">Modal Carousel</a></li>
+                            <li><a ng-click="navSection('modal#image');">Modal Image</a></li>
+                            <li><a ng-click="navSection('modal#video');">Modal Video</a></li>
                           </ul>
                         </li>
-                        <li><a href="#">Table</a></li>
-                        <li><a href="#">Inline</a>
+                        <li><a ng-click="navSection('table');">Table</a></li>
+                        <li><a ng-click="navSection('inline');">Inline</a>
                           <ul>
-                            <li><a href="#">Inline Gif</a></li>
-                            <li><a href="#">Inline Image</a></li>
-                            <li><a href="#">Inline Video</a></li>
+                            <li><a ng-click="navSection('inline#gif');">Inline Gif</a></li>
+                            <li><a ng-click="navSection('inline#image');">Inline Image</a></li>
+                            <li><a ng-click="navSection('inline#video');">Inline Video</a></li>
                           </ul>
                         </li>
                       </ul>
