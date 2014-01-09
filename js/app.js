@@ -43,7 +43,7 @@ app.controller('navCtrl', function($scope, $location) {
 });
 
 var routeCtrl = function($scope, $routeParams) {
-
+	console.log('ROUTE PARAMS: ', $routeParams.slug);
     $scope.templateUrl = 'partials/'+$routeParams.slug+'-tmpl.html';
 };
 
