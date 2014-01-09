@@ -5,6 +5,9 @@ $medium-grey: #ccc;
 html, body, .off-canvas-wrap, .inner-wrap {
   height: 100% !important;
 }
+.content-container {
+  overflow: auto;
+}
 ul, ol, dl {
   &.off-canvas-list {
     font-size: remCalc(12px) !important;
