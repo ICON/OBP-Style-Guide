@@ -1,5 +1,5 @@
 <!doctype html>
-<html class="no-js" lang="en">
+<html class="no-js" lang="en" ng-app="styleGuideApp">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -33,7 +33,7 @@
     <aside class="left-off-canvas-menu">
       <ul class="off-canvas-list">
         <li><label>Layout</label></li>
-        <li><a href="#">Default Colors</a></li>
+        <li><a href="#/default-colors">Default Colors</a></li>
         <li><a href="#">Top Bar</a></li>
         <li><a href="#">Table of Contents</a></li>
         <li><label>Typography</label></li>
@@ -74,7 +74,7 @@
       </ul>
     </aside>
     <a class="exit-off-canvas"></a>
-    <section role="main">
+    <section role="main" ng-controller="navCtrl">
       <div class="row">
         <div class="large-3 columns">
           <div class="hide-for-small">
@@ -88,7 +88,7 @@
                     <a href="#panel1">Layout</a>
                     <div id="panel1" class="content active">
                       <ul class="side-nav">
-                        <li><a href="#">Default Colors</a></li>
+                        <li><a ng-click="navSection('default-colors');">Default Colors</a></li>
                         <li><a href="#">Top Bar</a></li>
                         <li><a href="#">Table of Contents</a></li>
                       </ul>
@@ -147,7 +147,7 @@
         </div>
         <div class="large-9 columns">
           <div class="layout-container">
-            <h2>Layout</h2>
+            <ng-view></ng-view>
           </div>
         </div>
       </div>
@@ -155,8 +155,15 @@
   </div>
 </div>
 
+
+
 <script src="bower_components/jquery/jquery.js"></script>
 <script src="bower_components/foundation/js/foundation.min.js"></script>
+
+<script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.7/angular.min.js"></script>
+<script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.7/angular-route.js"></script>
+<script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.7/angular-animate.js"></script>
+
 <script src="js/app.js"></script>
 </body>
 </html>
