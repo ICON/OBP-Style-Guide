@@ -33,8 +33,11 @@ app.config( function ($routeProvider) {
 
 app.controller('navCtrl', function($scope, $location) {
 
-	$scope.navSection = function(slug) {
+	$scope.navSection = function(slug, hash) {
 		$location.path('/' + slug);
+		if(hash) {
+			$location.hash(hash);
+		}
 	};
 
 });
