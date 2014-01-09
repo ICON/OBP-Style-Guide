@@ -1,4 +1,6 @@
 // global styles
+$dark-grey: #333;
+$medium-grey: #ccc;
 
 html, body, .off-canvas-wrap, .inner-wrap {
   height: 100% !important;
@@ -28,4 +30,17 @@ form input {
 }
 .content-container {
   margin-top: 2rem;
+}
+.accordion {
+  margin-top: 1rem;
+  border: 1px solid $medium-grey;
+  dd > a {
+    border-bottom: 1px solid $medium-grey;
+    &:nth-last-of-type {
+      border-bottom: none !important;
+    }
+  }
+  ul.side-nav {
+    padding: 0 !important;
+  }
 }
