@@ -4,7 +4,8 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Gaming Docs Style Guide - v1.0 Manatee</title>
-  <link rel="stylesheet" href="stylesheets/app.css" />
+  <link rel="stylesheet" href="stylesheets/app.css" type="text/css" />
+  <link rel="stylesheet" href="stylesheets/pie.css" type="text/css" />
   <script src="bower_components/modernizr/modernizr.js"></script>
 </head>
 <body>
@@ -23,21 +24,21 @@
           </ul> -->
         </section>
       </nav>
+      <nav class="tab-bar show-for-small">
+        <section class="left-small">
+          <a class="left-off-canvas-toggle menu-icon" ><span></span></a>
+        </section>
+        <section class="middle tab-bar-section">
+          <h1 class="title">Gaming Docs Style Guide - 1.0 Manatee</h1>
+        </section>
+      </nav>
     </div>
-    <nav class="tab-bar show-for-small">
-      <section class="left-small">
-        <a class="left-off-canvas-toggle menu-icon" ><span></span></a>
-      </section>
-      <section class="middle tab-bar-section">
-        <h1 class="title">Gaming Docs Style Guide - 1.0 Manatee</h1>
-      </section>
-    </nav>
     <aside class="left-off-canvas-menu">
       <ul class="off-canvas-list">
         <li><label>Layout</label></li>
-        <li><a href="#/">Default Colors</a></li>
         <li><a href="#">Top Bar</a></li>
         <li><a href="#">Table of Contents</a></li>
+        
         <li><label>Typography</label></li>
         <li><a href="#">Headers</a></li>
         <li><a href="#">Content</a></li>
@@ -87,26 +88,26 @@
               <nav>
                 <dl class="accordion" data-accordion>
                   <dd>
-                    <a href="#layout" ng-click="navSection('layout');">Layout</a>
+                    <a href="#layout">Layout</a>
                     <div id="layout" class="content active">
                       <ul class="side-nav">
-                        <li><a ng-click="navSection('default-colors');">Default Colors</a></li>
-                        <li><a ng-click="navSection('top-bar');">Top Bar</a></li>
-                        <li><a ng-click="navSection('toc');">Table of Contents</a></li>
+                        <li><a ng-click="navSection('default-colors', '');">Default Colors</a></li>
+                        <li><a ng-click="navSection('top-bar', '');">Top Bar</a></li>
+                        <li><a ng-click="navSection('toc', '');">Table of Contents</a></li>
                       </ul>
                     </div>
                   </dd>
                   <dd>
-                    <a href="#typography" ng-click="navSection('typography');">Typography</a>
+                    <a href="#typography">Typography</a>
                     <div id="typography" class="content">
                       <ul class="side-nav">
-                        <li><a ng-click="navSection('type-headers');">Headers</a></li>
-                        <li><a ng-click="navSection('type-content');">Content</a></li>
+                        <li><a ng-click="navSection('headers', '');">Headers</a></li>
+                        <li><a ng-click="navSection('content', '');">Content</a></li>
                       </ul>
                     </div>
                   </dd>
                   <dd>
-                    <a href="#components" ng-click="navSection('components');">Components</a>
+                    <a href="#components">Components</a>
                     <div id="components" class="content">
                       <ul class="side-nav">
                         <li><a ng-click="navSection('headers');">Headers</a>
@@ -137,8 +138,8 @@
                             <li><a ng-click="navSection('inline', 'gif');">Inline Gif</a></li>
                             <li><a ng-click="navSection('inline', 'image');">Inline Image</a></li>
                             <li><a ng-click="navSection('inline', 'video');">Inline Video</a></li>
-                          </ul>
-                        </li>
+                         </ul>
+                       </li>
                       </ul>
                     </div>
                   </dd>
@@ -148,24 +149,21 @@
           </div>
         </div>
         <div class="large-9 columns">
-          <div class="content-container">
+          <div id="content-container">
             <ng-view></ng-view>
           </div>
-        </div>
       </div>
     </section>
   </div>
 </div>
 
-
-
 <script src="bower_components/jquery/jquery.js"></script>
 <script src="bower_components/foundation/js/foundation.min.js"></script>
-
+<script src="bower_components/foundation/js/foundation/foundation.tooltip.js"></script>
 <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.7/angular.min.js"></script>
 <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.7/angular-route.js"></script>
 <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.7/angular-animate.js"></script>
-
 <script src="js/app.js"></script>
+<script src="bower_components/foundation/js/foundation/foundation.magellan.js"></script>
 </body>
 </html>

@@ -1,1 +1,96 @@
-<h1> This is the layout page</h1>
+<!-- <div data-magellan-expedition="fixed">
+  <dl class="sub-nav">
+    <dd data-magellan-arrival="layout1"><a href="#layout1">Default Colors</a></dd>
+    <dd data-magellan-arrival="layout2"><a href="#layout2">Top Bar</a></dd>
+    <dd data-magellan-arrival="layout3"><a href="#layout3">Table of Contents</a></dd>
+  </dl>
+</div> 
+<a name="layout1"></a>
+<h3 data-magellan-destination="layout1">Default Colors</h3>
+
+<a name="layout2"></a>
+<h3 data-magellan-destination="layout2">Top Bar</h3>
+
+<a name="layout3"></a>
+<h3 data-magellan-destination="layout3">Table of Contents</h3>-->
+<h1>Grid</h1>
+<p>The Gaming Docs digital manual reader has a responsive layout based on the <a href="http://foundation.zurb.com/" target="blank">Foundation</a> 12-column nestable grid, using Media Queries to switch between various layouts. The following breakpoints determine each layout.</p>
+<pre>
+  <code>
+    $mobile: "only screen and (min-width:'#{$mobile-screen}')";
+    $small: "only screen and (min-width:'#{$small-screen}')";
+    $medium: "only screen and (min-width:#{$medium-screen})";
+    $large: "only screen and (min-width:'#{$large-screen}')";
+  </code>
+</pre>
+<h1>Layout</h1>
+<p>There is a default stylesheet for the base template as well as theme overrides specific to individual manuals. Stylesheets are written in <a href="http://sass-lang.com" target="_blank">SCSS</a>, broken down into partials and compiled into a master CSS file.</p>
+<hr>
+<p>There are three main sections to the reader layout: Top Bar, Content Area and Table of Contents.</p>
+<div class="wireframes">
+  <div class="topbar">
+    <div><h3>Top Bar</h3></div>
+    <div>
+      <ul>
+        <li><span class="icons search"></span></li>
+        <li><span class="icons toc"></span></li>
+        <li><span class="icons settings"></span></li>
+      </ul>
+    </div>
+  </div>
+  <div class="main">
+    <div>
+      <h3>Content</h3>
+    </div>
+    <div>
+      <br><br><br><br><br>
+      <h3>Table of Contents</h3>
+      <span>Toggles on/off in desktop and console view<br>hidden in tablet/mobile view</span>
+    </div>
+  </div>
+</div>
+<div class="divider"></div>
+<h3 class="spacer">Default Colors</h3>
+<p>These are the default colors used throughout the base template along with each respective $variable name and #hex color.</p>
+<ul class="colorblocks">
+  <li>
+    <span class="color1"></span>
+    <code language="html">$light-blue<br>#2c7cf1</code>
+  </li>
+   <li>
+    <span class="color2"></span>
+    <code language="html">$medium-blue<br>#298fd7</code>
+  </li>
+   <li>
+    <span class="color3"></span>
+    <code language="html">$dark-blue<br>#202060</code>
+  </li>
+  <li>
+    <span class="color4"></span>
+    <code language="html">$dark-blue2<br>#142d9c</code>
+  </li>
+   <li>
+    <span class="color5"></span>
+    <code language="html">$yellow<br>#f5f2a5</code>
+  </li>
+   <li>
+    <span class="color6"></span>
+    <code language="html">$dark-grey<br>#333333</code>
+  </li>
+</ul>
+<hr>
+<h3 class="spacer">Top Bar</h3>
+<p>The top bar contains the manual title and charm icons for Search, Table of Contents (TOC) and Settings. Charms are only visible on larger screen resolutions and are hidden for tablet and mobile where a standard mobile sidebar toggle is displayed instead.</p>
+<p>The top bar has a fixed height of 50px and a linear background CSS3 gradient from left to right with <code language="html">$dark-blue</code> to <code language="html">$medium-blue</code> color-stops.</p>
+<div class="wireframes">
+  <div class="topbar with-gradient">
+    <div><h3><span data-tooltip class="has-tip tip-top" data-options="disable_for_touch:true" title="The game title goes here.">Title</span></h3></div>
+    <div>
+      <ul>
+        <li><span data-tooltip class="has-tip tip-top" data-options="disable_for_touch:true" title="Search icon"><span class="icons search"></span></span></li>
+        <li><span data-tooltip class="has-tip tip-top" data-options="disable_for_touch:true" title="TOC icon"><span class="icons toc"></span></span></li>
+        <li><span data-tooltip class="has-tip tip-top" data-options="disable_for_touch:true" title="Settings icon"><span class="icons settings"></span></span></li>
+      </ul>
+    </div>
+  </div>
+</div>
