@@ -2,7 +2,7 @@
 // Documentation can be found at: http://foundation.zurb.com/docs
 $(document).foundation();
 
-var app = angular.module('styleGuideApp', ['ngAnimate', 'ngRoute']);
+var app = angular.module('styleGuideApp', ['ngAnimate', 'ngRoute', 'hljs']);
 
 app.config( function ($routeProvider) {
 //================================================
