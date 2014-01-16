@@ -4,8 +4,6 @@ $(document).foundation();
 
 var app = angular.module('styleGuideApp', ['ngAnimate', 'ngRoute', 'hljs']);
 
-angular.module('styleGuideApp.directives', []);
-
 app.config( function ($routeProvider) {
 //================================================
 // Define all the routes
@@ -13,14 +11,14 @@ app.config( function ($routeProvider) {
 $routeProvider
 	.when('/404',
 	{
-		title: 'Oops!',
+		title: 'Oh Oh!',
 		templateUrl: 'partials/not-found/404-tmpl.html',
 		controller: '404Ctrl'
 	})
 	.when('/',
 	{
 		title: 'Home',
-		templateUrl: 'partials/fundamentals-tmpl.html',
+		templateUrl: 'partials/layout-tmpl.html',
 		controller: routeCtrl
 	})
 	.when('/:slug',
@@ -44,9 +42,9 @@ var routeCtrl = function($scope, $routeParams) {
 	console.log('ROUTE PARAMS: ', $routeParams.slug);
     $scope.templateUrl = 'partials/'+$routeParams.slug+'-tmpl.html';
 
-    $scope.$on('$viewContentLoaded', function() {
-    	$(document).foundation();
-    });
+  $scope.$on('$viewContentLoaded', function() {
+  	$(document).foundation();
+  });
 };
 
 
