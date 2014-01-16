@@ -5,9 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Gaming Docs Style Guide - v1.0 Manatee</title>
   <link rel="stylesheet" href="stylesheets/app.css" type="text/css" />
-  <link rel="stylesheet" href="stylesheets/pie.css" type="text/css" />
   <script src="bower_components/modernizr/modernizr.js"></script>
-  <link rel="stylesheet" href="http://yandex.st/highlightjs/7.3/styles/github.min.css">
+  <link rel="stylesheet" href="http://yandex.st/highlightjs/8.0/styles/github.min.css">
 </head>
 <body>
 <div class="off-canvas-wrap">
@@ -78,7 +77,7 @@
       </ul>
     </aside>
     <a class="exit-off-canvas"></a>
-    <section role="main" ng-controller="navCtrl">
+    <section role="main">
       <div class="row">
         <div class="large-3 columns">
           <div class="hide-for-small">
@@ -89,31 +88,23 @@
               <nav>
                 <dl class="accordion" data-accordion>
                   <dd>
-                    <a href="#layout">Layout</a>
-                    <div id="layout" class="content active">
+                    <a href="#fundamentals">Fundamentals</a>
+                    <div id="fundamentals" class="content active">
                       <ul class="side-nav">
-                        <li><a ng-click="navSection('default-colors', '');">Default Colors</a></li>
-                        <li><a ng-click="navSection('top-bar', '');">Top Bar</a></li>
-                        <li><a ng-click="navSection('toc', '');">Table of Contents</a></li>
+                        <li><a href="#stylesheets">Stylesheets</a></li>
+                        <li><a href="#fundamentals">Media Queries</a></li>
+                        <li><a href="default-colors">Default Colors</a></li>
+                        <li><a href="#type">Type</a></li>
                       </ul>
                     </div>
                   </dd>
                   <dd>
                     <a href="#layout">Layout</a>
-                    <div id="layout" class="content active">
+                    <div id="layout" class="content">
                       <ul class="side-nav">
-                        <li><a ng-click="navSection('default-colors', '');">Default Colors</a></li>
-                        <li><a ng-click="navSection('top-bar', '');">Top Bar</a></li>
-                        <li><a ng-click="navSection('toc', '');">Table of Contents</a></li>
-                      </ul>
-                    </div>
-                  </dd>
-                  <dd>
-                    <a href="#typography">Typography</a>
-                    <div id="typography" class="content">
-                      <ul class="side-nav">
-                        <li><a ng-click="navSection('headers', '');">Headers</a></li>
-                        <li><a ng-click="navSection('content', '');">Content</a></li>
+                        <li><a href="#top-bar">Top Bar</a></li>
+                        <li><a href="#toc">Table of Contents</a></li>
+                        <li><a href="#content-area">Content Area</a></li>
                       </ul>
                     </div>
                   </dd>
@@ -176,7 +167,8 @@
 <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.7/angular-animate.js"></script>
 <script src="http://yandex.st/highlightjs/8.0/highlight.min.js"></script>
 <script src="http://pc035860.github.io/angular-highlightjs/angular-highlightjs.min.js"></script>
+<!-- <script src="js/digireader-modal-trigger.js"></script> -->
+<!-- <script src="bower_components/foundation/js/foundation/foundation.magellan.js"></script> -->
 <script src="js/app.js"></script>
-<script src="bower_components/foundation/js/foundation/foundation.magellan.js"></script>
 </body>
 </html>

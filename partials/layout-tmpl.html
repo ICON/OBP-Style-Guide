@@ -1,37 +1,9 @@
-<!-- <div data-magellan-expedition="fixed">
-  <dl class="sub-nav">
-    <dd data-magellan-arrival="layout1"><a href="#layout1">Default Colors</a></dd>
-    <dd data-magellan-arrival="layout2"><a href="#layout2">Top Bar</a></dd>
-    <dd data-magellan-arrival="layout3"><a href="#layout3">Table of Contents</a></dd>
-  </dl>
-</div> 
-<a name="layout1"></a>
-<h3 data-magellan-destination="layout1">Default Colors</h3>
-
-<a name="layout2"></a>
-<h3 data-magellan-destination="layout2">Top Bar</h3>
-
-<a name="layout3"></a>
-<h3 data-magellan-destination="layout3">Table of Contents</h3>-->
-<h1>Grid</h1>
-<p>The Gaming Docs digital manual reader has a responsive layout based on the <a href="http://foundation.zurb.com/" target="blank">Foundation</a> 12-column nestable grid, using Media Queries to switch between various layouts. The following breakpoints determine each layout.</p>
-<pre>
-  <code>
-    <div hljs>
-      $mobile: "only screen and (min-width:'#{$mobile-screen}')";
-      $small: "only screen and (min-width:'#{$small-screen}')";
-      $medium: "only screen and (min-width:#{$medium-screen})";
-      $large: "only screen and (min-width:'#{$large-screen}')";
-    </div>
-  </code>
-</pre>
 <h1>Layout</h1>
-<p>There is a default stylesheet for the base template as well as theme overrides specific to individual manuals. Stylesheets are written in <a href="http://sass-lang.com" target="_blank">SCSS</a>, broken down into partials and compiled into a master CSS file.</p>
-<hr>
-<p>There are three main sections to the reader layout: Top Bar, Content Area and Table of Contents.</p>
+<p>There are three main sections to the reader layout: Top Bar, Content Area and Table of Contents. A breakpoint of <code class="no-bg"><span class="attr">940px</span></code>, defined in a SCSS variable <code class="no-bg"><span class="attr">$topbar-breakpoint</span></code> is set to display the desktop/console or tablet/mobile layouts below.</p>
+<h4 class="subheader">Desktop/Console</h4>
 <div class="wireframes">
   <div class="topbar">
-    <div><h3>Top Bar</h3></div>
+    <div><h3 id="top-bar">Top Bar</h3></div>
     <div>
       <ul>
         <li><span class="icons search"></span></li>
@@ -45,45 +17,36 @@
       <h3>Content</h3>
     </div>
     <div>
-      <br><br><br><br><br>
       <h3>Table of Contents</h3>
-      <span>Toggles on/off in desktop and console view<br>hidden in tablet/mobile view</span>
     </div>
   </div>
 </div>
 <div class="divider"></div>
-<h3 class="spacer">Default Colors</h3>
-<p>These are the default colors used throughout the base template along with each respective $variable name and #hex color.</p>
-<ul class="colorblocks">
-  <li>
-    <span class="color1"></span>
-    <code language="html">$light-blue<br>#2c7cf1</code>
-  </li>
-   <li>
-    <span class="color2"></span>
-    <code language="html">$medium-blue<br>#298fd7</code>
-  </li>
-   <li>
-    <span class="color3"></span>
-    <code language="html">$dark-blue<br>#202060</code>
-  </li>
-  <li>
-    <span class="color4"></span>
-    <code language="html">$dark-blue2<br>#142d9c</code>
-  </li>
-   <li>
-    <span class="color5"></span>
-    <code language="html">$yellow<br>#f5f2a5</code>
-  </li>
-   <li>
-    <span class="color6"></span>
-    <code language="html">$dark-grey<br>#333333</code>
-  </li>
-</ul>
+<h4 class="subheader">Tablet/Mobile</h4>
+<div class="wireframes">
+  <div class="topbar">
+    <div><h3 id="top-bar">Top Bar</h3></div>
+    <div>
+      <ul>
+        <li><span class="icons search"></span></li>
+        <li><span class="icons toc"></span></li>
+      </ul>
+    </div>
+  </div>
+  <div class="main mobile">
+    <div>
+      <h3>Content</h3>
+    </div>
+    <div>
+      <h3>Table of Contents</h3>
+    </div>
+  </div>
+</div>
+<div class="divider"></div>
 <hr>
-<h3 class="spacer">Top Bar</h3>
-<p>The top bar contains the manual title and charm icons for Search, Table of Contents (TOC) and Settings. Charms are only visible on larger screen resolutions and are hidden for tablet and mobile where a standard mobile sidebar toggle is displayed instead.</p>
-<p>The top bar has a fixed height of 50px and a linear background CSS3 gradient from left to right with <code language="html">$dark-blue</code> to <code language="html">$medium-blue</code> color-stops.</p>
+<h2 id="top-bar" class="spacer">Top Bar</h2>
+<p>The top bar contains the title of the manual and Search, Table of Contents (TOC) and Settings charm icons. The three charm icons on the right of the top bar are Search, TOC and Settings. </p>
+<p>The top bar has a fixed height of <code class="no-bg"><span class="attr">50px</span></code> and a horizontal linear gradient background with <code class="no-bg"><span class="attr">$dark-blue</span></code> to <code class="no-bg"><span class="attr">$medium-blue</span></code> color-stops. It is the only section of the CVA that will never have any custom styling.</p>
 <div class="wireframes">
   <div class="topbar with-gradient">
     <div><h3><span data-tooltip class="has-tip tip-top" data-options="disable_for_touch:true" title="The game title goes here.">Title</span></h3></div>
@@ -96,3 +59,21 @@
     </div>
   </div>
 </div>
+<h4>Activated Charms</h4>
+<div class="activated-charms">
+  <p class="subheader"><strong>Search</strong></p>
+  <p><img class="with-shadow" src="images/layout-topbar-search.png"></p>
+  <p>On layouts smaller than <code class="no-bg"><span class="attr">940px</span></code>, or <code class="no-bg"><span class="attr">$topbar-breakpoint</span></code>, the 'Settings' icon in the top bar is hidden and the settings navigation is combined with the TOC. </p>
+  <p class="subheader"><strong>Settings: Desktop/Console</strong></p>
+  <p><img src="images/layout-topbar-settings.png"></p>
+  <p class="subheader"><strong>TOC and Settings: Tablet/Mobile</strong></p>
+  <p><img src="images/layout-topbar-breakpoint.png"></p>
+</div>
+<hr>
+<h2 id="toc" class="spacer">Table of Contents (TOC)</h2>
+<p>The Table of Contents, more commonly referred to as the TOC, acts as a navigation between pages of digital manuals. There are three customizable parts to the TOC: background, title and chapters. On desktop and console layouts, or any screen resolution higher than </p>
+<ul class="small-block-grid-2">
+  <li><strong>Default</strong><br><img src="images/layout-toc.png"></li>
+  <li><strong>Custom</strong><br><img src="images/layout-toc-custom.png"></li>
+</ul>
+<h4>Tablet/Mobile:</h4>
