@@ -34,7 +34,7 @@ $button-circle: 60px;
 }
 
 .icons {
-  @extend %psdoc-icons;
+  @extend %psdoc-icons !optional;
   font-size: 1.5rem;
   &.search:before {
     content: "\e003";
@@ -203,7 +203,7 @@ $button-circle: 60px;
   font-size: $font-size-large;
 }
 .modal-controls {
-  @extend %icon-rotate;
+  @extend %icon-rotate !optional;
   position: absolute;
   &.expand {
     right: 15px;
