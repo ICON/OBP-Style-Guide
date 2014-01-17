@@ -1,14 +1,20 @@
 <h1>Fundamentals</h1>
 <p>This is documentation on the Gaming Docs CVA (Content Viewing Application), otherwise referred to as "Reader." The CVA is based on the <a href="http://foundation.zurb.com/" target="blank">Foundation</a> front-end framework for its stylesheets and grids, and Angular client-side framework for its dynamic templating and data-binding features. It has a fluid, responsive layout using the CSS3 module <a href="http://www.w3.org/TR/css3-mediaqueries/" target="_blank">Media Queries</a> to set the @media type and features. Technical manuals in the form of Microsoft Word documents are formatted with specific classes and uploaded through the CPT (Content Publishing Tool). Its contents are parsed into mark-up and rendered in the CVA framework. Although there are limitations to the front-end styling, almost everything is customizable with theme overrides for each individual manual. This document, like the product, is a work in progress; it will be continuously evolving and updated as we refine our codebase.</p>
 <hr>
-<h2 id="stylesheets">Stylesheets</h2>
+<!-- end overview -->
+
+<a id="stylesheets" class="whitespace"></a>
+<h2>Stylesheets</h2>
 <p>Stylesheets in the CVA are written in <a href="http://sass-lang.com" target="_blank">SCSS</a> and compiled into a master CSS file. Some of the default Foundation styles are in use, but most of the CSS is custom. There are default stylesheets for the base template that can be overwritten by theme templates for individual manuals. SCSS files are separated into partials according to its contents and included to the <strong>main.scss</strong> file, which then is compiled into a standard CSS file: <strong>main.css</strong>. Stylesheets will not be rendered unless they are imported.</p>
 <p><strong>File location:</strong> <em>/cva/digireader/app/styles/scss/main.scss</em></p>
 <div hljs>
   @import "example-partial";
 </div>
 <hr>
-<h2 id="media-queries">Media Queries</h2>
+<!-- end stylesheets -->
+
+<a id="media-queries" class="whitespace"></a>
+<h2>Media Queries</h2>
 <p>The Gaming Docs digital manual reader has a responsive layout based on <a href="http://foundation.zurb.com/" target="blank">Foundation</a>'s 12-column nestable grid. The breakpoints below determine which layout styling is rendered in the browser. CSS declarations can be media-specific by wrapping them in the @media syntax:</p>
 <div hljs>
   @media [media type] and (media features) and (additional features) {
@@ -40,7 +46,10 @@
   $large: "only screen and (min-width:'#{$large-screen}')";
 </div>
 <hr>
-<h2 id="default-colors">Default Colors</h2>
+<!-- end media queries -->
+
+<a id="default-colors" class="whitespace"></a>
+<h2>Default Colors</h2>
 <p>These are the default colors used throughout the base template along with each respective $variable name and #hex color.</p>
 <ul class="colorblocks">
   <li>
@@ -87,7 +96,10 @@
   </li>
 </ul>
 <hr>
-<h2 id="type" class="spacer">Type</h2>
+<!-- end default colors -->
+
+<a id="type" class="whitespace"></a>
+<h2 class="spacer">Type</h2>
 <p>The default font for the CVA is <strong>"SST"</strong>, a non-standard font, and referenced by the <code class="no-bg">@font-face</code> rule. The base font size is <code class="no-bg"><span class="value">16px</span></code> which we use to determine <code class="no-bg"><span class="value">1rem</span></code> (root em) unit. All numerical values should be written in rem units, which are relative to the root or base font size as opposed to em units, which are relative to its parent and can cause compounding issues.</p>
 <p>We currently use four fonts out of the <strong>"SST"</strong> font-set:</p>
 <div hljs>
@@ -125,6 +137,6 @@
 }
 </div>
 <p>All text is rendered in the <strong>"SST"</strong> font in the base template, but can be replaced by theme overrides by uploading the font files (in .ttf, .woff, .eot and .svg formats) in the CPT then referencing the font(s) with the above syntax in the custom CSS overrides.</p>
-
+<!-- end type -->
 
 

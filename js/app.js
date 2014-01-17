@@ -18,7 +18,7 @@ $routeProvider
 	.when('/',
 	{
 		title: 'Home',
-		templateUrl: 'partials/layout-tmpl.html',
+		templateUrl: 'partials/fundamentals-tmpl.html',
 		controller: routeCtrl
 	})
 	.when('/:slug',
