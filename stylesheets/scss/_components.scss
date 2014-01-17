@@ -1,0 +1,30 @@
+.image-with-border {
+  position: relative;
+  cursor: pointer;  
+  text-align: center;
+  margin-bottom: 1rem;
+}
+.modal-image-container {
+  display: block;
+  position: relative;
+  width: 80%;
+  height: 100%;
+  margin: 0 auto 2rem;
+  img {
+    width: 100%;
+  }
+}
+.modal-content {
+  > * {
+    width: 80%;
+    margin: 0 auto 1rem;
+  }
+}
+.hide-modal {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  cursor: pointer;
+}
