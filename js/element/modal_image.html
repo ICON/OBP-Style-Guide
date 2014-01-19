@@ -1,13 +1,6 @@
 <div tabindex="51" class="image-with-border modal-trigger {{element.identifier}}" ng-click="expandModal(element)">
   <div class="modal-image-container">
-    <img ng-src="{{ element.asset }}" ng-show="element.asset" ng-src-responsive="[ 
-			[ 'mobile', element.assetsUrl['mobile'] ],
-			[ 'retina_mobile', element.assetsUrl['retina_mobile'] ],
-			[ 'tablet', element.assetsUrl['tablet'] ],
-			[ 'landscape_tablet', element.assetsUrl['landscape_tablet'] ],
-			[ 'desktop', element.assetsUrl['desktop'] ],
-			[ 'retina_tablet', element.assetsUrl['retina_tablet'] ]
-        ]"/>
+    <img src="http://placekitten.com/800/600"/>
     <span class="ux-button square ux-icon modal-controls expand icon-expand {{element.identifier}}"></span>
   </div>
 </div>

@@ -14,7 +14,7 @@ app.directive('digireaderModal', function ($rootScope, $templateCache, $compile,
             template: $templateCache.get('modal/modal.html'),
             restrict: 'E',
             link: function postLink(scope, element, attrs) {
-                var template;
+                var template = $templateCache.get( 'modal/modal_image.html' );
 
                 scope.$watch('modalElement',function (newElement, oldElement) {
                     console.log('ELEMENT CHANGED ', newElement, oldElement);
@@ -44,6 +44,7 @@ app.directive('digireaderModal', function ($rootScope, $templateCache, $compile,
 
                         console.log('current template: ', template);
 
+                        console.log('replacing modal-elment');
 
                         element.find('modal-element').replaceWith( $compile(template)(scope) );
 
