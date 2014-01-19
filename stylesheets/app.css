@@ -164,7 +164,7 @@ select {
 }
 
 /* line 190, ../bower_components/foundation/scss/foundation/components/_grid.scss */
-.row {
+.row, .modal-container .grid {
   width: 100%;
   margin-left: auto;
   margin-right: auto;
@@ -174,29 +174,30 @@ select {
   *zoom: 1;
 }
 /* line 165, ../bower_components/foundation/scss/foundation/components/_global.scss */
-.row:before, .row:after {
+.row:before, .modal-container .grid:before, .row:after, .modal-container .grid:after {
   content: " ";
   display: table;
 }
 /* line 166, ../bower_components/foundation/scss/foundation/components/_global.scss */
-.row:after {
+.row:after, .modal-container .grid:after {
   clear: both;
 }
 /* line 195, ../bower_components/foundation/scss/foundation/components/_grid.scss */
-.row.collapse > .column,
-.row.collapse > .columns {
+.row.collapse > .column, .modal-container .collapse.grid > .column,
+.row.collapse > .columns,
+.modal-container .collapse.grid > .columns {
   position: relative;
   padding-left: 0;
   padding-right: 0;
   float: left;
 }
 /* line 197, ../bower_components/foundation/scss/foundation/components/_grid.scss */
-.row.collapse .row {
+.row.collapse .row, .modal-container .collapse.grid .row, .row.collapse .modal-container .grid, .modal-container .row.collapse .grid, .modal-container .collapse.grid .grid {
   margin-left: 0;
   margin-right: 0;
 }
 /* line 200, ../bower_components/foundation/scss/foundation/components/_grid.scss */
-.row .row {
+.row .row, .modal-container .grid .row, .row .modal-container .grid, .modal-container .row .grid, .modal-container .grid .grid {
   width: auto;
   margin-left: -0.9375rem;
   margin-right: -0.9375rem;
@@ -206,28 +207,28 @@ select {
   *zoom: 1;
 }
 /* line 165, ../bower_components/foundation/scss/foundation/components/_global.scss */
-.row .row:before, .row .row:after {
+.row .row:before, .modal-container .grid .row:before, .row .modal-container .grid:before, .modal-container .row .grid:before, .modal-container .grid .grid:before, .row .row:after, .modal-container .grid .row:after, .row .modal-container .grid:after, .modal-container .row .grid:after, .modal-container .grid .grid:after {
   content: " ";
   display: table;
 }
 /* line 166, ../bower_components/foundation/scss/foundation/components/_global.scss */
-.row .row:after {
+.row .row:after, .modal-container .grid .row:after, .row .modal-container .grid:after, .modal-container .row .grid:after, .modal-container .grid .grid:after {
   clear: both;
 }
 /* line 201, ../bower_components/foundation/scss/foundation/components/_grid.scss */
-.row .row.collapse {
+.row .row.collapse, .modal-container .grid .row.collapse, .row .modal-container .collapse.grid, .modal-container .row .collapse.grid, .modal-container .grid .collapse.grid {
   width: auto;
   margin: 0;
   max-width: none;
   *zoom: 1;
 }
 /* line 165, ../bower_components/foundation/scss/foundation/components/_global.scss */
-.row .row.collapse:before, .row .row.collapse:after {
+.row .row.collapse:before, .modal-container .grid .row.collapse:before, .row .modal-container .collapse.grid:before, .modal-container .row .collapse.grid:before, .modal-container .grid .collapse.grid:before, .row .row.collapse:after, .modal-container .grid .row.collapse:after, .row .modal-container .collapse.grid:after, .modal-container .row .collapse.grid:after, .modal-container .grid .collapse.grid:after {
   content: " ";
   display: table;
 }
 /* line 166, ../bower_components/foundation/scss/foundation/components/_global.scss */
-.row .row.collapse:after {
+.row .row.collapse:after, .modal-container .grid .row.collapse:after, .row .modal-container .collapse.grid:after, .modal-container .row .collapse.grid:after, .modal-container .grid .collapse.grid:after {
   clear: both;
 }
 
@@ -3679,35 +3680,53 @@ form {
 
 /* Using forms within rows, we need to set some defaults */
 /* line 75, ../bower_components/foundation/scss/foundation/components/_forms.scss */
-form .row .row {
+form .row .row, form .modal-container .grid .row, .modal-container form .grid .row, form .row .modal-container .grid, .modal-container form .row .grid, form .modal-container .grid .grid, .modal-container form .grid .grid {
   margin: 0 -0.5rem;
 }
 /* line 78, ../bower_components/foundation/scss/foundation/components/_forms.scss */
-form .row .row .column,
-form .row .row .columns {
+form .row .row .column, form .modal-container .grid .row .column, .modal-container form .grid .row .column, form .row .modal-container .grid .column, .modal-container form .row .grid .column, form .modal-container .grid .grid .column, .modal-container form .grid .grid .column,
+form .row .row .columns,
+form .modal-container .grid .row .columns,
+.modal-container form .grid .row .columns,
+form .row .modal-container .grid .columns,
+.modal-container form .row .grid .columns,
+form .modal-container .grid .grid .columns,
+.modal-container form .grid .grid .columns {
   padding: 0 0.5rem;
 }
 /* line 81, ../bower_components/foundation/scss/foundation/components/_forms.scss */
-form .row .row.collapse {
+form .row .row.collapse, form .modal-container .grid .row.collapse, .modal-container form .grid .row.collapse, form .row .modal-container .collapse.grid, .modal-container form .row .collapse.grid, form .modal-container .grid .collapse.grid, .modal-container form .grid .collapse.grid {
   margin: 0;
 }
 /* line 84, ../bower_components/foundation/scss/foundation/components/_forms.scss */
-form .row .row.collapse .column,
-form .row .row.collapse .columns {
+form .row .row.collapse .column, form .modal-container .grid .row.collapse .column, .modal-container form .grid .row.collapse .column, form .row .modal-container .collapse.grid .column, .modal-container form .row .collapse.grid .column, form .modal-container .grid .collapse.grid .column, .modal-container form .grid .collapse.grid .column,
+form .row .row.collapse .columns,
+form .modal-container .grid .row.collapse .columns,
+.modal-container form .grid .row.collapse .columns,
+form .row .modal-container .collapse.grid .columns,
+.modal-container form .row .collapse.grid .columns,
+form .modal-container .grid .collapse.grid .columns,
+.modal-container form .grid .collapse.grid .columns {
   padding: 0;
 }
 /* line 85, ../bower_components/foundation/scss/foundation/components/_forms.scss */
-form .row .row.collapse input {
+form .row .row.collapse input, form .modal-container .grid .row.collapse input, .modal-container form .grid .row.collapse input, form .row .modal-container .collapse.grid input, .modal-container form .row .collapse.grid input, form .modal-container .grid .collapse.grid input, .modal-container form .grid .collapse.grid input {
   -moz-border-radius-bottomright: 0;
   -moz-border-radius-topright: 0;
   -webkit-border-bottom-right-radius: 0;
   -webkit-border-top-right-radius: 0;
 }
 /* line 97, ../bower_components/foundation/scss/foundation/components/_forms.scss */
-form .row input.column,
+form .row input.column, form .modal-container .grid input.column, .modal-container form .grid input.column,
 form .row input.columns,
+form .modal-container .grid input.columns,
+.modal-container form .grid input.columns,
 form .row textarea.column,
-form .row textarea.columns {
+form .modal-container .grid textarea.column,
+.modal-container form .grid textarea.column,
+form .row textarea.columns,
+form .modal-container .grid textarea.columns,
+.modal-container form .grid textarea.columns {
   padding-left: 0.5rem;
 }
 
@@ -6401,7 +6420,7 @@ meta.foundation-mq-topbar {
   list-style: none;
 }
 /* line 134, ../bower_components/foundation/scss/foundation/components/_top-bar.scss */
-.top-bar .row {
+.top-bar .row, .top-bar .modal-container .grid, .modal-container .top-bar .grid {
   max-width: none;
 }
 /* line 137, ../bower_components/foundation/scss/foundation/components/_top-bar.scss */
@@ -8390,4 +8409,129 @@ ul.colorblocks li span.square.color6 {
   left: 0;
   right: 0;
   cursor: pointer;
+}
+
+/* line 10, scss/_modal.scss */
+.modal-container, .fixed {
+  width: 100%;
+  left: 0;
+  position: fixed;
+  top: 0;
+  z-index: 99;
+}
+
+/* line 19, scss/_modal.scss */
+.modal-container {
+  background: rgba(0, 0, 0, 0.9);
+  left: 0;
+  right: 0;
+  width: auto;
+  top: 0;
+  bottom: 0;
+  height: auto;
+  min-height: 100%;
+  overflow-y: scroll;
+  z-index: 100 !important;
+}
+
+/* line 37, scss/_modal.scss */
+.modal-image-container, .inline-gif-container, .modal-alpha-base {
+  display: block;
+  position: relative;
+  width: 60%;
+  height: 100%;
+  margin: 0 auto 2rem;
+}
+/* line 43, scss/_modal.scss */
+.modal-image-container img, .inline-gif-container img, .modal-alpha-base img {
+  width: 100%;
+}
+
+/* line 48, scss/_modal.scss */
+.modal-content > * {
+  width: 80%;
+  margin: 0 auto 1rem;
+}
+
+/* line 53, scss/_modal.scss */
+.detailbox {
+  color: #fff;
+  height: 100%;
+  overflow: hidden;
+}
+
+/* line 59, scss/_modal.scss */
+.detailbox .modal-content {
+  position: relative;
+  /*Important for the position of the close box*/
+  z-index: 100;
+  margin-top: 1%;
+}
+
+/* line 65, scss/_modal.scss */
+.hide-modal {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  cursor: pointer;
+}
+
+/* line 73, scss/_modal.scss */
+.tool-tip {
+  display: inline-block;
+  cursor: pointer;
+}
+/* line 76, scss/_modal.scss */
+.tool-tip span {
+  display: inline-block;
+}
+/* line 78, scss/_modal.scss */
+.tool-tip span:nth-child(1) {
+  margin-right: 0.25rem;
+}
+
+/* line 83, scss/_modal.scss */
+.detail-wrapper {
+  width: 100%;
+  height: 100%;
+}
+
+/* line 88, scss/_modal.scss */
+.detail-header {
+  background: transparent;
+  position: relative;
+  text-align: right;
+  width: 100%;
+  padding: 0.9375rem;
+}
+
+/* line 96, scss/_modal.scss */
+.closeicon {
+  cursor: pointer;
+  font-size: 1.5rem;
+}
+
+/* line 101, scss/_modal.scss */
+table .modal-image-container {
+  width: 100%;
+}
+
+@media screen and (max-width: 48rem) {
+  /* line 107, scss/_modal.scss */
+  .modal-image-container, .modal-alpha-base, .inline-gif-container {
+    width: 100% !important;
+  }
+}
+@media screen and (max-width: 35rem) {
+  /* line 112, scss/_modal.scss */
+  .modal-image-container, .modal-alpha-base, .inline-gif-container {
+    width: 100% !important;
+  }
+
+  /* line 115, scss/_modal.scss */
+  .modal-content > * {
+    width: 100% !important;
+  }
 }

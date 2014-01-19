@@ -42,9 +42,6 @@ app.directive('digireaderModal', function ($rootScope, $templateCache, $compile,
                                 break;
                         }
 
-                        console.log('current template: ', template);
-
-                        console.log('replacing modal-elment');
 
                         element.find('modal-element').replaceWith( $compile(template)(scope) );
 

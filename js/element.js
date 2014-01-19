@@ -2,10 +2,9 @@
 
 app.controller('elementCtrl', function($scope, $rootScope) {
 
-	$rootScope.modalElement = {};
+	$rootScope.modalElement = null;
 
 	$scope.expandModal = function ( element ) {
-		console.log('expandModal ', element);
 		$rootScope.modalElement = element;
 		console.log('ROOT MODAL ELEMENT: ', element);
 	};
