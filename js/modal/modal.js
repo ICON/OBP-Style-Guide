@@ -9,48 +9,43 @@
  * @class digireaderModal
  * @namespace directives
  */
-app.directive('digireaderModal', function ($rootScope, $templateCache, $compile, $timeout,VG_EVENTS, Analytics) {
+app.directive('digireaderModal', function ($rootScope, $templateCache, $compile, $timeout) {
         return {
-            template: $templateCache.get('partials/modal/modal.html'),
+            template: $templateCache.get('modal/modal.html'),
             restrict: 'E',
             link: function postLink(scope, element, attrs) {
                 var template;
 
-                scope.$watch('element',function (newElement, oldElement) {
+                scope.$watch('modalElement',function (newElement, oldElement) {
+                    console.log('ELEMENT CHANGED ', newElement, oldElement);
                     if(newElement) {
                         switch( newElement.type) {
                             case 'modal_alpha_base':
-                                template = $templateCache.get( 'partials/modal/modal_alpha_base.html' );
+                                template = $templateCache.get( 'modal/modal_alpha_base.html' );
                                 break;
                             case 'modal_carousel':
                                 console.log('modal_carousel : instantiated');
                                 scope.carouselIndex = 0;
-                                template = $templateCache.get( 'partials/modal/modal_carousel.html' );
+                                template = $templateCache.get( 'modal/modal_carousel.html' );
                                 break;
                             case 'modal_gif':
-                                template = $templateCache.get( 'partials/modal/modal_gif.html' );
+                                template = $templateCache.get( 'modal/modal_gif.html' );
                                 break;
                             case 'modal_image':
-                                template = $templateCache.get( 'partials/modal/modal_image.html' );
+                                template = $templateCache.get( 'modal/modal_image.html' );
                                 break;
                             case 'modal_video':
-                                template = $templateCache.get( 'partials/modal/modal_video.html' );
+                                template = $templateCache.get( 'modal/modal_video.html' );
                                 break;
                             case 'modal_content':
-                                template = $templateCache.get( 'partials/modal/modal_content.html' );
+                                template = $templateCache.get( 'modal/modal_content.html' );
                                 break;
                         }
 
+                        console.log('current template: ', template);
+
+
                         element.find('modal-element').replaceWith( $compile(template)(scope) );
-
-                        Analytics.trackEvent('document event', 'open modal', newElement.type);
-
-                        $timeout(function(){
-                            if(element.find('video').length>0){
-                                element.find('video').eq(0)[0].play();
-                            }
-
-                        });
 
 
 

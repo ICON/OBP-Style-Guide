@@ -3,8 +3,7 @@
  *
  * @class digireaderModalTrigger
  */
-angular.module('styleGuideApp.directives')
-  .directive('digireaderModalTrigger', function ($rootScope,Analytics) {
+app.directive('digireaderModalTrigger', function ($rootScope,Analytics) {
     return {
       template: '<div tabindex="50" ng-transclude class="tool-tip"><span class="ux-icon icon-info icon-small"></span></div>',
       transclude: true,
