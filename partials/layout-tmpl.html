@@ -1,10 +1,11 @@
 <h1>Layout</h1>
 <p>There are three main sections to the reader layout: Top Bar, Content Area and Table of Contents. A breakpoint of <code class="no-bg"><span class="value">940px</span></code>, defined in a SCSS variable <code class="no-bg"><span class="attr">$topbar-breakpoint</span></code> is set to display the desktop/console or tablet/mobile layouts below.</p>
-<h4 class="subheader">Desktop/Console</h4>
+
+<h4>Desktop/Console</h4>
 <div class="wireframe-wrapper">
   <div class="wireframes">
     <div class="topbar">
-      <div><h3 id="top-bar">Top Bar</h3></div>
+      <div><h4 id="top-bar">Top Bar</h4></div>
       <div>
         <ul>
           <li><span class="icons search"></span></li>
@@ -15,21 +16,21 @@
     </div>
     <div class="main">
       <div>
-        <h3>Content</h3>
+        <h4>Content</h4>
       </div>
       <div>
-        <h3>Table of Contents</h3>
+        <h4>Table of Contents</h4>
         <p>(TOC overlay hidden when inactive)</p>
       </div>
     </div>
   </div>
   <div class="divider"></div>
 </div>
-<h4 class="subheader">Tablet/Mobile</h4>
+<h4>Tablet/Mobile</h4>
 <div class="wireframe-wrapper mobile">
   <div class="wireframes">
     <div class="topbar">
-      <div><h3 id="top-bar">Top Bar</h3></div>
+      <div><h4 id="top-bar">Top Bar</h4></div>
       <div>
         <ul>
           <li><span class="icons search"></span></li>
@@ -39,7 +40,7 @@
     </div>
     <div class="main">
       <div>
-        <h3>TOC &amp; Settings Overlay</h3>
+        <h4>TOC &amp; Settings Overlay</h4>
         <p>(Content hidden when TOC is active)</p>
       </div>
       <div></div>
@@ -53,10 +54,11 @@
 <h2 class="spacer">Top Bar</h2>
 <p>The top bar contains the title of the manual and Search, Table of Contents (TOC) and Settings charm icons. The three charm icons on the right of the top bar are Search, TOC and Settings. </p>
 <p>The top bar has a fixed height of <code class="no-bg"><span class="value">50px</span></code> and a horizontal linear gradient background with <code class="no-bg"><span class="attr">$dark-blue</span></code> to <code class="no-bg"><span class="attr">$medium-blue</span></code> color-stops. It is the only section of the CVA that will never have any custom styling.</p>
+<p>On layouts smaller than <code class="no-bg"><span class="value">940px</span></code>, or <code class="no-bg"><span class="attr">$topbar-breakpoint</span></code>, the 'Settings' icon in the top bar is hidden and the settings navigation is combined with the TOC. </p>
 <div class="wireframe-wrapper">
   <div class="wireframes">
     <div class="topbar with-gradient">
-      <div><h3><span data-tooltip class="has-tip tip-top" data-options="disable_for_touch:true" title="The game title goes here.">Title</span></h3></div>
+      <div><h4><span data-tooltip class="has-tip tip-top" data-options="disable_for_touch:true" title="The game title goes here.">Title</span></h4></div>
       <div>
         <ul>
           <li><span data-tooltip class="has-tip tip-top" data-options="disable_for_touch:true" title="Search icon"><span class="icons search"></span></span></li>
@@ -67,14 +69,13 @@
     </div>
   </div>
 </div>
-<h4 class="subheader">Activated Icons</h4>
+<h4>Activated Icons</h4>
 <div class="activated-charms">
-  <p><strong>Search</strong></p>
+  <p class="subheader"><strong>Search</strong></p>
   <p><img class="with-shadow" src="images/layout-topbar-search.png"></p>
-  <p>On layouts smaller than <code class="no-bg"><span class="value">940px</span></code>, or <code class="no-bg"><span class="attr">$topbar-breakpoint</span></code>, the 'Settings' icon in the top bar is hidden and the settings navigation is combined with the TOC. </p>
-  <p><strong>Settings: Desktop/Console</strong></p>
+  <p class="subheader"><strong>Settings: Desktop/Console</strong></p>
   <p><img src="images/layout-topbar-settings.png"></p>
-  <p><strong>TOC and Settings: Tablet/Mobile</strong></p>
+  <p class="subheader"><strong>TOC and Settings: Tablet/Mobile</strong></p>
   <p><img src="images/layout-topbar-breakpoint.png"></p>
 </div>
 <hr>
@@ -82,8 +83,11 @@
 <a id="toc" class="whitespace"></a>
 <h2 class="spacer">Table of Contents (TOC)</h2>
 <p>The Table of Contents, more commonly referred to as the TOC, acts as a navigation between pages of digital manuals. There are three customizable parts to the TOC: background, title and chapters. On desktop and console layouts, or any screen resolution higher than </p>
+<h4>Desktop/Console:</h4>
+<p>The TOC on layouts larger than <code class="no-bg"><span class="attr">$topbar-breakpoint</span></code> displays as an overlay on the right side of the screen.</p>
 <ul class="small-block-grid-2">
   <li><strong>Default</strong><br><img src="images/layout-toc.png"></li>
   <li><strong>Custom</strong><br><img src="images/layout-toc-custom.png"></li>
 </ul>
-<h4 class="subheader">Tablet/Mobile:</h4>
+<h4>Tablet/Mobile:</h4>
+<p><img src="images/layout-toc-mobile.png"></p>

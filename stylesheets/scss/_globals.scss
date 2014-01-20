@@ -23,6 +23,7 @@ body, html {
 h1, h2, h3, h4, h5 {
   font-weight: normal !important;
   color: $dark-grey;
+  letter-spacing: -1px;
 }
 h3.spacer {
   margin-top: 2rem;
@@ -93,12 +94,8 @@ code {
     padding: 0 !important;
   }
 }
-.whitespace {
-  display: block;
-  height: 2rem;
-}
 hr {
-  margin: 2rem 0 0 0 !important;
+  margin: 2rem 0 !important;
 }
 .small-block-grid-2 {
   img {

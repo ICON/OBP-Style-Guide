@@ -12,7 +12,7 @@
   .wireframes {
     border: $border;
     border-bottom: none !important;
-    h3 {
+    h4 {
       margin: 0;
     }
   }
@@ -60,7 +60,7 @@
     div {
       float: left;
       height: 15rem;
-      h3 {
+      h4 {
         white-space: nowrap;
         margin-top: 20%;
       }
@@ -71,7 +71,7 @@
       &:last-child {
         width: 39%;
         text-align: center;
-        h3 {
+        h4 {
           margin-top: 30% !important;
         }
       }
