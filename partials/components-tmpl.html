@@ -1,7 +1,64 @@
 <h1>Components</h1>
+<p>The following components or web elements are currently functional in the CVA interface. Classes for each component and character style are assigned in the Word document then rendered into markup and Angular functions from the parser. Each component and character style has default CSS in the base template but can be customized with override styles.</p>
+<hr>
+<a id="headers" class="whitespace"></a>
+<h2>Headers</h2>
+<p>There are three types of headers in the CVA.</p>
+<h3 id="ahead" class="subheader">A-Head</h3>
+<p><span data-tooltip class="has-tip tip-top" data-options="disable_for_touch:true" title="Custom A-Head example"><img class="with-shadow" src="images/component-ahead.png"></span></p>
+<p>A-Heads are <code class="no-bg"><span class="attr">&lt;h1&gt;</span></code> header tags that contain the chapter header and creates a chapter break. Assign the <span class="doc-class"># A Head</span> class to any line of content in the Word document at the beginning of a new chapter.</p>
+<p>Default A-Head font sizes are responsive according to the breakpoints in following mixin:</p>
+<div hljs>
+@mixin scaled-header-font($large:52px,$medium:46px,$small:36px) {
+  @media only screen and (min-width:$small-screen) {
+    font-size: $large;
+    max-width: 760px;
+  }
+  @media only screen and (min-width:$mobile-large-screen) and (max-width:$small-screen) {
+    font-size: $medium;
+    max-width: 650px;
+  }
+  @media only screen and (max-width:$mobile-large-screen) {
+    font-size: $small;
+    max-width: 520px;
+  }
+}
+</div>
+<p>Default A-Head CSS</p>
+<div hljs>
+.chapter-header { 
+  @include scaled-header-font;
+  width: 100%;
+  margin: 2rem 0;
+  padding: 0;
+  text-transform: uppercase;
+  line-height: $line-height-medium;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+</div>
+<h3 id="bhead" class="subheader">B-Head</h3>
+<p>B-Heads are <code class="no-bg"><span class="attr">&lt;h3&gt;</span></code> header tags that contain the page header and creates a page break within a chapter of a manual. Assign the <span class="doc-class"># B Head</span> class to any line of content in the Word document at the beginning of a page.</p>
+<p>Default B-Head CSS:</p>
+<div hljs>
+  .bhead {
+    font-size: $font-size-medium;
+  }
+</div>
+<h3 id="bhead" class="subheader">Body Head</h3>
+<p>Body Heads are also <code class="no-bg"><span class="attr">&lt;h3&gt;</span></code> header tags identical to B-Heads but do not create a chapter or page break. Assign the <span class="doc-class"># Body Head</span> class to any line of content in the Word document where you want a header anywhere on a page.</p>
+<p>Default Body Head CSS:</p>
+<div hljs>
+  .body-head {
+    font-size: $font-size-medium;
+  }
+</div>
+<p>For custom backgrounds, add a <code class="no-bg"><span class="symbol">background-image</span></code> rule to the <code class="no-bg"><span class="attr">.chapter-header</span></code> class in the CSS overrides.</p>
 <hr>
 <h2>Modal Images</h2>
 
+<p>Modal Images are image thumbnails with a trigger action to expand the image to full screen. Upload images in the CPT and make sure the image files are named with a prefix: <code class="no-bg"><span class="string">modal_image_[filename].jpg</span></code> In the Word document, insert the file name where a modal image is needed, then assign the <span class="doc-class"># Modal Image</span> class to the line containing the file name.</p>
 <div class="image-with-border modal-trigger" ng-controller="elementCtrl" ng-click="expandModal(mockPhotoModalElement)">
   <div class="modal-image-container">
     <img ng-src="http://placekitten.com/800/600" src="http://placekitten.com/800/600"> 

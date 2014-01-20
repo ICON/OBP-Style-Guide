@@ -136,7 +136,61 @@
   }
 }
 </div>
+<p>Default font-size variables based on <code class="no-bg"><span class="value">16px</span></code> base-font-size:</p>
+<div hljs>
+  $font-size-small: 0.875rem; 
+  $font-size-normal: 1.15rem;
+  $font-size-medium: 1.5rem; 
+  $font-size-large: 1.875rem;
+  $font-size-larger: 3.25rem;
+</div>
 <p>All text is rendered in the <strong>"SST"</strong> font in the base template, but can be replaced by theme overrides by uploading the font files (in .ttf, .woff, .eot and .svg formats) in the CPT then referencing the font(s) with the above syntax in the custom CSS overrides.</p>
 <!-- end type -->
 
+<a id="icons" class="whitespace"></a>
+<h2 class="spacer">Icons</h2>
+<p>There is a custom set of icons rendered as SVG fonts and used throughout the CVA for pagination, expand, video and various other buttons. The font-family name is <strong>"psdoc-icons"</strong> which following CSS assigns to any class name that contains <code class="no-bg"><span class="value">"icon-"</span></code></p>
+<div hljs>
+  [class^="icon-"],
+  [class*=" icon-"] {
+    font-family: "psdoc-icons";
+    font-weight: normal;
+    font-style: normal;
+    text-transform: none;
+    line-height: $line-height-normal;
+    -webkit-font-smoothing: antialiased;
+    text-decoration: inherit;
+    display: inline-block;
+  }
+</div>
+<p>psdoc-icons used in CVA:</p>
+<ul class="icon-list small-block-grid-2">
+  <li><span class="ux-button square ux-icon icon-expand"></span>
+    <code class="no-bg"><span class="attr">.icon-expand</span></code>
+  </li>
+  <li><span class="ux-button square ux-icon icon-video"></span>
+    <code class="no-bg"><span class="attr">.icon-video</span></code>
+  </li>
+  <li><span class="ux-button square ux-icon icon-leftArrow"></span>
+    <code class="no-bg"><span class="attr">.icon-leftArrow</span></code>
+  </li>
+  <li><span class="ux-button square ux-icon icon-rightArrow"></span>
+    <code class="no-bg"><span class="attr">.icon-rightArrow</span></code>
+  </li>
+  <li><span class="ux-button square ux-icon icon-info"></span>
+    <code class="no-bg"><span class="attr">.icon-info</span></code>
+  </li>
+  <li><span class="ux-button square ux-icon icon-settings"></span>
+    <code class="no-bg"><span class="attr">.icon-settings</span></code>
+  </li>
+  <li><span class="ux-button square ux-icon icon-search"></span>
+    <code class="no-bg"><span class="attr">.icon-search</span></code>
+  </li>
+  <li><span class="ux-button square ux-icon icon-toc"></span>
+    <code class="no-bg"><span class="attr">.icon-toc</span></code>
+  </li>
+  <li><span class="ux-button square ux-icon icon-close"></span>
+    <code class="no-bg"><span class="attr">.icon-close</span></code>
+  </li>
+</ul>
 
