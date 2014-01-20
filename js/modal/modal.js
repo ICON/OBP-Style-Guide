@@ -45,6 +45,13 @@ app.directive('digireaderModal', function ($rootScope, $templateCache, $compile,
 
                         element.find('modal-element').replaceWith( $compile(template)(scope) );
 
+                        $timeout(function(){
+                            if(element.find('video').length>0){
+                                element.find('video').eq(0)[0].play();
+                            }
+
+                        });
+
 
 
                     } else {

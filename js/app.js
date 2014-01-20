@@ -4,11 +4,16 @@ $(document).foundation();
 
 var app = angular.module('styleGuideApp', ['ngAnimate', 'ngRoute', 'hljs']);
 
-app.config( function ($routeProvider) {
-//================================================
-// Define all the routes
-//================================================
-$routeProvider
+app.config( function ($routeProvider, $sceDelegateProvider) {
+
+
+
+	$sceDelegateProvider.resourceUrlWhitelist(["self", "http*://d7cqn9pfudpvk.cloudfront.net/**"]);
+
+	//================================================
+	// Define all the routes
+	//================================================
+	$routeProvider
 	.when('/404',
 	{
 		title: 'Oh Oh!',
