@@ -47,10 +47,10 @@ body {
 /* line 325, ../bower_components/foundation/scss/foundation/components/_global.scss */
 body {
   background: white;
-  color: #222222;
+  color: #00cc00;
   padding: 0;
   margin: 0;
-  font-family: "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
+  font-family: "sstregular", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-weight: normal;
   font-style: normal;
   line-height: 1;
@@ -2100,7 +2100,7 @@ select {
   color: #222222;
   padding: 1rem;
   display: block;
-  font-family: "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
+  font-family: "sstregular", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 1rem;
 }
 /* line 36, ../bower_components/foundation/scss/foundation/components/_accordion.scss */
@@ -2797,7 +2797,7 @@ select {
 /* line 197, ../bower_components/foundation/scss/foundation/components/_buttons.scss */
 button, .button {
   cursor: pointer;
-  font-family: "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
+  font-family: "sstregular", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-weight: normal;
   line-height: normal;
   margin: 0 0 1.25rem;
@@ -4409,7 +4409,7 @@ kbd {
 /* line 87, ../bower_components/foundation/scss/foundation/components/_labels.scss */
 .label {
   font-weight: normal;
-  font-family: "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
+  font-family: "sstregular", "Helvetica Neue", Helvetica, Arial, sans-serif;
   text-align: center;
   text-decoration: none;
   line-height: 1;
@@ -4972,7 +4972,7 @@ ul.pagination li {
   color: #eeeeee;
   font-weight: normal;
   font-size: 1rem;
-  font-family: "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
+  font-family: "sstregular", "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 /* line 139, ../bower_components/foundation/scss/foundation/components/_pricing-tables.scss */
 .pricing-table .price {
@@ -4982,7 +4982,7 @@ ul.pagination li {
   color: #333333;
   font-weight: normal;
   font-size: 2rem;
-  font-family: "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
+  font-family: "sstregular", "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 /* line 140, ../bower_components/foundation/scss/foundation/components/_pricing-tables.scss */
 .pricing-table .description {
@@ -5166,7 +5166,7 @@ ul.pagination li {
   padding: 0.875rem 0;
   list-style-type: none;
   list-style-position: inside;
-  font-family: "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
+  font-family: "sstregular", "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 /* line 54, ../bower_components/foundation/scss/foundation/components/_side-nav.scss */
 .side-nav li {
@@ -5182,7 +5182,7 @@ ul.pagination li {
 .side-nav li.active > a:first-child {
   color: #4d4d4d;
   font-weight: normal;
-  font-family: "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
+  font-family: "sstregular", "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 /* line 69, ../bower_components/foundation/scss/foundation/components/_side-nav.scss */
 .side-nav li.divider {
@@ -5351,7 +5351,7 @@ ul.pagination li {
   display: inline;
   margin-left: 1rem;
   margin-bottom: 0.625rem;
-  font-family: "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
+  font-family: "sstregular", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-weight: normal;
   font-size: 0.875rem;
   color: #999999;
@@ -5696,7 +5696,7 @@ table tfoot tr td {
   padding-right: 2rem;
   padding-bottom: 1.0625rem;
   padding-left: 2rem;
-  font-family: "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
+  font-family: "sstregular", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 1rem;
 }
 /* line 41, ../bower_components/foundation/scss/foundation/components/_tabs.scss */
@@ -5984,7 +5984,7 @@ p aside {
 /* Default header styles */
 /* line 182, ../bower_components/foundation/scss/foundation/components/_type.scss */
 h1, h2, h3, h4, h5, h6 {
-  font-family: "Open Sans", "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
+  font-family: "sstregular", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-weight: 300;
   font-style: normal;
   color: #222222;
@@ -6157,7 +6157,7 @@ abbr,
 acronym {
   text-transform: uppercase;
   font-size: 90%;
-  color: #222222;
+  color: #00cc00;
   border-bottom: 1px dotted #dddddd;
   cursor: help;
 }
@@ -6563,7 +6563,7 @@ meta.foundation-mq-topbar {
   color: white;
   padding: 12px 0 12px 0;
   padding-left: 15px;
-  font-family: "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
+  font-family: "sstregular", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 0.8125rem;
   font-weight: normal;
   background: #333333;
@@ -6946,7 +6946,7 @@ nav.tab-bar {
 /* line 139, ../bower_components/foundation/scss/foundation/components/_offcanvas.scss */
 nav.tab-bar h1, nav.tab-bar h2, nav.tab-bar h3, nav.tab-bar h4, nav.tab-bar h5, nav.tab-bar h6 {
   color: white;
-  font-weight: bold;
+  font-weight: normal;
   line-height: 2.8125rem;
   margin: 0;
 }
@@ -7057,7 +7057,7 @@ ul.off-canvas-list li label {
   padding: 0.3rem 0.9375rem;
   color: #999999;
   text-transform: uppercase;
-  font-weight: bold;
+  font-weight: normal;
   background: #444444;
   border-top: 1px solid #5e5e5e;
   border-bottom: none;
@@ -7726,7 +7726,7 @@ th.hide-for-touch {
 /* line 14, scss/_globals.scss */
 body, html {
   height: 100%;
-  font-family: "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
+  font-family: "sstregular", "Helvetica Neue", Helvetica, Arial, sans-serif;
   color: #333333;
 }
 
@@ -7740,32 +7740,33 @@ body, html {
 h1, h2, h3, h4, h5 {
   font-weight: normal !important;
   color: #333333;
+  letter-spacing: -1px;
 }
 
-/* line 27, scss/_globals.scss */
+/* line 28, scss/_globals.scss */
 h3.spacer {
   margin-top: 2rem;
 }
 
-/* line 30, scss/_globals.scss */
+/* line 31, scss/_globals.scss */
 ul, ol, dl {
   margin: 0;
 }
-/* line 32, scss/_globals.scss */
+/* line 33, scss/_globals.scss */
 ul.off-canvas-list, ol.off-canvas-list, dl.off-canvas-list {
   font-size: remCalc(12px) !important;
 }
-/* line 36, scss/_globals.scss */
+/* line 37, scss/_globals.scss */
 ul li.heading a, ol li.heading a, dl li.heading a {
   color: #333;
 }
 
-/* line 41, scss/_globals.scss */
+/* line 42, scss/_globals.scss */
 form input {
   margin: 0 !important;
 }
 
-/* line 44, scss/_globals.scss */
+/* line 45, scss/_globals.scss */
 code {
   display: block;
   background: #ebebeb;
@@ -7775,26 +7776,30 @@ code {
   overflow: auto;
   font-weight: normal;
 }
-/* line 52, scss/_globals.scss */
+/* line 53, scss/_globals.scss */
 code.no-bg {
   background: none;
   padding: 0;
   display: inline;
 }
-/* line 56, scss/_globals.scss */
+/* line 57, scss/_globals.scss */
 code.no-bg .string {
   color: #d14;
 }
-/* line 59, scss/_globals.scss */
+/* line 60, scss/_globals.scss */
 code.no-bg .value {
   color: #bb260d;
 }
-/* line 62, scss/_globals.scss */
+/* line 63, scss/_globals.scss */
 code.no-bg .attr {
   color: #008080;
 }
+/* line 66, scss/_globals.scss */
+code.no-bg .symbol {
+  color: #990073;
+}
 
-/* line 67, scss/_globals.scss */
+/* line 71, scss/_globals.scss */
 .clearfix:after, ul.colorblocks:after, .wireframe-wrapper .topbar:after, .wireframe-wrapper .topbar ul:after, .wireframe-wrapper .main:after {
   content: " ";
   visibility: hidden;
@@ -7803,53 +7808,62 @@ code.no-bg .attr {
   clear: both;
 }
 
-/* line 74, scss/_globals.scss */
+/* line 78, scss/_globals.scss */
 .position-fixed {
   position: fixed;
 }
 
-/* line 77, scss/_globals.scss */
+/* line 81, scss/_globals.scss */
 .sidebar {
   padding-top: 3rem;
 }
 
-/* line 80, scss/_globals.scss */
+/* line 84, scss/_globals.scss */
 .content-container {
   margin-top: 2rem;
 }
 
-/* line 83, scss/_globals.scss */
+/* line 87, scss/_globals.scss */
 .accordion {
   margin-top: 1rem;
   border: 1px solid #cccccc;
 }
-/* line 86, scss/_globals.scss */
+/* line 90, scss/_globals.scss */
 .accordion dd {
   border-bottom: 1px solid #cccccc;
 }
-/* line 88, scss/_globals.scss */
+/* line 92, scss/_globals.scss */
 .accordion dd:last-of-type {
   border-bottom: none !important;
 }
-/* line 92, scss/_globals.scss */
+/* line 96, scss/_globals.scss */
 .accordion ul.side-nav {
   padding: 0 !important;
 }
 
-/* line 96, scss/_globals.scss */
-.whitespace {
-  display: block;
-  height: 2rem;
-}
-
 /* line 100, scss/_globals.scss */
 hr {
-  margin: 2rem 0 0 0 !important;
+  margin: 2rem 0 !important;
 }
 
 /* line 104, scss/_globals.scss */
 .small-block-grid-2 img {
   margin-top: 0.5rem;
+}
+
+/* line 108, scss/_globals.scss */
+.doc-class {
+  font-family: "sstbold";
+  background: #ebebeb;
+  color: #298fd7;
+  white-space: nowrap;
+}
+
+/* line 114, scss/_globals.scss */
+.with-shadow {
+  -webkit-box-shadow: #cccccc 5px 5px 10px;
+  -moz-box-shadow: #cccccc 5px 5px 10px;
+  box-shadow: #cccccc 5px 5px 10px;
 }
 
 @font-face {
@@ -7898,10 +7912,8 @@ hr {
 [class^="icon-"],
 [class*=" icon-"] {
   font-family: "psdoc-icons";
-  speak: none;
   font-weight: normal;
   font-style: normal;
-  font-variant: normal;
   text-transform: none;
   line-height: 1;
   -webkit-font-smoothing: antialiased;
@@ -7909,247 +7921,247 @@ hr {
   display: inline-block;
 }
 
-/* line 32, scss/_icons.scss */
+/* line 30, scss/_icons.scss */
 .icons {
   font-family: "psdoc-icons" !important;
 }
 
-/* line 36, scss/_icons.scss */
+/* line 34, scss/_icons.scss */
 .icons {
   font-size: 1.5rem;
 }
-/* line 39, scss/_icons.scss */
+/* line 37, scss/_icons.scss */
 .icons.search:before {
   content: "\e003";
 }
-/* line 42, scss/_icons.scss */
+/* line 40, scss/_icons.scss */
 .icons.settings:before {
   content: "\e600";
 }
-/* line 45, scss/_icons.scss */
+/* line 43, scss/_icons.scss */
 .icons.toc:before {
   content: "\e002";
 }
 
-/* line 50, scss/_icons.scss */
+/* line 48, scss/_icons.scss */
 .icon-psLogo:before {
   content: "\e001";
 }
 
-/* line 53, scss/_icons.scss */
+/* line 51, scss/_icons.scss */
 .icon-search:before {
   content: "\e003";
 }
 
-/* line 56, scss/_icons.scss */
+/* line 54, scss/_icons.scss */
 .icon-audioOff:before {
   content: "\e006";
 }
 
-/* line 59, scss/_icons.scss */
+/* line 57, scss/_icons.scss */
 .icon-cancel:before {
   content: "\e004";
 }
 
-/* line 62, scss/_icons.scss */
+/* line 60, scss/_icons.scss */
 .icon-psvitaLogo:before {
   content: "\e00a";
 }
 
-/* line 65, scss/_icons.scss */
+/* line 63, scss/_icons.scss */
 .icon-audioOn:before {
   content: "\e00c";
 }
 
-/* line 68, scss/_icons.scss */
+/* line 66, scss/_icons.scss */
 .icon-libraryAdd:before {
   content: "\e00d";
 }
 
-/* line 71, scss/_icons.scss */
+/* line 69, scss/_icons.scss */
 .icon-catalog:before {
   content: "\e00f";
 }
 
-/* line 74, scss/_icons.scss */
+/* line 72, scss/_icons.scss */
 .icon-profile:before {
   content: "\e000";
 }
 
-/* line 77, scss/_icons.scss */
+/* line 75, scss/_icons.scss */
 .icon-library:before {
   content: "\e005";
 }
 
-/* line 80, scss/_icons.scss */
+/* line 78, scss/_icons.scss */
 .icon-leftArrow:before {
   content: "\e008";
 }
 
-/* line 83, scss/_icons.scss */
+/* line 81, scss/_icons.scss */
 .icon-ps4Logo:before {
   content: "\e011";
 }
 
-/* line 86, scss/_icons.scss */
+/* line 84, scss/_icons.scss */
 .icon-downArrow:before {
   content: "\e012";
 }
 
-/* line 89, scss/_icons.scss */
+/* line 87, scss/_icons.scss */
 .icon-ps3Logo:before {
   content: "\e010";
 }
 
-/* line 92, scss/_icons.scss */
+/* line 90, scss/_icons.scss */
 .icon-cancelSquare:before {
   content: "\e014";
 }
 
-/* line 95, scss/_icons.scss */
+/* line 93, scss/_icons.scss */
 .icon-add:before {
   content: "\e013";
 }
 
-/* line 98, scss/_icons.scss */
+/* line 96, scss/_icons.scss */
 .icon-sort:before {
   content: "\e017";
 }
 
-/* line 101, scss/_icons.scss */
+/* line 99, scss/_icons.scss */
 .icon-viewReverse:before {
   content: "\e01d";
 }
 
-/* line 104, scss/_icons.scss */
+/* line 102, scss/_icons.scss */
 .icon-shoppingCart:before {
   content: "\e00b";
 }
 
-/* line 107, scss/_icons.scss */
+/* line 105, scss/_icons.scss */
 .icon-remove:before {
   content: "\e016";
 }
 
-/* line 110, scss/_icons.scss */
+/* line 108, scss/_icons.scss */
 .icon-upArrowAlt:before {
   content: "\e009";
 }
 
-/* line 113, scss/_icons.scss */
+/* line 111, scss/_icons.scss */
 .icon-downArrowAlt:before {
   content: "\e018";
 }
 
-/* line 116, scss/_icons.scss */
+/* line 114, scss/_icons.scss */
 .icon-filter:before {
   content: "\e015";
 }
 
-/* line 119, scss/_icons.scss */
+/* line 117, scss/_icons.scss */
 .icon-rightArrow:before {
   content: "\e008";
 }
 
-/* line 122, scss/_icons.scss */
+/* line 120, scss/_icons.scss */
 .icon-menu:before {
   content: "\e01a";
 }
 
-/* line 125, scss/_icons.scss */
+/* line 123, scss/_icons.scss */
 .icon-toc:before {
   content: "\e002";
 }
 
-/* line 128, scss/_icons.scss */
+/* line 126, scss/_icons.scss */
 .icon-leftArrow:before {
   content: "\e019";
 }
 
-/* line 131, scss/_icons.scss */
+/* line 129, scss/_icons.scss */
 .icon-close:before {
   content: "\e01e";
 }
 
-/* line 134, scss/_icons.scss */
+/* line 132, scss/_icons.scss */
 .icon-view:before {
   content: "\e00e";
 }
 
-/* line 137, scss/_icons.scss */
+/* line 135, scss/_icons.scss */
 .icon-expand:before {
   content: "\e007";
 }
 
-/* line 140, scss/_icons.scss */
+/* line 138, scss/_icons.scss */
 .icon-tooltip:before {
   content: "\e01b";
 }
 
-/* line 143, scss/_icons.scss */
+/* line 141, scss/_icons.scss */
 .icon-video:before {
   content: "\e01f";
 }
 
-/* line 146, scss/_icons.scss */
+/* line 144, scss/_icons.scss */
 .icon-settings:before {
   content: "\e600";
 }
 
-/* line 149, scss/_icons.scss */
+/* line 147, scss/_icons.scss */
 .icon-info:before {
   content: "\e601";
 }
 
-/* line 152, scss/_icons.scss */
+/* line 150, scss/_icons.scss */
 .icon-xlarge {
   font-size: 2.5rem;
 }
 
-/* line 155, scss/_icons.scss */
+/* line 153, scss/_icons.scss */
 .icon-xlarge.icon-psvitaLogo {
   font-size: 3.25rem;
 }
 
-/* line 158, scss/_icons.scss */
+/* line 156, scss/_icons.scss */
 .icon-large {
   font-size: 2rem;
 }
 
-/* line 161, scss/_icons.scss */
+/* line 159, scss/_icons.scss */
 .icon-medium {
   font-size: 1.5rem;
 }
 
-/* line 164, scss/_icons.scss */
+/* line 162, scss/_icons.scss */
 .icon-small {
   font-size: 1.25rem !important;
 }
 
-/* line 167, scss/_icons.scss */
+/* line 165, scss/_icons.scss */
 .icon-xsmall {
   font-size: 0.75rem;
 }
 
-/* line 170, scss/_icons.scss */
+/* line 168, scss/_icons.scss */
 .icon-xxsmall {
   font-size: 0.5rem;
 }
 
-/* line 173, scss/_icons.scss */
+/* line 171, scss/_icons.scss */
 .icon-header {
   font-size: 5rem;
   line-height: 1;
 }
 
-/* line 177, scss/_icons.scss */
+/* line 175, scss/_icons.scss */
 .ux-button {
   cursor: pointer;
   background-color: #333333;
   border: 1px solid #333333;
   text-align: center;
 }
-/* line 182, scss/_icons.scss */
+/* line 180, scss/_icons.scss */
 .ux-button.square {
   width: 47px;
   height: 47px;
@@ -8157,7 +8169,7 @@ hr {
   -moz-border-radius: 4px;
   border-radius: 4px;
 }
-/* line 189, scss/_icons.scss */
+/* line 187, scss/_icons.scss */
 .ux-button.circle {
   width: 60px;
   height: 60px;
@@ -8167,7 +8179,7 @@ hr {
   opacity: 0.8;
 }
 
-/* line 198, scss/_icons.scss */
+/* line 196, scss/_icons.scss */
 .ux-icon {
   color: white;
   vertical-align: bottom;
@@ -8176,16 +8188,16 @@ hr {
   font-size: 1.875rem;
 }
 
-/* line 205, scss/_icons.scss */
+/* line 203, scss/_icons.scss */
 .modal-controls {
   position: absolute;
 }
-/* line 208, scss/_icons.scss */
+/* line 206, scss/_icons.scss */
 .modal-controls.expand {
   right: 15px;
   top: 15px;
 }
-/* line 212, scss/_icons.scss */
+/* line 210, scss/_icons.scss */
 .modal-controls.video {
   top: 50%;
   left: 50%;
@@ -8244,6 +8256,20 @@ ul.colorblocks li span.square.color6 {
   background: #333333;
 }
 
+/* line 36, scss/_fundamentals.scss */
+ul.icon-list {
+  width: 100%;
+}
+/* line 38, scss/_fundamentals.scss */
+ul.icon-list li {
+  text-align: left;
+}
+/* line 41, scss/_fundamentals.scss */
+ul.icon-list .ux-icon {
+  display: inline-block !important;
+  vertical-align: middle !important;
+}
+
 /* line 1, scss/_layout.scss */
 .h-gradient, .wireframe-wrapper .topbar.with-gradient {
   background-image: -webkit-gradient(linear, 0% 50%, 100% 50%, color-stop(0%, #202060), color-stop(100%, #298fd7));
@@ -8270,7 +8296,7 @@ ul.colorblocks li span.square.color6 {
   border-bottom: none !important;
 }
 /* line 15, scss/_layout.scss */
-.wireframe-wrapper .wireframes h3 {
+.wireframe-wrapper .wireframes h4 {
   margin: 0;
 }
 /* line 19, scss/_layout.scss */
@@ -8326,7 +8352,7 @@ ul.colorblocks li span.square.color6 {
   height: 15rem;
 }
 /* line 63, scss/_layout.scss */
-.wireframe-wrapper .main div h3 {
+.wireframe-wrapper .main div h4 {
   white-space: nowrap;
   margin-top: 20%;
 }
@@ -8341,7 +8367,7 @@ ul.colorblocks li span.square.color6 {
   text-align: center;
 }
 /* line 74, scss/_layout.scss */
-.wireframe-wrapper .main div:last-child h3 {
+.wireframe-wrapper .main div:last-child h4 {
   margin-top: 30% !important;
 }
 /* line 78, scss/_layout.scss */
@@ -8381,8 +8407,12 @@ ul.colorblocks li span.square.color6 {
   text-align: center;
   margin-bottom: 1rem;
 }
+/* line 6, scss/_components.scss */
+.image-with-border img {
+  border: 1px solid #333333;
+}
 
-/* line 7, scss/_components.scss */
+/* line 10, scss/_components.scss */
 .modal-image-container {
   display: block;
   position: relative;
@@ -8390,18 +8420,22 @@ ul.colorblocks li span.square.color6 {
   height: 100%;
   margin: 0 auto 2rem;
 }
-/* line 13, scss/_components.scss */
+/* line 16, scss/_components.scss */
 .modal-image-container img {
   width: 100%;
 }
 
-/* line 18, scss/_components.scss */
+/* line 20, scss/_components.scss */
+.modal-content {
+  text-align: center;
+}
+/* line 22, scss/_components.scss */
 .modal-content > * {
   width: 80%;
   margin: 0 auto 1rem;
 }
 
-/* line 23, scss/_components.scss */
+/* line 27, scss/_components.scss */
 .hide-modal {
   position: absolute;
   top: 0;
@@ -8870,4 +8904,186 @@ table .modal-image-container {
 [vg-poster-image] img.fill, vg-poster-image img.fill {
   /* left: is changed dynamically through javascript at poster.js */
   height: 100%;
+}
+
+/*
+generic styles applied to any carousel
+must be ul/li 
+*/
+/* line 5, scss/_carousel.scss */
+.rn-carousel-container {
+  overflow: hidden;
+}
+
+/* line 8, scss/_carousel.scss */
+ul.rn-carousel-slides {
+  position: relative;
+  white-space: nowrap;
+  overflow: visible;
+  -webkit-transform: translate(0, 0);
+  -moz-transform: translate(0, 0);
+  transform: translate(0, 0);
+  padding: 0;
+  margin: 0;
+}
+/* line 17, scss/_carousel.scss */
+ul.rn-carousel-slides > li {
+  white-space: normal;
+  vertical-align: top;
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+/* line 27, scss/_carousel.scss */
+.rn-carousel-animate {
+  -webkit-transition: -webkit-transform .1s ease-out;
+  -moz-transition: -moz-transform .1s ease-out;
+  transition: transform .1s ease-out;
+}
+
+/* line 32, scss/_carousel.scss */
+.rn-carousel-noanimate {
+  -webkit-transition: none;
+  -moz-transition: none;
+  -ms-transition: none;
+  -o-transition: none;
+  transition: none;
+}
+
+/* line 39, scss/_carousel.scss */
+.rn-carousel-indicator {
+  width: 100%;
+  text-align: center;
+}
+/* line 42, scss/_carousel.scss */
+.rn-carousel-indicator span {
+  padding: 0 5px;
+  color: #333;
+  transition: color .2s ease-out;
+}
+/* line 46, scss/_carousel.scss */
+.rn-carousel-indicator span:active {
+  color: white;
+}
+
+/*
+generic styles applied to any carousel
+must be ul/li 
+*/
+/* line 5, scss/_angular-carousel.scss */
+.rn-carousel-container {
+  overflow: hidden;
+  height: 100%;
+}
+
+/* line 9, scss/_angular-carousel.scss */
+ul.rn-carousel-slides {
+  position: relative;
+  white-space: nowrap;
+  overflow: visible;
+  -webkit-transform: translate(0, 0);
+  -moz-transform: translate(0, 0);
+  transform: translate(0, 0);
+  padding: 0;
+  margin: 0;
+}
+/* line 18, scss/_angular-carousel.scss */
+ul.rn-carousel-slides > li {
+  white-space: normal;
+  vertical-align: top;
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  text-align: center;
+}
+
+/* line 29, scss/_angular-carousel.scss */
+.rn-carousel-animate {
+  -webkit-transition: -webkit-transform .1s ease-out;
+  -moz-transition: -moz-transform .1s ease-out;
+  transition: transform .1s ease-out;
+}
+
+/* line 34, scss/_angular-carousel.scss */
+.rn-carousel-noanimate {
+  -webkit-transition: none;
+  -moz-transition: none;
+  -ms-transition: none;
+  -o-transition: none;
+  transition: none;
+}
+
+/* line 41, scss/_angular-carousel.scss */
+.rn-carousel-indicator {
+  width: 100%;
+  text-align: center;
+  cursor: pointer;
+  margin-top: 1rem;
+}
+/* line 46, scss/_angular-carousel.scss */
+.rn-carousel-indicator .carousel-pagination {
+  display: inline-block;
+  border-radius: 50%;
+  width: 25px;
+  height: 25px;
+  background: #333;
+  margin: 0 0.75rem 0 0;
+}
+/* line 53, scss/_angular-carousel.scss */
+.rn-carousel-indicator .carousel-pagination.active {
+  background: white;
+}
+
+/* line 58, scss/_angular-carousel.scss */
+.rn-carousel-image {
+  max-width: 100%;
+  max-height: 95%;
+  height: auto;
+}
+
+/* line 63, scss/_angular-carousel.scss */
+.rn-carousel-image-container {
+  position: relative;
+}
+
+/* line 66, scss/_angular-carousel.scss */
+.carousel-left {
+  position: absolute;
+  top: 50%;
+  left: 1%;
+  margin-top: -46px;
+}
+
+/* line 72, scss/_angular-carousel.scss */
+.carousel-right {
+  position: absolute;
+  top: 50%;
+  right: 1%;
+  margin-top: -46px;
+}
+
+@media screen and (max-width: 48rem) {
+  /* line 79, scss/_angular-carousel.scss */
+  .detailbox {
+    padding: 0 !important;
+  }
+
+  /* line 83, scss/_angular-carousel.scss */
+  .rn-carousel-container .ux-icon {
+    background: none !important;
+    border: none;
+  }
+  /* line 87, scss/_angular-carousel.scss */
+  .rn-carousel-container .carousel-right {
+    right: 0 !important;
+  }
+  /* line 90, scss/_angular-carousel.scss */
+  .rn-carousel-container .carousel-left {
+    left: 0 !important;
+  }
 }

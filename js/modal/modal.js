@@ -42,7 +42,7 @@ app.directive('digireaderModal', function ($rootScope, $templateCache, $compile,
                                 break;
                         }
 
-
+                        console.log('CURRENT TEMPLATE ', template);
                         element.find('modal-element').replaceWith( $compile(template)(scope) );
 
                         $timeout(function(){
