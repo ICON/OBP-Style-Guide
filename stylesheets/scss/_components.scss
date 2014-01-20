@@ -3,6 +3,9 @@
   cursor: pointer;  
   text-align: center;
   margin-bottom: 1rem;
+  img {
+    border: 1px solid $dark-grey;
+  }
 }
 .modal-image-container {
   display: block;
@@ -15,6 +18,7 @@
   }
 }
 .modal-content {
+  text-align: center;
   > * {
     width: 80%;
     margin: 0 auto 1rem;

@@ -63,6 +63,9 @@ code {
     .attr {
       color: #008080;
     }
+    .symbol {
+      color: #990073;
+    }
   }
 }
 .clearfix:after {
@@ -101,4 +104,13 @@ hr {
   img {
     margin-top: 0.5rem;
   }
+}
+.doc-class {
+  font-family: "sstbold";
+  background: $light-grey;
+  color: $medium-blue;
+  white-space: nowrap;
+}
+.with-shadow {
+  @include box-shadow($medium-grey 5px 5px 10px);
 }
