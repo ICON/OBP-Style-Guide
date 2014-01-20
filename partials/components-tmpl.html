@@ -2,9 +2,10 @@
 <hr>
 <h2>Modal Images</h2>
 
-<div class="image-with-border modal-trigger" ng-click="expandModal(element)">
+<div class="image-with-border modal-trigger" ng-controller="elementCtrl" ng-click="expandModal(thisModalElement)">
   <div class="modal-image-container">
     <img ng-src="http://placekitten.com/800/600" src="http://placekitten.com/800/600"> 
     <span class="ux-button square ux-icon modal-controls expand icon-expand"></span>
   </div>
 </div>
+
