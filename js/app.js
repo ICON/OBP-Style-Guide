@@ -2,13 +2,25 @@
 // Documentation can be found at: http://foundation.zurb.com/docs
 $(document).foundation();
 
-var app = angular.module('styleGuideApp', ['ngAnimate', 'ngRoute', 'hljs', 'ngTouch']);
+var app = angular.module('styleGuideApp', [
+	'ngAnimate', 
+	'ngRoute', 
+	'hljs', 
+	'ngTouch',
+	'com.2fdevs.videogular',
+	'com.2fdevs.videogular.plugins.controlbar',
+	'com.2fdevs.videogular.plugins.overlayplay',
+	'com.2fdevs.videogular.plugins.buffering',
+	'com.2fdevs.videogular.plugins.poster'
+]);
+
 
 app.config( function ($routeProvider, $sceDelegateProvider) {
 
 
 
-	$sceDelegateProvider.resourceUrlWhitelist(["self", "http*://d7cqn9pfudpvk.cloudfront.net/**", "http*://placekitten.com/**"]);
+	$sceDelegateProvider.resourceUrlWhitelist(["self", "http*://d7cqn9pfudpvk.cloudfront.net/**", "http://placekitten.com/**"]);
+
 
 	//================================================
 	// Define all the routes
