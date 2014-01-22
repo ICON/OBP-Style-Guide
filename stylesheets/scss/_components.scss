@@ -18,3 +18,29 @@
   background:url("../images/word-logo.png") no-repeat 0 4px;
   padding-left: 25px;
 }
+.body-control-container {
+  @include clearfix();
+  .body-control {
+    font-size: 1.25rem;
+    font-weight: normal;
+    line-height: $line-height-base;
+    padding: 0;
+    margin: 0 0 18px 0;
+    &:after {
+      content: "..................................................................................................................................................................................................................................................";
+      overflow: hidden;
+      display: block;
+      height: 30px;
+    }
+    dt, dd {
+      white-space: nowrap;
+    }
+  }
+  .body-control-action {
+    float: right;
+    @extend %obp-icons !optional;
+  }
+  .body-control-title {
+    float: left;
+  }
+}

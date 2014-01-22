@@ -8,7 +8,7 @@ $button-circle: 60px;
   "../fonts/psdoc-icons.ttf",
   "../fonts/psdoc-icons.svg#psdoc-icons"), normal, normal);
 
-@include font-face("obp-sce-webfont", font-files(
+@include font-face("obp-icons", font-files(
   "../fonts/obp_sce-webfont.woff",
   "../fonts/obp_sce-webfont.eot",
   "../fonts/obp_sce-webfont.eot#iefix",
@@ -29,6 +29,9 @@ $button-circle: 60px;
 
 %psdoc-icons {
   font-family: "psdoc-icons" !important;
+}
+%obp-icons {
+  font-family: "obp-icons" !important;
 }
 
 .icons {
