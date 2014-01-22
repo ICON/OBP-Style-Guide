@@ -8,7 +8,7 @@ app.config( function ($routeProvider, $sceDelegateProvider) {
 
 
 
-	$sceDelegateProvider.resourceUrlWhitelist(["self", "http*://d7cqn9pfudpvk.cloudfront.net/**, http*://placekitten.com/**"]);
+	$sceDelegateProvider.resourceUrlWhitelist(["self", "http*://d7cqn9pfudpvk.cloudfront.net/**", "http*://placekitten.com/**"]);
 
 	//================================================
 	// Define all the routes
