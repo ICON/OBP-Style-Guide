@@ -7,28 +7,14 @@
     border: 1px solid $dark-grey;
   }
 }
-.modal-image-container {
-  display: block;
-  position: relative;
-  width: 80%;
-  height: 100%;
-  margin: 0 auto 2rem;
-  img {
-    width: 100%;
-  }
+.doc-class {
+  font-family: "sstbold";
+  font-weight: normal !important;
+  background: $light-grey;
+  color: $medium-blue;
+  white-space: nowrap;
 }
-.modal-content {
-  text-align: center;
-  > * {
-    width: 80%;
-    margin: 0 auto 1rem;
-  }
-}
-.hide-modal {
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  cursor: pointer;
+.word {
+  background:url("../images/word-logo.png") no-repeat 0 4px;
+  padding-left: 25px;
 }
