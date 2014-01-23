@@ -48,18 +48,6 @@ ul, ol, dl {
     }
   }
 }
-ul {
-  &.icon-list {
-    width: 100%;
-    li {
-      text-align: left;
-    }
-    .ux-icon {
-      display: inline-block !important;
-      vertical-align: middle !important;
-    }
-  }
-}
 form input {
   margin: 0 !important;
 }

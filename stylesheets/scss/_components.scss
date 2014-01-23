@@ -44,3 +44,9 @@
     float: left;
   }
 }
+ul.control-list {
+  width: 100%;
+  li {
+    @extend %obp-icons !optional;
+  }
+}

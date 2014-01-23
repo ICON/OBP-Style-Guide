@@ -56,9 +56,9 @@
   <p class="word">Docx: Assign the <span class="doc-class"># Body Head</span> class to any line of text to create a header anywhere on a page.</p>
   <p>Default Body Head CSS:</p>
   <div hljs>
-    .body-head {
-      font-size: $font-size-medium;
-    }
+  .body-head {
+    font-size: $font-size-medium;
+  }
   </div>
   <p>For custom backgrounds, add a <code class="no-bg"><span class="symbol">background-image</span></code> rule to the <code class="no-bg"><span class="class">.chapter-header</span></code> class in the CSS overrides.</p>
 </div>
@@ -71,12 +71,12 @@
   <h3 id="body-normal" class="subheader">Body Normal</h3>
   <p>Static manual content is rendered as <code class="no-bg"><span class="title">&lt;p&gt;</span></code> paragraph block elements.</p>
   <div hljs>
-    .body-normal {
-      font-size: $font-size-normal;
-      font-weight: normal;
-      padding: 0;
-      margin: 0 0 1rem 0;
-    }
+  .body-normal {
+    font-size: $font-size-normal;
+    font-weight: normal;
+    padding: 0;
+    margin: 0 0 1rem 0;
+  }
   </div>
   <p class="word">Assign the <span class="doc-class"># Body Normal</span> class to any static content in the Word document.</p>
   <hr>
@@ -93,11 +93,43 @@
   <a id="control-items" class="whitespace"></a>
   <h2>Control Items</h2>
   <p>Control Items are Playstation<sup>TM</sup> specific SVG icons representing each controller button. They are used to illustrate game controls and play move instructions in manuals.</p>
+  <ul class="control-list small-block-grid-4">
+    <li>S</li>
+    <li>A</li>
+    <li>F</li>
+    <li>D</li>
+    <li>Q</li>
+    <li>W</li>
+    <li>E</li>
+    <li>R</li>
+    <li>▲</li>
+    <li>▶</li>
+    <li>▼</li>
+    <li>◀</li>
+  </ul>
+  <p>Each manual's 'Game Controls' chapter is laid out according to its print counterpart; the leader dots spanning from the title to control item is inserted with CSS content.</p>
+  <p class="subheader"><strong>Example:</strong></p>
   <div class="body-control-container">
     <dl class="body-control">
-      <dt class="body-control-title">Confirm</dt>
+      <dt class="body-control-title">Button</dt>
       <dd class="body-control-action">S</dd>
     </dl>
+  </div>
+  <p class="subheader"><strong>CSS:</strong></p>
+  <div hljs>
+  .body-control {
+    font-size: 1.25rem;
+    font-weight: normal;
+    line-height: $line-height-base;
+    padding: 0;
+    margin: 0 0 18px 0;
+    &amp;:after {
+      content: "..................................................................................................................................................................................................................................................";
+      overflow: hidden;
+      display: block;
+      height: 30px;
+    }
+  }
   </div>
 </div>
 <div class="subsection">
