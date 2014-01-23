@@ -38,24 +38,42 @@ app.controller('elementCtrl', function($scope, $rootScope) {
     type: "modal_video"
   }
 
-  $scope.mockPhotoModalElement = {
+  $scope.mockCarouselModalElement = {
     asset: "http://placekitten.com/810/600",
     assets: [],
     assetsUrl: [],
     elements: [
       {
+        asset: "http://placekitten.com/801/600",
+        assets: [],
         elements: [],
-        identifier: '',
+        identifier: "ch-1-pg-1-modal-alpha-base-3-modal-alpha-layer-1",
         position: 0,
         type: "modal_alpha_layer"
+
       },
       {
-        
+        asset: "http://placekitten.com/802/600",
+        assets: [],
+        elements: [],
+        identifier: "ch-1-pg-1-modal-alpha-base-3-modal-alpha-layer-2",
+        position: 1,
+        type: "modal_alpha_layer"
+
+      },
+      {
+        asset: "http://placekitten.com/803/600",
+        assets: [],
+        elements: [],
+        identifier: "ch-1-pg-1-modal-alpha-base-3-modal-alpha-layer-2",
+        position: 2,
+        type: "modal_alpha_layer"
+
       }
     ],
     identifier: "ch-1-pg-1-modal-image-1",
     position: 0,
-    type: "modal_image"
+    type: "modal_alpha_base"
   }
 
 });
