@@ -1,14 +1,14 @@
 <h1>Components</h1>
 <p>The following components or web elements are currently functional in the CVA interface. Classes for each component and character style are assigned in the Word document then rendered into markup and Angular functions from the parser. Each component and character style has default CSS in the base template but can be customized with override styles.</p>
 
+<a id="headers" class="whitespace"></a>
 <div class="subsection">
-  <a id="headers" class="whitespace"></a>
   <h2>Headers</h2>
   <p>There are three types of headers in the CVA.</p>
   <h3 id="ahead" class="subheader">A-Head</h3>
   <p><span data-tooltip class="has-tip tip-top" data-options="disable_for_touch:true" title="Custom A-Head example"><img class="with-shadow" src="images/component-ahead.png"></span></p>
   <p><strong>A-Heads</strong> are <code class="no-bg"><span class="title">&lt;h1&gt;</span></code> header tags that contain the chapter header and triggers a chapter break.</p> 
-  <p class="word">Docx: Assign the <span class="doc-class"># A Head</span> class to the title of each new chapter.</p>
+  <p class="word"><strong>Docx:</strong> Assign the <span class="doc-class"># A Head</span> class to the title of each new chapter.</p>
   <p>Default A-Head font sizes are responsive according to the breakpoints in following mixin:</p>
   <div hljs>
   @mixin scaled-header-font($large:52px,$medium:46px,$small:36px) {
@@ -43,7 +43,7 @@
 
   <h3 id="bhead" class="subheader">B-Head</h3>
   <p><strong>B-Heads</strong> are <code class="no-bg"><span class="title">&lt;h3&gt;</span></code> header tags that contain the page header and triggers a page break within a chapter of a manual.</p>
-  <p class="word">Docx: Assign the <span class="doc-class"># B Head</span> class to the title at the beginning of each new page.</p>
+  <p class="word"><strong>Docx:</strong> Assign the <span class="doc-class"># B Head</span> class to the title at the beginning of each new page.</p>
   <p>Default B-Head CSS:</p>
   <div hljs language="css">
     .bhead {
@@ -53,7 +53,7 @@
 
   <h3 id="body-head" class="subheader">Body Head</h3>
   <p><strong>Body Heads</strong> are also <code class="no-bg"><span class="title">&lt;h3&gt;</span></code> header tags, identical to B-Heads but do not trigger a chapter or page break.</p>
-  <p class="word">Docx: Assign the <span class="doc-class"># Body Head</span> class to any line of text to create a header anywhere on a page.</p>
+  <p class="word"><strong>Docx:</strong> Assign the <span class="doc-class"># Body Head</span> class to any line of text to create a header anywhere on a page.</p>
   <p>Default Body Head CSS:</p>
   <div hljs>
   .body-head {
@@ -62,9 +62,10 @@
   </div>
   <p>For custom backgrounds, add a <code class="no-bg"><span class="symbol">background-image</span></code> rule to the <code class="no-bg"><span class="class">.chapter-header</span></code> class in the CSS overrides.</p>
 </div>
+<!-- end headers subsection -->
 
+<a id="content" class="whitespace"></a>
 <div class="subsection">
-  <a id="content" class="whitespace"></a>
   <h2>Content</h2>
   <p>CVA content is laid out in the following ways:</p>
   <hr>
@@ -82,15 +83,15 @@
   <hr>
   <h3 id="bulleted-list" class="subheader">Bulleted List</h3>
   <p>The CPT renders bulleted lists as <code class="no-bg"><span class="title">&lt;ul&gt;</span></code> list elements. The default <code class="no-bg"><span class="attr">list-style</span></code> can be changed or hidden with CSS with the <code class="no-bg"><span class="attr">list-style-type</span></code> attribute.</p>
-  <p class="word">Docx: Assign the <span class="doc-class"># Bulleted List</span> class to the contents of the desired list.</p>
+  <p class="word"><strong>Docx:</strong> Assign the <span class="doc-class"># Bulleted List</span> class to the contents of the desired list.</p>
   <hr>
   <h3 id="external-link" class="subheader">External Link</h3>
   <p>The CPT renders external links as <code class="no-bg"><span class="title">&lt;a&gt;</span></code> elements. A class of <code class="no-bg"><span class="class">.body-hyperlink</span></code> is assigned to the <code class="no-bg"><span class="title">&lt;a&gt;</span></code> tag and the href location is defined in the CPT. </p>
-  <p class="word">Docx: Enter the hyperlink copy. Then on the same line, with no space, enter the link URL inside &#91; <em>square brackets</em> &#93; and omit the http:// prefix. Assign the <span class="doc-class"># External Link</span> class to the entire link copy. <strong>Example:</strong> <a href="#"><u>Click Me[www.example.com]</a></u></p> 
+  <p class="word"><strong>Docx:</strong> Enter the hyperlink copy. Then on the same line, with no space, enter the link URL inside &#91; <em>square brackets</em> &#93; and omit the http:// prefix. Assign the <span class="doc-class"># External Link</span> class to the entire link copy. <strong>Example:</strong> <a href="#"><u>Click Me[www.example.com]</a></u></p> 
 </div>
-
+<!-- end content subsection-->
+<a id="control-items" class="whitespace"></a>
 <div class="subsection">
-  <a id="control-items" class="whitespace"></a>
   <h2>Control Items</h2>
   <p>Control Items are Playstation<sup>TM</sup> specific SVG icons representing each controller button. They are used to illustrate game controls and play move instructions in manuals.</p>
   <ul class="control-list small-block-grid-4">
@@ -116,70 +117,192 @@
     </dl>
   </div>
   <p class="subheader"><strong>CSS:</strong></p>
-  <div hljs>
+  <div hljs language="scss">
+  <style>
   .body-control {
     font-size: 1.25rem;
-    font-weight: normal;
-    line-height: $line-height-base;
-    padding: 0;
-    margin: 0 0 18px 0;
-    &amp;:after {
+    &:after {
       content: "..................................................................................................................................................................................................................................................";
       overflow: hidden;
       display: block;
       height: 30px;
     }
   }
+  </style>
   </div>
+  <p class="word"><strong>Docx:</strong> Enter any control item title in all caps inside &#91;SQUARE BRACKETS&#93; and assign the <span class="doc-class"># Control Item</span> class to each item.<br><br>
+    <strong>Control item titles:</strong> [X], [TRIANGLE], [SQUARE], [CIRCLE], [UP], [RIGHT], [DOWN], [LEFT]   
+  </p> 
 </div>
+<!-- end control items subsection -->
+
+<a id="modals" class="whitespace"></a>
 <div class="subsection">
-  <a id="modals" class="whitespace"></a>
   <h2>Modals</h2>
-  <hr>
+  <p>Modals are images, videos or other content that expand to a full-screen overlay attached to a trigger function.</p>
   <h3 id="modal-images" class="subheader">Modal Images</h3>
-  <p>Modal Images are image thumbnails with a trigger action to expand the image to full screen. Upload images in the CPT and make sure the image files are named with a prefix: <code class="no-bg"><span class="string">modal_image_[filename].jpg</span></code> In the Word document, insert the file name where a modal image is needed, then assign the <span class="doc-class"># Modal Image</span> class to the line containing the file name.</p>
-  <div class="image-with-border modal-trigger" ng-controller="elementCtrl" ng-click="expandModal(mockPhotoModalElement)">
+  <p>Modal Images are images that expand from a thumbnail, or poster, to a full screen overlay when clicking on a <span class="ux-button square ux-icon icon-expand icon-xsmall"></span> trigger button. The images must be uploaded in the CPT; absolute sources are not supported as responsive images are implemented for different screen resolutions. Images must be uploaded in the CPT in JPG, PNG or GIF format and named with the prefix: <code class="no-bg"><span class="string">modal_image_[filename].jpg</span></code>.</p>
+  <div class="image-with-border">
+    <div class="modal-image-container modal-trigger" ng-click="expandModal(mockPhotoModalElement)" ng-controller="elementCtrl">
+      <img ng-src="http://placekitten.com/800/600" src="http://placekitten.com/800/600"> 
+      <span class="ux-button square ux-icon modal-controls expand icon-expand"></span>
+    </div>
+  </div>  
+  <p><strong><span class="subheader"></span>CSS:</strong> Modal image thumbnails/posters are set to 60% width on any display larger than <code class="no-bg"><span class="attr">$small-screen</span></code> or <code class="no-bg"><span class="value">768px</span></code> and 100% on all smaller displays.</p>
+  <div hljs language="scss">
+  <style>
+  .modal-image-container {
+    display: inline-block;
+    position: relative;
+    cursor: pointer;  
+    width: 60%;
+    img {
+      width: 100%;
+    }
+  }
+  @media screen and (max-width:#{$small-screen}) {
+    .modal-image-container, .modal-alpha-base, .inline-gif-container {
+      width: 100% !important;
+    }
+  }
+  </style>
+  </div>
+  <p class="word"><strong>Docx:</strong> Enter the image file name as it's named in the CPT and assign the <span class="doc-class"># Modal Image</span> class.</p>
+  <hr>
+  <!-- end modal images -->
+
+  <h3 id="modal-video" class="subheader">Modal Video</h3>
+  <p>Modal videos are embedded videos that display within a full screen overlay when clicking on a thumbnail or poster image and a <span class="ux-button circle ux-icon icon-rotate icon-downArrow icon-xsmall"></span> trigger button. Videos must be uploaded in the CPT in H.264/MPEG-4 format and be named with the prefix: <code class="no-bg"><span class="string">modal_video_[filename].mp4</span></code>. The parser converts the mp4 into webm format. The CSS for video thumbnail is identical to modal images above.</p>
+  <div class="image-with-border">
+    <div class="modal-image-container modal-trigger" ng-controller="elementCtrl" ng-click="expandModal(mockVideoModalElement)">
+      <img src="http://www.catster.com/files/hollywood-kitten-camera.jpg">
+      <span class="ux-button circle ux-icon modal-controls video icon-downArrow"></span>
+    </div>
+  </div>
+  <p class="word"><strong>Docx:</strong> Enter the video file name as it's named in the CPT and assign the <span class="doc-class"># Modal Video</span> class.</p>
+  <hr>
+  <!-- end modal video -->
+
+  <h3 id="modal-carousel" class="subheader">Modal Carousel</h3>
+  <p>Modal carousels are like image galleries and contain scrollable images that display in a full screen overlay when clicking on a thumbnail or poster image and a <span class="ux-button square ux-icon icon-expand icon-xsmall"></span> trigger button. Pagination below the full-size image controls the carousel. Carousel images must be uploaded in the CPT in JPG, PNG or GIF format and named with the prefix: <code class="no-bg"><span class="string">modal_carousel_[filename].jpg</span></code>. The first image in the series is used as the thumbnail/poster trigger element.</p>
+  <div class="image-with-border modal-trigger" ng-controller="elementCtrl" ng-click="expandModal(mockCarouselModalElement)">
     <div class="modal-image-container">
       <img ng-src="http://placekitten.com/800/600" src="http://placekitten.com/800/600"> 
       <span class="ux-button square ux-icon modal-controls expand icon-expand"></span>
     </div>
   </div>
-
-
-  <h2>Modal Videos</h2>
-  <div class="image-with-border modal-trigger" ng-controller="elementCtrl" ng-click="expandModal(mockVideoModalElement)">
-    <div class="modal-image-container">
-      <img width="600" height="400"src="https://d7cqn9pfudpvk.cloudfront.net/projects/58/asset_images/2897/tablet_image_modal_video_gameplay.png">
-      <span class="ux-button circle ux-icon modal-controls video icon-downArrow ch-1-pg-1-modal-video-1"></span>
+  <p class="word"><strong>Docx:</strong> Enter the carousel image file names, separated with line breaks, as they are named in the CPT and assign the <span class="doc-class"># Modal Carousel</span> class to each line.</p>
+  <!-- end modal carousel -->
+</div>
+<div class="subsection">
+  <div videogular>
+    <video class='videoPlayer' preload='metadata'>
+      <source src="https://d7cqn9pfudpvk.cloudfront.net/projects/58/asset_modal_videos/2898/modal_video_gameplay.mp4" type="video/mp4">
+      <source src="https://d7cqn9pfudpvk.cloudfront.net/projects/58/asset_modal_videos/2898/modal_video_gameplay.webm" type="video/webm">
+    </video>
+    <div vg-overlayPlay></div>
+    <div vg-controls vg-autohide="false" style="height: 50px;">
+      <div vg-playpauseButton></div>
+      <div class="vg-time-container">
+        <div vg-timeDisplay>{{ currentTime }}</div>
+        <div vg-timeDisplay>{{ totalTime }}</div>
+      </div>
+      <div vg-volume>
+        <div vg-mutebutton></div>
+      </div>
     </div>
   </div>
 </div>
+<!-- end modals subsection -->
 
-<div videogular>
-  <video class='videoPlayer' preload='metadata'>
-    <source src="https://d7cqn9pfudpvk.cloudfront.net/projects/58/asset_modal_videos/2898/modal_video_gameplay.mp4" type="video/mp4">
-    <source src="https://d7cqn9pfudpvk.cloudfront.net/projects/58/asset_modal_videos/2898/modal_video_gameplay.webm" type="video/webm">
- </video>
- <div vg-overlayPlay></div>
- <div vg-controls vg-autohide="false" style="height: 50px;">
-    <div vg-playpauseButton></div>
-   <div class="vg-time-container">
-       <div vg-timeDisplay>{{ currentTime }}</div>
-       <div vg-timeDisplay>{{ totalTime }}</div>
-   </div>
-   <div vg-volume>
-     <div vg-mutebutton></div>
-   </div>
+<a id="table" class="whitespace"></a>
+<div class="subsection">
+  <h2>Tables</h2>
+  <p>Tables are used throughout the CVA to display tabular data, but more commonly used for multiple column layouts. As of now, Gaming Docs 1.0 does not support multiple column layouts, so the workaround is to wrap content within tables in the Docx, which are rendered as HTML <code class="no-bg"><span class="title">&lt;table&gt;</span></code> elements that resemble floated block elements.</p>
+  <p>Tables are all identified with a class of <code class="no-bg"><span class="class">.body-table</span></code> and have minmal default styling.</p>
+  <div hljs language="scss">
+  <style>
+  .body-table {
+    border: 0;
+    border-collapse: collapse;
+    margin: 0 auto 1rem;
+    tr, th, td {
+      margin: 0;
+      border: 0;
+      vertical-align: top;
+    }
+    tr {
+      padding-top: 1rem;
+      &:nth-child(odd) {
+        padding-bottom: 1rem;
+      }
+      &:nth-child(even) {
+        padding-bottom: 0;
+      }
+    }
+    td {
+      &:nth-child(1) {
+        padding-right: 0.5rem;
+      }
+      &:nth-child(2) {
+        padding-left: 0.5rem; 
+      }
+    }
+  }
+  </style>
   </div>
+  <p class="word"><strong>Docx:</strong> Click anywhere on the page to add a table. Select the <em>Tables</em> tab from the tab bar menu, then click on the <img src="images/insert-button.png?2" class="icon-align">Insert Table button on the toolbar. </p>
+  <p><img src="images/word-thumbnail.png" style="width:75%"></p>
+  <p>Enter the number of columns and rows for the table.</p>
+  <p><img src="images/insert-table.png"></p>
+  <p>Below are examples of tables in Word and its rendered CVA counerpart.</p>
+  <ul class="small-block-grid-2">
+    <li><p><strong>Docx view</strong></p>
+      <table class="body-table doc-table">
+        <thead>
+          <tr>
+            <td>Column 1 Header</td>
+            <td>Column 2 Header</td>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Row 1 - Cell 1</td>
+            <td>Row 2 - Cell 1</td>
+          </tr>
+          <tr>
+            <td>Row 1 - Cell 2</td>
+            <td>Row 2 - Cell 2</td>
+          </tr>
+        </tbody>
+      </table>
+    </li>
+    <li><p><strong>Rendered HTML</strong></p>
+      <table class="body-table">
+        <thead>
+          <tr>
+            <td>Column 1 Header</td>
+            <td>Column 2 Header</td>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Row 1 - Cell 1</td>
+            <td>Row 2 - Cell 1</td>
+          </tr>
+          <tr>
+            <td>Row 1 - Cell 2</td>
+            <td>Row 2 - Cell 2</td>
+          </tr>
+        </tbody>
+      </table>
+    </li>
+  </ul>
 </div>
+<!-- end tables -->
 
-<h2>Modal Carousel</h2>
-
-
-<div class="image-with-border modal-trigger" ng-controller="elementCtrl" ng-click="expandModal(mockCarouselModalElement)">
-  <div class="modal-image-container">
-    <img ng-src="http://placekitten.com/800/600" src="http://placekitten.com/800/600"> 
-    <span class="ux-button square ux-icon modal-controls expand icon-expand"></span>
-  </div>
+<a id="inline" class="whitespace"></a>
+<div class="subsection">
+  <h2>Inline Elements</h2>
+  <p>Inline components are elements that display inline, and do not expand into modals.</p> 
 </div>
-

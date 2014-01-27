@@ -14,8 +14,6 @@ $default-float: left;
   top: 0;
   z-index: 99;
 }
-
-
 .modal-container {
   @extend %fixed;
   background: $modal-overlay-color;
@@ -33,14 +31,20 @@ $default-float: left;
 .modal-container .grid {
   @extend .row;
 }
-.modal-image-container {
-  display: block;
+.image-with-border {
   position: relative;
-  width: 80%;
-  height: 100%;
-  margin: 0 auto 2rem;
+  margin-bottom: 1rem;
+  text-align: center;
+
+}
+.modal-image-container {
+  display: inline-block;
+  position: relative;
+  cursor: pointer;  
+  width: 60%;
   img {
     width: 100%;
+    border: 1px solid $dark-grey;
   }
 }
 .modal-content {
@@ -48,6 +52,9 @@ $default-float: left;
   > * {
     width: 80%;
     margin: 0 auto 1rem;
+  }
+  img {
+    border: $border;
   }
 }
 .detailbox {
@@ -95,11 +102,6 @@ table .modal-image-container {
 
 
 @media screen and (max-width:#{$small-screen}) {
-  .modal-image-container, .modal-alpha-base, .inline-gif-container {
-    width: 100% !important;
-  }
-}
-@media screen and (max-width:#{$mobile-large-screen}) {
   .modal-image-container, .modal-alpha-base, .inline-gif-container {
     width: 100% !important;
   }

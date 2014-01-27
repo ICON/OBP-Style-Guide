@@ -18,7 +18,7 @@ app.run(['$templateCache', function($templateCache) {
 
 
   $templateCache.put('partials/document/element/modal_image.html',
-    "<div tabindex=51 class=\"image-with-border modal-trigger {{element.identifier}}\" ng-click=expandModal(element)><div class=modal-image-container><img ng-src=\"{{ element.asset }}\" ng-show=element.asset ng-src-responsive=\"[ \n" +
+    "<div tabindex=51 class=\"image-with-border {{element.identifier}}\"><div class=\"modal-image-container modal-trigger\" ng-click=expandModal(element)><img ng-src=\"{{ element.asset }}\" ng-show=element.asset ng-src-responsive=\"[ \n" +
     "\t\t\t[ 'mobile', element.assetsUrl['mobile'] ],\n" +
     "\t\t\t[ 'retina_mobile', element.assetsUrl['retina_mobile'] ],\n" +
     "\t\t\t[ 'tablet', element.assetsUrl['tablet'] ],\n" +

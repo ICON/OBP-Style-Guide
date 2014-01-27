@@ -12,13 +12,31 @@ $black-transparent: rgba(0,0,0,0.9);
 $yellow: #f5f2a5;
 $border: 1px solid $medium-grey;
 
+$mobile-screen: emCalc(320px);
+$mobile-portrait: emCalc(480px);
+$mobile-large-screen: emCalc(560px);
+$small-screen: emCalc(768px);
+$tablet-screen: emCalc(1024px);
+$medium-screen: emCalc(1280px);
+$large-screen: emCalc(1440px);
+$ps4-fullscreen: emCalc(1900px);
+
+$screen: "only screen";
+$mobile: "only screen and (min-width:'#{$mobile-screen}')";
+$small: "only screen and (min-width:'#{$small-screen}')";
+$medium: "only screen and (min-width:#{$medium-screen})";
+$large: "only screen and (min-width:'#{$large-screen}')";
+$landscape: "only screen and (orientation: landscape)";
+$portrait: "only screen and (orientation: portrait)";
+$maxMobile: "only screen and (max-width:'#{$mobile-screen}')";
+
 body, html {
   height: 100%;
   font-family: $body-font-family;
   color: $dark-grey;
 }
 #content-container {
-  margin: 3rem 0;
+  margin: 2rem 0;
   height: 100%;
 }
 strong {
@@ -87,16 +105,9 @@ code {
   height: 0;
   clear: both;
 }
-.position-fixed {
-  position: fixed;
-}
 .sidebar {
-  width: 16%;
-  padding-top: 3rem;
+  padding-top: 2rem;
   position: fixed;
-}
-.content-container {
-  margin-top: 2rem;
 }
 .accordion {
   margin-top: 1rem;
@@ -114,6 +125,9 @@ code {
 hr {
   margin: 2rem 0 !important;
 }
+img {
+  max-width: 100%;
+}
 .small-block-grid-2 {
   img {
     margin-top: 0.5rem;
@@ -128,4 +142,15 @@ hr {
   margin-bottom: 2rem;
   @include border-radius(5px);
   @include box-shadow($medium-grey 2px 2px 5px);
+}
+
+@media only screen and (min-width:#{$medium-screen}) {
+  .sidebar {
+    width: 220px;
+  }
+}
+@media only screen and (min-width:640px) and (max-width:#{$medium-screen}) {
+  .sidebar {
+    width: 200px;
+  }
 }

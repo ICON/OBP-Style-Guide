@@ -103,46 +103,41 @@
 <p>The default font for the CVA is <strong>"SST"</strong>, a non-standard font, and referenced by the <code class="no-bg">@font-face</code> rule. The base font size is <code class="no-bg"><span class="value">16px</span></code> which we use to determine <code class="no-bg"><span class="value">1rem</span></code> (root em) unit. All numerical values should be written in rem units, which are relative to the root or base font size as opposed to em units, which are relative to its parent and can cause compounding issues.</p>
 <p>We currently use four fonts out of the <strong>"SST"</strong> font-set:</p>
 <div hljs>
-  @font-face {
-    font-family: "sstregular";
-    src: "..."; #relative path of font file
-    font-weight: normal;
-    font-style: normal;
-  }
-
-  @font-face {
-    font-family: "sstitalic";
-    src: "...";
-    font-weight: normal;
-    font-style: normal;
-  }
-
-  @font-face {
-    font-family: "sstbold";
-    src: "...";
-    font-weight: normal;
-    font-style: normal;
-  }
-
-  @font-face {
-    font-family: "sstbold_italic";
-    src: "...";
-    font-weight: normal;
-    font-style: normal;
-  }
-
-  body {
-    font-family: "sstregular", Helvetica, Arial, sans-serif;
-  }
+@font-face {
+  font-family: "sstregular";
+  src: "..."; #relative path of font file
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "sstitalic";
+  src: "...";
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "sstbold";
+  src: "...";
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "sstbold_italic";
+  src: "...";
+  font-weight: normal;
+  font-style: normal;
+}
+body {
+  font-family: "sstregular", Helvetica, Arial, sans-serif;
 }
 </div>
 <p>Default font-size variables based on <code class="no-bg"><span class="value">16px</span></code> base-font-size:</p>
 <div hljs>
-  $font-size-small: 0.875rem; 
-  $font-size-normal: 1.15rem;
-  $font-size-medium: 1.5rem; 
-  $font-size-large: 1.875rem;
-  $font-size-larger: 3.25rem;
+$font-size-small: 0.875rem; 
+$font-size-normal: 1.15rem;
+$font-size-medium: 1.5rem; 
+$font-size-large: 1.875rem;
+$font-size-larger: 3.25rem;
 </div>
 <p>All text is rendered in the <strong>"SST"</strong> font in the base template, but can be replaced by theme overrides by uploading the font files (in .ttf, .woff, .eot and .svg formats) in the CPT then referencing the font(s) with the above syntax in the custom CSS overrides.</p>
 <!-- end type -->
@@ -151,17 +146,16 @@
 <h2 class="spacer">Icons</h2>
 <p>There is a custom set of icons rendered as SVG fonts and used throughout the CVA for pagination, expand, video and various other buttons. The font-family name is <strong>"psdoc-icons"</strong> which following CSS assigns to any class name that contains <code class="no-bg"><span class="value">"icon-"</span></code></p>
 <div hljs>
-  [class^="icon-"],
-  [class*=" icon-"] {
-    font-family: "psdoc-icons";
-    font-weight: normal;
-    font-style: normal;
-    text-transform: none;
-    line-height: $line-height-normal;
-    -webkit-font-smoothing: antialiased;
-    text-decoration: inherit;
-    display: inline-block;
-  }
+[class^="icon-"],
+[class*=" icon-"] {
+  font-family: "psdoc-icons";
+  font-weight: normal;
+  font-style: normal;
+  text-transform: none;
+  -webkit-font-smoothing: antialiased;
+  text-decoration: inherit;
+  display: inline-block;
+}
 </div>
 <p>psdoc-icons used in CVA:</p>
 <ul class="icon-list small-block-grid-2">
