@@ -89,7 +89,26 @@ ul.control-list {
   }
 }
 .icon-align {
-  width: 20px;
+  height: 20px;
   vertical-align: baseline;
   margin-right: 5px;
+}
+.body-image, .inline-gif-container {
+  margin-bottom: 1rem;
+  text-align: center;
+  img {
+    border: $border;
+  }
+  &.float-left img {
+    float: left;
+    margin-right: 0.5rem;
+  }
+  &.float-right img {
+    float: right;
+    margin-left: 0.5rem;
+  }
+}
+.clear-image {
+  @extend .clearfix;
+  margin-top: 1rem;
 }

@@ -48,6 +48,17 @@
 <hr>
 <!-- end media queries -->
 
+<a id="unique-ids" class="whitespace"></a>
+<h2>Unique Identifiers</h2>
+<p>Every element in the CVA includes a unique identifier rendered in a CSS class. Each class is named by the element type + sequential order of element on the current page, then nested after each parent element and always starting with the chapter.</p>
+<p class="subheader"><strong>Example</strong></p>
+<div hljs language="css">
+.ch-1-pg-1-body-image-1-image-1
+</div>
+<p>These unique IDs were introduced as a way to style individual elements of the same type without affecting the rest of its siblings. Use the unique class as a direct or parent selector in any CSS rules.</p>
+<!-- end unique identifiers -->
+<hr>
+
 <a id="default-colors" class="whitespace"></a>
 <h2>Default Colors</h2>
 <p>These are the default colors used throughout the base template along with each respective $variable name and #hex color.</p>

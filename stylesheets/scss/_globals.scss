@@ -56,7 +56,8 @@ h3.spacer {
   margin-top: 2rem;
 }
 ul, ol, dl {
-  margin: 0;
+  margin: 0 0 1rem;
+  list-style-position: inside;
   &.off-canvas-list {
     font-size: remCalc(12px) !important;
   }
@@ -136,6 +137,9 @@ img {
 .with-shadow {
   @include box-shadow($medium-grey 5px 5px 10px);
 }
+.subheader {
+  margin-top: 1rem;
+}
 .subsection {
   padding: 1rem;
   border: 1px solid $light-grey;
@@ -143,7 +147,15 @@ img {
   @include border-radius(5px);
   @include box-shadow($medium-grey 2px 2px 5px);
 }
-
+.left-justify {
+  text-align: left;
+}
+.right-justify {
+  text-align: right;
+}
+.top-space {
+  margin-top: 1rem;
+}
 @media only screen and (min-width:#{$medium-screen}) {
   .sidebar {
     width: 220px;

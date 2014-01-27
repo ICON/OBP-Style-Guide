@@ -100,8 +100,6 @@
     @include box-shadow($medium-grey 2px 2px 5px);
   }
 }
-.small-block-grid-2 {
-  li {
-    text-align: center;
-  }
+.centered {
+  text-align: center;
 }
