@@ -7,11 +7,11 @@
   <p>There are three types of headers in the CVA.</p>
   <hr>
   <h3 id="a-head" class="subheader">A-Head</h3>
-  <p><span data-tooltip class="has-tip tip-top" data-options="disable_for_touch:true" title="Custom A-Head example"><img class="with-shadow" src="images/component-ahead.png"></span></p>
   <p><strong>A-Heads</strong> are <code class="no-bg"><span class="title">&lt;h1&gt;</span></code> header tags that contain the chapter header and triggers a chapter break.</p> 
+  <p><span data-tooltip class="has-tip tip-top" data-options="disable_for_touch:true" title="Custom A-Head example"><img class="with-shadow" src="images/component-ahead.png"></span></p>
   <p class="word"><strong>Docx:</strong> Assign the <span class="doc-class"># A Head</span> class to the title of each new chapter.</p>
-  <p>Default A-Head font sizes are responsive according to the breakpoints in following mixin:</p>
-<div hljs>
+  <p>Default A-Head font sizes, by default, are responsive according to the breakpoints in following mixin:</p>
+<div hljs language="scss">
 @mixin scaled-header-font($large:52px,$medium:46px,$small:36px) {
   @media only screen and (min-width:$small-screen) {
     font-size: $large;
@@ -28,7 +28,7 @@
 }
 </div>
   <p>Default A-Head CSS</p>
-<div hljs>
+<div hljs language="scss">
 .chapter-header { 
   @include scaled-header-font;
   width: 100%;
@@ -41,19 +41,17 @@
   white-space: nowrap;
 }
 </div>
-<!-- end ahead
- -->
+<!-- end ahead-->
   <h3 id="b-head" class="subheader">B-Head</h3>
   <p><strong>B-Heads</strong> are <code class="no-bg"><span class="title">&lt;h3&gt;</span></code> header tags that contain the page header and triggers a page break within a chapter of a manual.</p>
   <p class="word"><strong>Docx:</strong> Assign the <span class="doc-class"># B Head</span> class to the title at the beginning of each new page.</p>
   <p>Default B-Head CSS:</p>
-<div hljs language="css">
+<div hljs language="scss">
 .bhead {
-  font-size: $font-size-medium; #1.5rem/24px
+  font-size: $font-size-medium; //1.5rem/24px
 }
 </div>
-<!-- end b-head
- -->
+<!-- end b-head-->
   <h3 id="body-head" class="subheader">Body Head</h3>
   <p><strong>Body Heads</strong> are also <code class="no-bg"><span class="title">&lt;h3&gt;</span></code> header tags, identical to B-Heads but do not trigger a chapter or page break.</p>
   <p class="word"><strong>Docx:</strong> Assign the <span class="doc-class"># Body Head</span> class to any line of text to create a header anywhere on a page.</p>
@@ -141,7 +139,7 @@
     </dl>
   </div>
   <p class="subheader"><strong>CSS:</strong></p>
-<div hljs language="css">
+<div hljs language="scss">
 .body-control {
   font-size: 1.25rem;
   &:after {
@@ -173,7 +171,7 @@
     </div>
   </div>  
   <p><strong><span class="subheader"></span>CSS:</strong> Modal image thumbnails/posters are set to 60% width on any display larger than <code class="no-bg"><span class="attr">$small-screen</span></code> or <code class="no-bg"><span class="value">768px</span></code> and 100% on all smaller displays.</p>
-  <div hljs language="css">
+  <div hljs language="scss">
   .modal-image-container {
     display: inline-block;
     position: relative;
@@ -188,6 +186,19 @@
       width: 100% !important;
     }
   }
+  </div>
+  <p class="subheader">Custom Borders</p>
+  <p>Borders and <a href="http://www.w3schools.com/cssref/css3_pr_border-image.asp" target="_blank">border-images</a> can be added to modal posters by adding the following CSS:</p>
+  <div hljs language="scss">
+  .modal-image-container {
+    img {
+      border-width: 20px;
+      -moz-border-image: $border-img 20 repeat;
+      -webkit-border-image: $border-img 20 repeat;
+      -o-border-image: $border-img 20 repeat;
+      border-image: $border-img 20 repeat;
+    }
+  }  
   </div>
   <p class="word"><strong>Docx:</strong> Enter the image file name as it's named in the CPT and assign the <span class="doc-class"># Modal Image</span> class.</p>
   <hr>
@@ -232,7 +243,7 @@
 </div>
 </div>
   <p class="subheader"><strong>CSS:</strong></p>
-<div hljs language="css">
+<div hljs language="scss">
 .body-image {
   margin-bottom: 1rem;
   text-align: center;
@@ -252,7 +263,7 @@
       <img src="http://placekitten.com/150/100">
     </div>
     <p class="left-justify">Float image to the left of text. Add a right margin to <code class="no-bg"><span class="title">&lt;img&gt;</span></code></p>
-<div class="clear-image" hljs language="css">
+<div class="clear-image" hljs language="scss">
 .body-image.unique-id {
   img {
     float: left;
@@ -265,7 +276,7 @@
       <img src="http://placekitten.com/150/100">
     </div>
     <p class="right-justify">Float image to the right of text. Add a left margin to <code class="no-bg"><span class="title">&lt;img&gt;</span></code></p>
-<div class="clear-image" hljs language="css">
+<div class="clear-image" hljs language="scss">
 .body-image.unique-id {
   img {
     float: right;
@@ -282,11 +293,11 @@
   <p>Inline gifs behave exactly like inline images and share the same styling. However, gifs are rarely used in manuals; videos are more common for displaying animations due to its smaller file size.</p>
   <p class="subheader"><strong>HTML:</strong></p>
 <div hljs language="html">
-<div class="inline-gif-container">
-  <img src="images/example-url.gif">
+  <div class="inline-gif-container">
+    <img src="images/example-url.gif">
+  </div>
 </div>
-</div>
-  <p class="subheader"><strong>CSS:</strong> Same as <a href="#inline-images">Inline Images</a></p>
+  <p class="subheader"><strong>CSS:</strong> Same as <a href="#inline-image">Inline Images</a></p>
   <div class="inline-gif-container top-space">
     <img src="https://cpt-assets.s3.amazonaws.com/projects/54/asset_gifs/984/gif_cat_flip.gif" style="width:60%">
   </div>
@@ -322,7 +333,7 @@
   <h2>Tables</h2>
   <p>Tables are used throughout the CVA to display tabular data, but more commonly used for multiple column layouts. As of now, Gaming Docs 1.0 does not support multiple column layouts, so the workaround is to wrap content within tables in the Docx, which are rendered as HTML <code class="no-bg"><span class="title">&lt;table&gt;</span></code> elements that resemble floated block elements.</p>
   <p>Tables are all identified with a class of <code class="no-bg"><span class="class">.body-table</span></code> and have minmal default styling.</p>
-  <div hljs language="css">
+  <div hljs language="scss">
   <style>
   .body-table {
     border: 0;

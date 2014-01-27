@@ -94,23 +94,24 @@
 <p><img src="images/layout-toc-mobile.png"></p>
 <p>Custom TOCs are easily styled with the following CSS, this example is from an existing version. If your custom styles are being overwritten by the default CSS, add the <code class="no-bg"><span class="value">!important</span></code> rule to the end of the declaration:</p>
 <div hljs language="scss">
-.side-toc { /*outer wrapper of the TOC*/
+<style>
+.side-toc { //outer wrapper of the TOC
   background:url('images/exmaple.png'); //set a background image or color to TOC
 }
-.toc-title { /*style the title of TOC*/
+.toc-title { //style the title of TOC
   margin-left: 2.5rem !important;
   font-family: "SFbold" !important;
 }
-.toc-item { /*style li attributes of TOC list*/
+.toc-item { //style li attributes of TOC list
   font-size: 1.875rem !important;
   margin: 0;
   padding: 0;
   line-height: 0.8;
-  a { /*style href attributes*/
+  a { //style href attributes
     margin: 0 0.5rem;
     padding: 15px;
     color: $link-color !important;
-    &:hover, &:active, &.is-active { /*style href hover/active state attributes
+    &:hover, &:active, &.is-active { //style href hover/active state attributes
       background:url('images/example-bg.png') no-repeat 0 0;
       background-size: 100%;
       color: $some-color !important;
@@ -118,10 +119,28 @@
     }
   }
 }
+</style>
 </div>
 <hr>
 <!-- end TOC -->
 
 <a id="content-area"></a>
 <h2>Content Area</h2>
-<p>The </p>
+<p>The main content area of the CVA contains all of the manual content. The content area is wrapped in a <code class="no-bg"><span class="tag">div</span></code> with a class of <code class="no-bg"><span class="class">.content-main</span></code> that spans the entire 12-column grid.</p>
+<p><img src="images/content-area.png"></p>
+<h3 id="backgrounds" class="subheader">Backgrounds</h3>
+<p>Custom background colors, <a href="http://www.w3schools.com/cssref/pr_background-image.asp" target="_blank">background-images</a>, borders and <a href="http://www.w3schools.com/cssref/css3_pr_border-image.asp" target="_blank">border-images</a> can be added by adding the following CSS to the theme stylesheet. Backgrounds can be added to the entire page by styling the <code class="no-bg"><span class="tag">body</span></code> tag.</p>
+<div hljs language="scss">
+body { //define background for entire page
+  background:url(images/example-bg.png);
+}
+.content-main {
+  background: rgba(255,255,255,0.8); //define background image or color to content area
+  border-width: 0 20px; //define background border image
+  -moz-border-image:url('images/example-bg.png') 0 20 round;
+  -webkit-border-image:url('images/example-bg.png') 0 20 round;
+  -o-border-image:url('images/example-bg.png') 0 20 round;
+  border-image:url('images/example-bg.png') 0 20 round;
+}
+</div>
+

@@ -5,10 +5,10 @@
 
 <a id="stylesheets"></a>
 <h2>Stylesheets</h2>
-<p>Stylesheets in the CVA are written in <a href="http://sass-lang.com" target="_blank">SCSS</a> and compiled into a master CSS file. Some of the default Foundation styles are in use, but most of the CSS is custom. There are default stylesheets for the base template that can be overwritten by theme templates for individual manuals. SCSS files are separated into partials according to its contents and included to the <strong>main.scss</strong> file, which then is compiled into a standard CSS file: <strong>main.css</strong>. Stylesheets will not be rendered unless they are imported.</p>
+<p>Stylesheets in the CVA are written in <a href="http://sass-lang.com" target="_blank">SCSS</a> and compiled into a master CSS file; it supports <a href="http://www.w3schools.com/css/css3_intro.asp" target="_blank">CSS3</a> and <a href="http://compass-style.org/" target="_blank">Compass</a> helpers. Some of the default Foundation styles are in use, but most of the CSS is custom. Default CSS for the base template can be overwritten by theme templates for individual manuals. SCSS files are separated into partials according to its contents and included to the <strong>main.scss</strong> file, which then is compiled into a standard CSS file: <strong>main.css</strong>. Stylesheets will not be rendered unless they are imported.</p>
 <p><strong>File location:</strong> <em>/cva/digireader/app/styles/scss/main.scss</em></p>
-<div hljs>
-  @import "example-partial";
+<div hljs language="scss">
+@import "example-partial";
 </div>
 <p>If custom theme styles are being overwritten by the default CSS, add the <code class="no-bg"><span class="value">!important</span></code> rule to the end of the declarations.</p>
 <hr>
@@ -17,34 +17,34 @@
 <a id="media-queries"></a>
 <h2>Media Queries</h2>
 <p>The Gaming Docs digital manual reader has a responsive layout based on <a href="http://foundation.zurb.com/" target="blank">Foundation</a>'s 12-column nestable grid. The breakpoints below determine which layout styling is rendered in the browser. CSS declarations can be media-specific by wrapping them in the @media syntax:</p>
-<div hljs>
-  @media [media type] and (media features) and (additional features) {
-    [media specific CSS]
-  }
+<div hljs language="scss">
+@media screen and (media features) and (additional features) {
+  [media specific CSS]
+}
 </div>
 <p><strong>Example:</strong></p>
-<div hljs>
+<div hljs language="scss">
   @media only screen and (max-width:1024px) and (min-width:768px) {
     ...
   } 
 </div>
 <h4 class="subheader">Breakpoints</h4>
-<div hljs>
-  $mobile-screen: emCalc(320px);
-  $mobile-portrait: emCalc(480px);
-  $mobile-large-screen: emCalc(560px);
-  $small-screen: emCalc(768px);
-  $tablet-screen: emCalc(1024px);
-  $medium-screen: emCalc(1280px);
-  $large-screen: emCalc(1440px);
-  $ps4-fullscreen: emCalc(1900px);
+<div hljs language="scss">
+$mobile-screen: emCalc(320px);
+$mobile-portrait: emCalc(480px);
+$mobile-large-screen: emCalc(560px);
+$small-screen: emCalc(768px);
+$tablet-screen: emCalc(1024px);
+$medium-screen: emCalc(1280px);
+$large-screen: emCalc(1440px);
+$ps4-fullscreen: emCalc(1900px);
 </div>
 <h4 class="subheader">Media Query Rules <small>&#45; variables must be wrapped in '#{$...}'</small></h4>
-<div hljs>
-  $mobile: "only screen and (min-width:'#{$mobile-screen}')";
-  $small: "only screen and (min-width:#{$small-screen}))";
-  $medium: "only screen and (min-width:#{$medium-screen})";
-  $large: "only screen and (min-width:'#{$large-screen}')";
+<div hljs language="scss">
+$mobile: "only screen and (min-width:'#{$mobile-screen}')";
+$small: "only screen and (min-width:#{$small-screen}))";
+$medium: "only screen and (min-width:#{$medium-screen})";
+$large: "only screen and (min-width:'#{$large-screen}')";
 </div>
 <hr>
 <!-- end media queries -->
@@ -53,10 +53,10 @@
 <h2>Unique Identifiers</h2>
 <p>Every element in the CVA includes a unique identifier rendered in a CSS class. Each class is named by the element type + sequential order of element on the current page, then nested after each parent element and always starting with the chapter.</p>
 <p class="subheader"><strong>Example</strong></p>
-<div hljs language="css">
+<div hljs language="scss">
 .ch-1-pg-1-body-image-1-image-1
 </div>
-<p>These unique IDs were introduced as a way to style individual elements of the same type without affecting the rest of its siblings. Use the unique class as a direct or parent selector in any CSS rules.</p>
+<p>These unique IDs were introduced as a way to style specific instances of an element type without affecting the rest of its siblings. Use the unique class as a direct or parent selector in any CSS rules.</p>
 <!-- end unique identifiers -->
 <hr>
 
@@ -114,7 +114,7 @@
 <h2 class="spacer">Type</h2>
 <p>The default font for the CVA is <strong>"SST"</strong>, a non-standard font, and referenced by the <code class="no-bg">@font-face</code> rule. The base font size is <code class="no-bg"><span class="value">16px</span></code> which we use to determine <code class="no-bg"><span class="value">1rem</span></code> (root em) unit. All numerical values should be written in rem units, which are relative to the root or base font size as opposed to em units, which are relative to its parent and can cause compounding issues.</p>
 <p>We currently use four fonts out of the <strong>"SST"</strong> font-set:</p>
-<div hljs>
+<div hljs language="scss">
 @font-face {
   font-family: "sstregular";
   src: "..."; #relative path of font file
@@ -144,7 +144,7 @@ body {
 }
 </div>
 <p>Default font-size variables based on <code class="no-bg"><span class="value">16px</span></code> base-font-size:</p>
-<div hljs>
+<div hljs language="scss">
 $font-size-small: 0.875rem; 
 $font-size-normal: 1.15rem;
 $font-size-medium: 1.5rem; 
@@ -157,7 +157,7 @@ $font-size-larger: 3.25rem;
 <a id="icons"></a>
 <h2 class="spacer">Icons</h2>
 <p>There is a custom set of icons rendered as SVG fonts and used throughout the CVA for pagination, expand, video and various other buttons. The font-family name is <strong>"psdoc-icons"</strong> which following CSS assigns to any class name that contains <code class="no-bg"><span class="value">"icon-"</span></code></p>
-<div hljs>
+<div hljs language="scss">
 [class^="icon-"],
 [class*=" icon-"] {
   font-family: "psdoc-icons";
