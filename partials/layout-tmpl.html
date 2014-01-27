@@ -93,8 +93,7 @@
 <p>The TOC on layouts smaller than <code class="no-bg"><span class="attr">$topbar-breakpoint</span></code> is triggered by the <span class="icon-menu"></span> "hamburger" menu icon and displays above settings menu in list-view </p>
 <p><img src="images/layout-toc-mobile.png"></p>
 <p>Custom TOCs are easily styled with the following CSS, this example is from an existing version. If your custom styles are being overwritten by the default CSS, add the <code class="no-bg"><span class="value">!important</span></code> rule to the end of the declaration:</p>
-<div hljs language="css">
-<style>
+<div hljs language="scss">
 .side-toc { /*outer wrapper of the TOC*/
   background:url('images/exmaple.png'); //set a background image or color to TOC
 }
@@ -111,7 +110,7 @@
     margin: 0 0.5rem;
     padding: 15px;
     color: $link-color !important;
-    &:hover, &:active, &.is-active { /*style href hover/active state attributes*/
+    &:hover, &:active, &.is-active { /*style href hover/active state attributes
       background:url('images/example-bg.png') no-repeat 0 0;
       background-size: 100%;
       color: $some-color !important;
@@ -119,7 +118,6 @@
     }
   }
 }
-</style>
 </div>
 <hr>
 <!-- end TOC -->
