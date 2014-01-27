@@ -99,12 +99,12 @@
                   </div>
                 </dd>
                 <dd>
-                  <a href="#layout">Layout</a>
+                  <a href="#layout" ng-click="navSection('layout');">Layout</a>
                   <div id="layout" class="content">
                     <ul class="side-nav">
-                      <li><a href="#top-bar">Top Bar</a></li>
-                      <li><a href="#toc">Table of Contents</a></li>
-                      <li><a href="#content-area">Content Area</a></li>
+                      <li><a ng-click="navSection('layout', 'top-bar');">Top Bar</a></li>
+                      <li><a ng-click="navSection('layout', 'toc');">Table of Contents</a></li>
+                      <li><a ng-click="navSection('layout', 'content-area');">Content Area</a></li>
                     </ul>
                   </div>
                 </dd>
@@ -112,36 +112,37 @@
                   <a href="#components">Components</a>
                   <div id="components" class="content">
                     <ul class="side-nav">
-                      <li><a ng-click="navSection('components');">Headers</a>
+                      <li><a ng-click="navSection('components', 'headers');">Headers</a>
                         <ul>
-                          <li><a ng-click="navSection('components', 'ahead');">A-Head</a></li>
-                          <li><a ng-click="navSection('components', 'bhead');">B-Head</a></li>
-                          <li><a ng-click="navSection('components', 'bodyhead');">Body Head</a></li>
+                          <li><a ng-click="navSection('components', 'a-head');">A-Head</a></li>
+                          <li><a ng-click="navSection('components', 'b-head');">B-Head</a></li>
+                          <li><a ng-click="navSection('components', 'body-head');">Body Head</a></li>
                         </ul>
                       </li>
-                      <li><a ng-click="navSection('content');">Content</a>
+                      <li><a ng-click="navSection('components', 'content');">Content</a>
                         <ul>
-                          <li><a ng-click="navSection('components', 'blist');">Bulleted List</a></li>
-                          <li><a ng-click="navSection('components', 'extlink');">External Link</a></li>
+                          <li><a ng-click="navSection('components', 'bulleted-list');">Bulleted List</a></li>
+                          <li><a ng-click="navSection('components', 'ordered-list');">Ordered List</a></li>
+                          <li><a ng-click="navSection('components', 'external-link');">External Link</a></li>
                           <li><a ng-click="navSection('components', 'paragraph');">Paragraph</a></li>
                         </ul>
                       </li>
-                      <li><a ng-click="navSection('control-item');">Control Items</a></li>
-                      <li><a ng-click="navSection('modal');">Modals</a>
+                      <li><a ng-click="navSection('components', 'control-items');">Control Items</a></li>
+                      <li><a ng-click="navSection('components', 'modals');">Modals</a>
                         <ul>
-                          <li><a ng-click="navSection('components', 'image');">Modal Image</a></li>
-                          <li><a ng-click="navSection('components', 'video');">Modal Video</a></li>
-                          <li><a ng-click="navSection('components', 'carousel');">Modal Carousel</a></li>
+                          <li><a ng-click="navSection('components', 'modal-image');">Modal Image</a></li>
+                          <li><a ng-click="navSection('components', 'modal-video');">Modal Video</a></li>
+                          <li><a ng-click="navSection('components', 'modal-carousel');">Modal Carousel</a></li>
                         </ul>
                       </li>
-                      <li><a ng-click="navSection('inline');">Inline</a>
+                      <li><a ng-click="navSection('components', 'inline');">Inline</a>
                         <ul>
-                          <li><a ng-click="navSection('components', 'gif');">Inline Gif</a></li>
-                          <li><a ng-click="navSection('components', 'image');">Inline Image</a></li>
-                          <li><a ng-click="navSection('components', 'video');">Inline Video</a></li>
+                          <li><a ng-click="navSection('components', 'inline-gif');">Inline Gif</a></li>
+                          <li><a ng-click="navSection('components', 'inline-image');">Inline Image</a></li>
+                          <li><a ng-click="navSection('components', 'inline-video');">Inline Video</a></li>
                        </ul>
                      </li>
-                     <li><a ng-click="navSection('table');">Table</a></li>
+                     <li><a ng-click="navSection('components', 'tables');">Table</a></li>
                     </ul>
                   </div>
                 </dd>

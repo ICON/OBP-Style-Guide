@@ -31,21 +31,6 @@
   font-family: "obp-icons" !important;
   font-size: 1.5rem;
 }
-
-.icons {
-  @extend %psdoc-icons !optional;
-  font-size: 1.5rem;
-  &.search:before {
-    content: "\e003";
-  }
-  &.settings:before {
-    content: "\e600";
-  }
-  &.toc:before {
-    content: "\e002";
-  }
-}
-
 .icon-psLogo:before {
   content: "\e001";
 }

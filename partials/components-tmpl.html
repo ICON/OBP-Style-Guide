@@ -1,11 +1,12 @@
 <h1>Components</h1>
 <p>The following components or web elements are currently functional in the CVA interface. Classes for each component and character style are assigned in the Word document then rendered into markup and Angular functions from the parser. Each component and character style has default CSS in the base template but can be customized with override styles.</p>
 
-<a id="headers" class="whitespace"></a>
 <div class="subsection">
+  <a id="headers"></a>
   <h2>Headers</h2>
   <p>There are three types of headers in the CVA.</p>
-  <h3 id="ahead" class="subheader">A-Head</h3>
+  <hr>
+  <h3 id="a-head" class="subheader">A-Head</h3>
   <p><span data-tooltip class="has-tip tip-top" data-options="disable_for_touch:true" title="Custom A-Head example"><img class="with-shadow" src="images/component-ahead.png"></span></p>
   <p><strong>A-Heads</strong> are <code class="no-bg"><span class="title">&lt;h1&gt;</span></code> header tags that contain the chapter header and triggers a chapter break.</p> 
   <p class="word"><strong>Docx:</strong> Assign the <span class="doc-class"># A Head</span> class to the title of each new chapter.</p>
@@ -40,8 +41,9 @@
   white-space: nowrap;
 }
 </div>
-
-  <h3 id="bhead" class="subheader">B-Head</h3>
+<!-- end ahead
+ -->
+  <h3 id="b-head" class="subheader">B-Head</h3>
   <p><strong>B-Heads</strong> are <code class="no-bg"><span class="title">&lt;h3&gt;</span></code> header tags that contain the page header and triggers a page break within a chapter of a manual.</p>
   <p class="word"><strong>Docx:</strong> Assign the <span class="doc-class"># B Head</span> class to the title at the beginning of each new page.</p>
   <p>Default B-Head CSS:</p>
@@ -50,7 +52,8 @@
   font-size: $font-size-medium; #1.5rem/24px
 }
 </div>
-
+<!-- end b-head
+ -->
   <h3 id="body-head" class="subheader">Body Head</h3>
   <p><strong>Body Heads</strong> are also <code class="no-bg"><span class="title">&lt;h3&gt;</span></code> header tags, identical to B-Heads but do not trigger a chapter or page break.</p>
   <p class="word"><strong>Docx:</strong> Assign the <span class="doc-class"># Body Head</span> class to any line of text to create a header anywhere on a page.</p>
@@ -64,8 +67,8 @@
 </div>
 <!-- end headers subsection -->
 
-<a id="content" class="whitespace"></a>
 <div class="subsection">
+  <a id="content"></a>
   <h2>Content</h2>
   <p>CVA content is laid out in the following ways:</p>
   <hr>
@@ -82,6 +85,7 @@
   <p class="word">Assign the <span class="doc-class"># Body Normal</span> class to any static content in the Word document.</p>
   <hr>
   <!-- end body normal -->
+
   <h3 id="bulleted-list" class="subheader">Bulleted List</h3>
   <p>The CPT renders bulleted lists as <code class="no-bg"><span class="title">&lt;ul&gt;</span></code> unordered list elements. The default <code class="no-bg"><span class="attr">list-style</span></code> can be changed or hidden with CSS with the <code class="no-bg"><span class="attr">list-style-type</span></code> attribute.</p>
   <ul>
@@ -109,8 +113,9 @@
   <p class="word"><strong>Docx:</strong> Enter the hyperlink copy. Then on the same line, with no space, enter the link URL inside &#91; <em>square brackets</em> &#93; and omit the http:// prefix. Assign the <span class="doc-class"># External Link</span> class to the entire link copy. <strong>Example:</strong> <a href="#"><u>Click Me[www.example.com]</a></u></p> 
 </div>
 <!-- end content subsection-->
-<a id="control-items" class="whitespace"></a>
+
 <div class="subsection">
+  <a id="control-items"></a>
   <h2>Control Items</h2>
   <p>Control Items are Playstation<sup>TM</sup> specific SVG icons representing each controller button. They are used to illustrate game controls and play move instructions in manuals.</p>
   <ul class="control-list small-block-grid-4">
@@ -153,12 +158,13 @@
 </div>
 <!-- end control items subsection -->
 
-<a id="modals" class="whitespace"></a>
 <div class="subsection">
+  <a id="modals"></a>
   <h2>Modals</h2>
   <p>Modals are images, videos or other content that expand to a full-screen overlay attached to a trigger function.</p>
   <hr>
-  <h3 id="modal-images" class="subheader">Modal Images</h3>
+
+  <h3 id="modal-image" class="subheader">Modal Images</h3>
   <p>Modal Images are images that expand from a thumbnail, or poster, to a full screen overlay when clicking on a <span class="ux-button square ux-icon icon-expand icon-xsmall"></span> trigger button. The images must be uploaded in the CPT; absolute sources are not supported as responsive images are implemented for different screen resolutions. Images must be uploaded in the CPT in JPG, PNG or GIF format and named with the prefix: <code class="no-bg"><span class="string">modal_image_[filename].jpg</span></code>.</p>
   <div class="image-with-border">
     <div class="modal-image-container modal-trigger" ng-click="expandModal(mockPhotoModalElement)" ng-controller="elementCtrl">
@@ -212,8 +218,107 @@
 </div>
 <!-- end modals subsection -->
 
-<a id="table" class="whitespace"></a>
 <div class="subsection">
+  <a id="inline"></a>
+  <h2>Inline</h2>
+  <p>Inline components are images, videos or other elements that only display inline; they do not trigger a modal.</p> 
+  <hr>
+  <h3 id="inline-image" class="subheader">Inline Images</h3>
+  <p>Inline images are nested inside <code class="no-bg"><span class="title">&lt;div&gt;</span></code> tags with a class of <code class="no-bg"><span class="class">.body-image</span></code>. Upload images in the CPT, supported image types are JPG, PNG and SVG.</p>
+  <p class="subheader"><strong>HTML:</strong></p>
+<div hljs language="html">
+<div class="body-image">
+  <img src="images/example-url.jpg">
+</div>
+</div>
+  <p class="subheader"><strong>CSS:</strong></p>
+<div hljs language="css">
+.body-image {
+  margin-bottom: 1rem;
+  text-align: center;
+  img {
+    width: 100%;
+  }
+}
+</div>
+  <div class="body-image">
+    <img src="http://placekitten.com/400/300">
+  </div>
+  <h5 class="subheader">Inline image alignment</h5>
+  <p>Inline images, by default, are nested in <code class="no-bg"><span class="title">&lt;div&gt;</span></code> elements and center aligned. To align an inline image to be left or right-justified with text, add a CSS rule with delarations for <code class="no-bg"><span class="attr">float</span></code> and <code class="no-bg"><span class="attr">width</span></code> to the <code class="no-bg"><span class="title">&lt;img&gt;</span></code> tag on the custom theme stylesheet. Individual images can be specified with its unique identifier class.</p>
+  <ul class="small-block-grid-2">
+  <li>
+    <div class="body-image float-left">
+      <img src="http://placekitten.com/150/100">
+    </div>
+    <p class="left-justify">Float image to the left of text. Add a right margin to <code class="no-bg"><span class="title">&lt;img&gt;</span></code></p>
+<div class="clear-image" hljs language="css">
+.body-image.unique-id {
+  img {
+    float: left;
+  }
+}
+</div>
+  </li>
+  <li>
+    <div class="body-image float-right">
+      <img src="http://placekitten.com/150/100">
+    </div>
+    <p class="right-justify">Float image to the right of text. Add a left margin to <code class="no-bg"><span class="title">&lt;img&gt;</span></code></p>
+<div class="clear-image" hljs language="css">
+.body-image.unique-id {
+  img {
+    float: right;
+  }
+}
+</div>
+  </li>
+  </ul>
+  <p class="word"><strong>Docx:</strong> Enter the image file name as it's named in the CPT and assign the <span class="doc-class"># Image</span> class.</p>
+  <!-- end inline image -->
+  <hr>
+
+  <h3 id="inline-gif" class="subheader">Inline Gifs</h3>
+  <p>Inline gifs behave exactly like inline images and share the same styling. However, gifs are rarely used in manuals; videos are more common for displaying animations due to its smaller file size.</p>
+  <p class="subheader"><strong>HTML:</strong></p>
+<div hljs language="html">
+<div class="inline-gif-container">
+  <img src="images/example-url.gif">
+</div>
+</div>
+  <p class="subheader"><strong>CSS:</strong> Same as <a href="#inline-images">Inline Images</a></p>
+  <div class="inline-gif-container top-space">
+    <img src="https://cpt-assets.s3.amazonaws.com/projects/54/asset_gifs/984/gif_cat_flip.gif" style="width:60%">
+  </div>
+  <p class="word"><strong>Docx:</strong> Enter the gif file name as it's named in the CPT and assign the <span class="doc-class"># GIF</span> class.</p>
+  <!-- end inline gif -->
+  <hr>
+
+  <h3 id="inline-video" class="subheader">Inline Video</h3>
+  <p>Inline videos are embedded directly on the page and do not expand into modals. We use an HTML5 video player for AngularJS called <a href="https://github.com/2fdevs/videogular" target="_blank">Videogular</a>. This feature is <strong>no longer supported</strong> due to regulations on ESRB ratings requirement to be displayed prior to video play.</p>
+  <div videogular>
+    <video class='videoPlayer' preload='metadata'>
+      <source src="https://d7cqn9pfudpvk.cloudfront.net/projects/58/asset_modal_videos/2898/modal_video_gameplay.mp4" type="video/mp4">
+      <source src="https://d7cqn9pfudpvk.cloudfront.net/projects/58/asset_modal_videos/2898/modal_video_gameplay.webm" type="video/webm">
+    </video>
+    <div vg-overlayPlay></div>
+    <div vg-controls vg-autohide="false" style="height: 50px;">
+      <div vg-playpauseButton></div>
+      <div class="vg-time-container">
+        <div vg-timeDisplay>{{ currentTime }}</div>
+        <div vg-timeDisplay>{{ totalTime }}</div>
+      </div>
+      <div vg-volume>
+        <div vg-mutebutton></div>
+      </div>
+    </div>
+  </div><br>
+  <p class="word"><strong>Docx:</strong> Enter the video file name as it's named in the CPT and assign the <span class="doc-class"># Video</span> class.</p>
+</div>
+<!-- end inline -->
+
+<div class="subsection">
+  <a id="tables"></a>
   <h2>Tables</h2>
   <p>Tables are used throughout the CVA to display tabular data, but more commonly used for multiple column layouts. As of now, Gaming Docs 1.0 does not support multiple column layouts, so the workaround is to wrap content within tables in the Docx, which are rendered as HTML <code class="no-bg"><span class="title">&lt;table&gt;</span></code> elements that resemble floated block elements.</p>
   <p>Tables are all identified with a class of <code class="no-bg"><span class="class">.body-table</span></code> and have minmal default styling.</p>
@@ -297,101 +402,3 @@
   </ul>
 </div>
 <!-- end tables -->
-
-<a id="inline" class="whitespace"></a>
-<div class="subsection">
-  <h2>Inline</h2>
-  <p>Inline components are images, videos or other elements that only display inline; they do not trigger a modal.</p> 
-  <hr>
-  <h3 id="inline-image" class="subheader">Inline Images</h3>
-  <p>Inline images are nested inside <code class="no-bg"><span class="title">&lt;div&gt;</span></code> tags with a class of <code class="no-bg"><span class="class">.body-image</span></code>. Upload images in the CPT, supported image types are JPG, PNG and SVG.</p>
-  <p class="subheader"><strong>HTML:</strong></p>
-<div hljs language="html">
-<div class="body-image">
-  <img src="images/example-url.jpg">
-</div>
-</div>
-  <p class="subheader"><strong>CSS:</strong></p>
-<div hljs language="css">
-.body-image {
-  margin-bottom: 1rem;
-  text-align: center;
-  img {
-    width: 100%;
-  }
-}
-</div>
-  <div class="body-image">
-    <img src="http://placekitten.com/400/300">
-  </div>
-  <h5 class="subheader">Inline image alignment</h5>
-  <p>Inline images, by default, are nested in <code class="no-bg"><span class="title">&lt;div&gt;</span></code> elements and center aligned. To align an inline image to be left or right-justified with text, add a CSS rule with delarations for <code class="no-bg"><span class="attr">float</span></code> and <code class="no-bg"><span class="attr">width</span></code> to the <code class="no-bg"><span class="title">&lt;img&gt;</span></code> tag on the custom theme stylesheet. Individual images can be specified with its unique identifier class.</p>
-  <ul class="small-block-grid-2">
-  <li>
-    <div class="body-image float-left">
-      <img src="http://placekitten.com/150/100">
-    </div>
-    <p class="left-justify">Float image to the left of text. Add a right margin to <code class="no-bg"><span class="title">&lt;img&gt;</span></code></p>
-<div class="clear-image" hljs language="css">
-.body-image.unique-id {
-  img {
-    float: left;
-  }
-}
-</div>
-  </li>
-  <li>
-    <div class="body-image float-right">
-      <img src="http://placekitten.com/150/100">
-    </div>
-    <p class="right-justify">Float image to the right of text. Add a left margin to <code class="no-bg"><span class="title">&lt;img&gt;</span></code></p>
-<div class="clear-image" hljs language="css">
-.body-image.unique-id {
-  img {
-    float: right;
-  }
-}
-</div>
-  </li>
-  </ul>
-  <p class="word"><strong>Docx:</strong> Enter the image file name as it's named in the CPT and assign the <span class="doc-class"># Image</span> class.</p>
-  <!-- end inline images -->
-  <hr>
-
-  <h3 id="inline-gifs" class="subheader">Inline Gifs</h3>
-  <p>Inline gifs behave exactly like inline images and share the same styling. However, gifs are rarely used in manuals; videos are more common for displaying animations due to its smaller file size.</p>
-  <p class="subheader"><strong>HTML:</strong></p>
-<div hljs language="html">
-<div class="inline-gif-container">
-  <img src="images/example-url.gif">
-</div>
-</div>
-  <p class="subheader"><strong>CSS:</strong> Same as <a href="#inline-images">Inline Images</a></p>
-  <div class="inline-gif-container top-space">
-    <img src="https://cpt-assets.s3.amazonaws.com/projects/54/asset_gifs/984/gif_cat_flip.gif" style="width:60%">
-  </div>
-  <p class="word"><strong>Docx:</strong> Enter the gif file name as it's named in the CPT and assign the <span class="doc-class"># GIF</span> class.</p>
-  <!-- end inline gif -->
-  <hr>
-
-  <h3 id="inline-video" class="subheader">Inline Video</h3>
-  <p>Inline videos are embedded directly on the page and do not expand into modals. We use an HTML5 video player for AngularJS called <a href="https://github.com/2fdevs/videogular" target="_blank">Videogular</a>. This feature is <strong>no longer supported</strong> due to regulations on ESRB ratings requirement to be displayed prior to video play.</p>
-  <div videogular>
-    <video class='videoPlayer' preload='metadata'>
-      <source src="https://d7cqn9pfudpvk.cloudfront.net/projects/58/asset_modal_videos/2898/modal_video_gameplay.mp4" type="video/mp4">
-      <source src="https://d7cqn9pfudpvk.cloudfront.net/projects/58/asset_modal_videos/2898/modal_video_gameplay.webm" type="video/webm">
-    </video>
-    <div vg-overlayPlay></div>
-    <div vg-controls vg-autohide="false" style="height: 50px;">
-      <div vg-playpauseButton></div>
-      <div class="vg-time-container">
-        <div vg-timeDisplay>{{ currentTime }}</div>
-        <div vg-timeDisplay>{{ totalTime }}</div>
-      </div>
-      <div vg-volume>
-        <div vg-mutebutton></div>
-      </div>
-    </div>
-  </div><br>
-  <p class="word"><strong>Docx:</strong> Enter the video file name as it's named in the CPT and assign the <span class="doc-class"># Video</span> class.</p>
-</div>

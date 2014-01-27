@@ -3,17 +3,18 @@
 <hr>
 <!-- end overview -->
 
-<a id="stylesheets" class="whitespace"></a>
+<a id="stylesheets"></a>
 <h2>Stylesheets</h2>
 <p>Stylesheets in the CVA are written in <a href="http://sass-lang.com" target="_blank">SCSS</a> and compiled into a master CSS file. Some of the default Foundation styles are in use, but most of the CSS is custom. There are default stylesheets for the base template that can be overwritten by theme templates for individual manuals. SCSS files are separated into partials according to its contents and included to the <strong>main.scss</strong> file, which then is compiled into a standard CSS file: <strong>main.css</strong>. Stylesheets will not be rendered unless they are imported.</p>
 <p><strong>File location:</strong> <em>/cva/digireader/app/styles/scss/main.scss</em></p>
 <div hljs>
   @import "example-partial";
 </div>
+<p>If custom theme styles are being overwritten by the default CSS, add the <code class="no-bg"><span class="value">!important</span></code> rule to the end of the declarations.</p>
 <hr>
 <!-- end stylesheets -->
 
-<a id="media-queries" class="whitespace"></a>
+<a id="media-queries"></a>
 <h2>Media Queries</h2>
 <p>The Gaming Docs digital manual reader has a responsive layout based on <a href="http://foundation.zurb.com/" target="blank">Foundation</a>'s 12-column nestable grid. The breakpoints below determine which layout styling is rendered in the browser. CSS declarations can be media-specific by wrapping them in the @media syntax:</p>
 <div hljs>
@@ -48,7 +49,7 @@
 <hr>
 <!-- end media queries -->
 
-<a id="unique-ids" class="whitespace"></a>
+<a id="unique-ids"></a>
 <h2>Unique Identifiers</h2>
 <p>Every element in the CVA includes a unique identifier rendered in a CSS class. Each class is named by the element type + sequential order of element on the current page, then nested after each parent element and always starting with the chapter.</p>
 <p class="subheader"><strong>Example</strong></p>
@@ -59,7 +60,7 @@
 <!-- end unique identifiers -->
 <hr>
 
-<a id="default-colors" class="whitespace"></a>
+<a id="default-colors"></a>
 <h2>Default Colors</h2>
 <p>These are the default colors used throughout the base template along with each respective $variable name and #hex color.</p>
 <ul class="colorblocks">
@@ -109,7 +110,7 @@
 <hr>
 <!-- end default colors -->
 
-<a id="type" class="whitespace"></a>
+<a id="type"></a>
 <h2 class="spacer">Type</h2>
 <p>The default font for the CVA is <strong>"SST"</strong>, a non-standard font, and referenced by the <code class="no-bg">@font-face</code> rule. The base font size is <code class="no-bg"><span class="value">16px</span></code> which we use to determine <code class="no-bg"><span class="value">1rem</span></code> (root em) unit. All numerical values should be written in rem units, which are relative to the root or base font size as opposed to em units, which are relative to its parent and can cause compounding issues.</p>
 <p>We currently use four fonts out of the <strong>"SST"</strong> font-set:</p>
@@ -153,7 +154,7 @@ $font-size-larger: 3.25rem;
 <p>All text is rendered in the <strong>"SST"</strong> font in the base template, but can be replaced by theme overrides by uploading the font files (in .ttf, .woff, .eot and .svg formats) in the CPT then referencing the font(s) with the above syntax in the custom CSS overrides.</p>
 <!-- end type -->
 
-<a id="icons" class="whitespace"></a>
+<a id="icons"></a>
 <h2 class="spacer">Icons</h2>
 <p>There is a custom set of icons rendered as SVG fonts and used throughout the CVA for pagination, expand, video and various other buttons. The font-family name is <strong>"psdoc-icons"</strong> which following CSS assigns to any class name that contains <code class="no-bg"><span class="value">"icon-"</span></code></p>
 <div hljs>
