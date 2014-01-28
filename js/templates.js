@@ -71,10 +71,8 @@ app.run(['$templateCache', function($templateCache) {
     "        ]\"></div>"
   );
 
-
   $templateCache.put('modal/modal_video.html',
     "<div class=modal-content><div videogular=\"\" vg-loop=true vg-video-stretch=none><video class=videoPlayer preload=metadata><source ng-src={{videoMp4}} type=video/mp4><source ng-src={{videoWebM}} type=video/webm></video><div vg-buffering=\"\"></div><div vg-overlayplay=\"\"></div><div vg-controls=\"\" vg-autohide=false style=\"height: 50px\"><div vg-playpausebutton=\"\"></div><div class=vg-time-container><div vg-timedisplay=\"\">{{ currentTime }}</div><div vg-timedisplay=\"\">{{ totalTime }}</div></div><div vg-volume=\"\"><div vg-mutebutton=\"\"></div></div></div></div></div>"
   );
-
 
 }]);

@@ -8,9 +8,15 @@
   <hr>
   <h3 id="a-head" class="subheader">A-Head</h3>
   <p><strong>A-Heads</strong> are <code class="no-bg"><span class="title">&lt;h1&gt;</span></code> header tags that contain the chapter header and triggers a chapter break.</p> 
+  <p class="subheader"><strong>Custom A-Head Example:</strong></p>
   <p><span data-tooltip class="has-tip tip-top" data-options="disable_for_touch:true" title="Custom A-Head example"><img class="with-shadow" src="images/component-ahead.png"></span></p>
   <p class="word"><strong>Docx:</strong> Assign the <span class="doc-class"># A Head</span> class to the title of each new chapter.</p>
-  <p>Default A-Head font sizes, by default, are responsive according to the breakpoints in following mixin:</p>
+  <p>Default A-Head font sizes are responsive according to the breakpoints in the SCSS mixin below:</p>
+  <ul>
+    <li><strong>Large</strong> (760px max-width): 52px</li>
+    <li><strong>Medium</strong> (650px max-width): 46px</li>
+    <li><strong>Small</strong> (520px max-width): 36px</li>
+  </ul>
 <div hljs language="scss">
 @mixin scaled-header-font($large:52px,$medium:46px,$small:36px) {
   @media only screen and (min-width:$small-screen) {
@@ -56,7 +62,7 @@
   <p><strong>Body Heads</strong> are also <code class="no-bg"><span class="title">&lt;h3&gt;</span></code> header tags, identical to B-Heads but do not trigger a chapter or page break.</p>
   <p class="word"><strong>Docx:</strong> Assign the <span class="doc-class"># Body Head</span> class to any line of text to create a header anywhere on a page.</p>
   <p>Default Body Head CSS:</p>
-<div hljs>
+<div hljs language="scss">
 .body-head {
   font-size: $font-size-medium;
 }
@@ -72,7 +78,7 @@
   <hr>
   <h3 id="body-normal" class="subheader">Body Normal</h3>
   <p>Static manual content is rendered as <code class="no-bg"><span class="title">&lt;p&gt;</span></code> paragraph block elements.</p>
-<div hljs>
+<div hljs language="scss">
 .body-normal {
   font-size: $font-size-normal;
   font-weight: normal;
@@ -140,6 +146,7 @@
   </div>
   <p class="subheader"><strong>CSS:</strong></p>
 <div hljs language="scss">
+<style>
 .body-control {
   font-size: 1.25rem;
   &:after {
@@ -149,6 +156,7 @@
     height: 30px;
   }
 }
+</style>
 </div>
   <p class="word"><strong>Docx:</strong> Enter any control item title in all caps inside &#91;SQUARE BRACKETS&#93; and assign the <span class="doc-class"># Control Item</span> class to each item.<br><br>
     <strong>Control item titles:</strong> [X], [TRIANGLE], [SQUARE], [CIRCLE], [UP], [RIGHT], [DOWN], [LEFT]   
@@ -217,7 +225,7 @@
   <!-- end modal video -->
 
   <h3 id="modal-carousel" class="subheader">Modal Carousel</h3>
-  <p>Modal carousels are like image galleries and contain scrollable images that display in a full screen overlay when clicking on a thumbnail or poster image and a <span class="ux-button square ux-icon icon-expand icon-xsmall"></span> trigger button. Pagination below the full-size image controls the carousel. Carousel images must be uploaded in the CPT in JPG, PNG or GIF format and named with the prefix: <code class="no-bg"><span class="string">modal_carousel_[filename].jpg</span></code>. The first image in the series is used as the thumbnail/poster trigger element.</p>
+  <p>Modal carousels are like image galleries and contain scrollable images that display in a full screen overlay when clicking on a thumbnail or poster image and a <span class="ux-button square ux-icon icon-rotate icon-expand icon-xsmall"></span> trigger button. Pagination below the full-size image controls the carousel. Carousel images must be uploaded in the CPT in JPG, PNG or GIF format and named with the prefix: <code class="no-bg"><span class="string">modal_carousel_[filename].jpg</span></code>. The first image in the series is used as the thumbnail/poster trigger element.</p>
   <div class="image-with-border modal-trigger" ng-controller="elementCtrl" ng-click="expandModal(mockCarouselModalElement)">
     <div class="modal-image-container">
       <img ng-src="http://placekitten.com/800/600" src="http://placekitten.com/800/600"> 
@@ -309,8 +317,8 @@
   <p>Inline videos are embedded directly on the page and do not expand into modals. We use an HTML5 video player for AngularJS called <a href="https://github.com/2fdevs/videogular" target="_blank">Videogular</a>. This feature is <strong>no longer supported</strong> due to regulations on ESRB ratings requirement to be displayed prior to video play.</p>
   <div videogular>
     <video class='videoPlayer' preload='metadata'>
-      <source src="https://d7cqn9pfudpvk.cloudfront.net/projects/58/asset_modal_videos/2898/modal_video_gameplay.mp4" type="video/mp4">
-      <source src="https://d7cqn9pfudpvk.cloudfront.net/projects/58/asset_modal_videos/2898/modal_video_gameplay.webm" type="video/webm">
+      <source src="../video/poey.mp4" type="video/mp4">
+      <source src="../video/poey.webm" type="video/webm">
     </video>
     <div vg-overlayPlay></div>
     <div vg-controls vg-autohide="false" style="height: 50px;">

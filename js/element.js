@@ -14,27 +14,27 @@ app.controller('elementCtrl', function($scope, $rootScope) {
     assets: [],
     assetsUrl: [],
     elements: [],
-    identifier: "ch-1-pg-1-modal-image-1",
+    identifier: "",
     position: 0,
     type: "modal_image"
   }
 
   $scope.mockVideoModalElement = {
-    asset: "https://d7cqn9pfudpvk.cloudfront.net/projects/58/asset_modal_videos/2898/modal_video_gameplay.mp4",
+    asset: "",
     assets: [
       {
         type: "mp4",
-        url: "https://d7cqn9pfudpvk.cloudfront.net/projects/58/asset_modal_videos/2898/modal_video_gameplay.mp4",
+        url: "video/poey.mp4",
       },
       {
         type: "webm",
-        url: "https://d7cqn9pfudpvk.cloudfront.net/projects/58/asset_modal_videos/2898/modal_video_gameplay.webmp"
+        url: "video/poey.webm"
       }
     ],
     elements: [],
-    identifier: "ch-1-pg-1-modal-video-1",
+    identifier: "",
     position: 0,
-    poster: "https://d7cqn9pfudpvk.cloudfront.net/projects/58/asset_images/2897/tablet_image_modal_video_gameplay.png",
+    poster: "",
     type: "modal_video"
   }
 
@@ -47,7 +47,7 @@ app.controller('elementCtrl', function($scope, $rootScope) {
         asset: "http://placekitten.com/801/600",
         assets: [],
         elements: [],
-        identifier: "ch-1-pg-1-modal-alpha-base-3-modal-alpha-layer-1",
+        identifier: "",
         position: 0,
         type: "modal_alpha_layer"
 
@@ -56,7 +56,7 @@ app.controller('elementCtrl', function($scope, $rootScope) {
         asset: "http://placekitten.com/802/600",
         assets: [],
         elements: [],
-        identifier: "ch-1-pg-1-modal-alpha-base-3-modal-alpha-layer-2",
+        identifier: "",
         position: 1,
         type: "modal_alpha_layer"
 
@@ -65,13 +65,13 @@ app.controller('elementCtrl', function($scope, $rootScope) {
         asset: "http://placekitten.com/803/600",
         assets: [],
         elements: [],
-        identifier: "ch-1-pg-1-modal-alpha-base-3-modal-alpha-layer-2",
+        identifier: "",
         position: 2,
         type: "modal_alpha_layer"
 
       }
     ],
-    identifier: "ch-1-pg-1-modal-image-1",
+    identifier: "",
     position: 0,
     type: "modal_alpha_base"
   }
