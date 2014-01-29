@@ -9,7 +9,7 @@
  * @class element
  * @namespace directives
  */
-app.directive('element', function ($rootScope, $compile, $templateCache,Analytics) {
+app.directive('element', function ($rootScope, $compile, $templateCache) {
     return {
       template: '<span></span>',
       replace: true,
@@ -121,18 +121,6 @@ app.directive('element', function ($rootScope, $compile, $templateCache,Analytic
         };
 
 
-        /*
-        scope.playVideo = function ( videoElement ) {
-          if( videoElement.playing ) {
-            element.find('video').eq(0)[0].pause();
-            videoElement.playing = false;
-          } else {
-            element.find('video').eq(0)[0].play();
-            videoElement.playing = true;
-            Analytics.trackEvent('video', 'play',  element.find('video').attr('src'));
-          }
-        };
-        */
       } // end of link function
     };
   });

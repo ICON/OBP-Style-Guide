@@ -74,6 +74,32 @@ app.controller('elementCtrl', function($scope, $rootScope) {
     identifier: "",
     position: 0,
     type: "modal_alpha_base"
-  }
+  };
+
+  $scope.mockModalContent = {
+    elements: [
+      {
+        content: "Body Head Content",
+        identifier: 'ch-1-pg-1-body-head-1',
+        type: "body_head"
+      },
+      {
+        content: "This is the body content.",
+        identifier: "ch-1-pg-1-body-normal-1",
+        type: "body_normal"
+      },
+      {
+        content: "",
+        asset: "http://placekitten.com/800/600",
+        elements: [],
+        identifier: "ch-1-pg-1-image",
+        position: 0,
+        type: "image"
+      }
+    ],
+    identifier: "",
+    position: 0,
+    type: "modal_content"
+  };
 
 });

@@ -75,4 +75,47 @@ app.run(['$templateCache', function($templateCache) {
     "<div class=modal-content><div videogular=\"\" vg-loop=true vg-video-stretch=none><video class=videoPlayer preload=metadata><source ng-src={{videoMp4}} type=video/mp4><source ng-src={{videoWebM}} type=video/webm></video><div vg-buffering=\"\"></div><div vg-overlayplay=\"\"></div><div vg-controls=\"\" vg-autohide=false style=\"height: 50px\"><div vg-playpausebutton=\"\"></div><div class=vg-time-container><div vg-timedisplay=\"\">{{ currentTime }}</div><div vg-timedisplay=\"\">{{ totalTime }}</div></div><div vg-volume=\"\"><div vg-mutebutton=\"\"></div></div></div></div></div>"
   );
 
+
+  $templateCache.put('partials/document/element/audio_player.html',
+    "<span class=\"audio_player {{element.identifier}}\"></span>"
+  );
+
+
+  $templateCache.put('partials/document/element/body_head.html',
+    "<h3 class=\"bhead {{element.identifier}}\" digireader-dynamic-html=element.content></h3>"
+  );
+
+
+  $templateCache.put('partials/document/element/body_normal.html',
+    "<p class=\"body-normal {{element.identifier}}\" digireader-dynamic-html=element.content></p>"
+  );
+
+
+  $templateCache.put('partials/document/element/control_item.html',
+    "<div class=body-control-container><dl class=body-control><dt class=\"body-control-title {{element.elements[0].identifier}}\" digireader-dynamic-html=element.content></dt><dd class=\"body-control-action {{element.elements[0].identifier}}\" digireader-dynamic-html=element.elements[0].content></dd></dl></div>"
+  );
+
+
+  $templateCache.put('partials/document/element/external_link.html',
+    "<a class=\"body-hyperlink {{element.identifier}}\" ng-href=element.url>{{element.content}}</a>"
+  );
+
+  $templateCache.put('partials/document/element/gif.html',
+    "<div class=\"inline-gif-container {{element.identifier}}\"><img ng-src={{element.asset}} ng-show=element.asset></div>"
+  );
+
+
+  $templateCache.put('partials/document/element/image.html',
+    "<span class=body-image><img ng-src=\"{{ element.asset }}\" ng-show=element.asset class={{element.identifier}} ng-src-responsive=\"[ \n" +
+    "\t\t\t[ 'mobile', element.assetsUrl['mobile'] ],\n" +
+    "\t\t\t[ 'retina_mobile', element.assetsUrl['retina_mobile'] ],\n" +
+    "\t\t\t[ 'tablet', element.assetsUrl['tablet'] ],\n" +
+    "\t\t\t[ 'landscape_tablet', element.assetsUrl['landscape_tablet'] ],\n" +
+    "\t\t\t[ 'desktop', element.assetsUrl['desktop'] ],\n" +
+    "\t\t\t[ 'retina_tablet', element.assetsUrl['retina_tablet'] ]\n" +
+    "        ]\"></span>"
+  );
+
+
+
 }]);
