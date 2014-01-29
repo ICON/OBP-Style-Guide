@@ -79,20 +79,20 @@ app.controller('elementCtrl', function($scope, $rootScope) {
   $scope.mockModalContent = {
     elements: [
       {
-        content: "Body Head Content",
-        identifier: 'ch-1-pg-1-body-head-1',
+        content: "Modal Content",
+        identifier: '',
         type: "body_head"
       },
       {
-        content: "This is the body content.",
-        identifier: "ch-1-pg-1-body-normal-1",
+        content: "Kitty ipsum dolor sit amet, iaculis stuck in a tree dolor lick scratched, puking judging you faucibus suscipit suspendisse. Attack bat justo meow egestas quis, sleep on your face tail flick zzz climb the curtains. Attack dolor accumsan dolor give me fish, non biting attack your ankles iaculis in viverra. Ac shed everywhere chuf rip the couch leap, eat the grass knock over the lamp stretching sollicitudin meow biting. Neque tail flick sleep on your keyboard sagittis purr egestas, meow eat vestibulum orci turpis vehicula meow. Vestibulum sniff fluffy fur libero I don't like that food dolor, et in viverra kittens suspendisse nam. Rutrum enim elit orci turpis vestibulum knock over the lamp, scratched nullam pellentesque quis faucibus puking.",
+        identifier: "",
         type: "body_normal"
       },
       {
         content: "",
-        asset: "http://placekitten.com/800/600",
+        asset: "http://placekitten.com/600/400",
         elements: [],
-        identifier: "ch-1-pg-1-image",
+        identifier: "",
         position: 0,
         type: "image"
       }
