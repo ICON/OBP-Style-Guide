@@ -234,6 +234,16 @@
   </div>
   <p class="word"><strong>Docx:</strong> Enter the carousel image file names, separated with line breaks, as they are named in the CPT and assign the <span class="doc-class"># Modal Carousel</span> class to each line.</p>
   <!-- end modal carousel -->
+
+  <h3 id="modal-trigger" class="subheader">Modal Trigger</h3>
+  <p>Modal triggers behave like standard tooltips; some text preceded by this <span class="icon-info"></span> "info" icon is linked to the trigger function that opens a modal overlay. The expanded modal could contain any one or combination of content: text, image, video. In this case, there is no thumbnail/poster image since the text acts as the modal trigger.</p>
+  <p><a class="modal-trigger" ng-controller="elementCtrl" ng-click="expandModal(mockCarouselModalElement)"><span class="icon-info"></span> Example Modal Trigger</a></p>
+  <p class="word"><strong>Docx:</strong> Select any word or series of words that will be the modal trigger, with no space, add an ID beginning with <em>modal_</em> inside &#91; <em>square brackets</em> &#93;. (Example: &#91;modal_1&#93;) In the Styles pane, apply the <span class="doc-class"># Modal Trigger</span> class to the modal trigger and ID.<br><br>
+  <strong>Modal Content:</strong> After applying the modal trigger style, hit Enter then place any content you want in the expanded modal between opening and closing &#91; <em>square brackets</em> &#93; containing the ID defined in the corresponding trigger. Example below:<br><br>
+  &#91;modal_1&#93;<br>
+  Modal content goes here<br>image_example_inside_modal.jpg<br>
+  &#91;/modal_1&#93;</p>
+  <!-- end modal content -->
 </div>
 <!-- end modals subsection -->
 
