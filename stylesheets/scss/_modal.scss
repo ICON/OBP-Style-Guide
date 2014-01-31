@@ -44,17 +44,24 @@ $default-float: left;
   width: 60%;
   img {
     width: 100%;
-    border: 1px solid $dark-grey;
+    border: 1px solid $darker-grey;
   }
 }
 .modal-content {
-  text-align: center;
-  > * {
-    width: 80%;
-    margin: 0 auto 1rem;
+  margin-top: 0 !important;
+  z-index: 0 !important;
+  > p, > span {
+    width: 60%;
+    margin: 2rem auto;
+    display: block;
   }
   h3 {
+    @include background-image(linear-gradient($dark-grey, $darkest-grey));
+    border-bottom: 1px solid $darker-grey;
     color: white;
+    padding: 0.5rem 0;
+    margin-bottom: 3rem;
+    text-align: center;
   }
   img {
     border: $border;
@@ -65,13 +72,6 @@ $default-float: left;
   height: 100%;
   overflow: hidden;
 }
-
-.detailbox .modal-content {
-  position: relative; /*Important for the position of the close box*/
-  z-index: $zIndex100;
-  margin-top: 1%;
-}
-
 .hide-modal {
   position: absolute;
   top: 0;
@@ -80,18 +80,16 @@ $default-float: left;
   right: 0;
   cursor: pointer;
 }
-
 .detail-wrapper {
   width: 100%;
   height: 100%;
 }
-
 .detail-header {
   background:transparent;
-  position: relative;
-  text-align:right;
-  width: 100%;
-  padding: 0.9375rem;
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  z-index: 100;
 }
 
 .closeicon {

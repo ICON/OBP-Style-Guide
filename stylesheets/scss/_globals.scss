@@ -3,11 +3,14 @@ $white: #fff;
 $black: #000;
 $light-grey: #ebebeb;
 $medium-grey: #ccc;
-$dark-grey: #333;
+$dark-grey: #464646;
+$darker-grey: #333;
+$darkest-grey: #222;
 $light-blue: #2c7cf1;
 $medium-blue: #298fd7;
 $dark-blue: #202060;
 $dark-blue2: #142d9c;
+$transparent: rgba(255,255,255,0);
 $black-transparent: rgba(0,0,0,0.9);
 $yellow: #f5f2a5;
 $border: 1px solid $medium-grey;
@@ -33,10 +36,10 @@ $maxMobile: "only screen and (max-width:'#{$mobile-screen}')";
 body, html {
   height: 100%;
   font-family: $body-font-family;
-  color: $dark-grey;
+  color: $darker-grey;
 }
 #content-container {
-  margin: 4rem 0;
+  margin: 3.5rem 0;
   height: 100%;
 }
 strong {
@@ -49,7 +52,7 @@ em, i {
 }
 h1, h2, h3, h4, h5 {
   font-weight: normal !important;
-  color: $dark-grey;
+  color: $darker-grey;
   letter-spacing: -1px;
 }
 .spacer {
@@ -107,7 +110,7 @@ code {
   clear: both;
 }
 .sidebar {
-  padding-top: 4rem;
+  padding-top: 3.5rem;
   position: fixed;
 }
 .accordion {
@@ -122,6 +125,15 @@ code {
   ul.side-nav {
     padding: 0 !important;
   }
+}
+.scroll-gradient {
+  @include background-image(linear-gradient(top, $transparent, $white));
+  width: 220px;
+  height: 2rem;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  display: none;
 }
 hr {
   margin: 2rem 0 !important;
@@ -164,5 +176,14 @@ img {
 @media only screen and (min-width:640px) and (max-width:#{$medium-screen}) {
   .sidebar {
     width: 200px;
+  }
+}
+@media only screen and (max-height:800px) {
+  .accordion .content {
+    max-height: 500px;
+    overflow-y: auto;
+  }
+  #components .scroll-gradient {
+    display: block !important;
   }
 }

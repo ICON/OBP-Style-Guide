@@ -177,8 +177,8 @@ $button-square: 47px;
 $button-circle: 60px;
 %ux-button, .ux-button {
   cursor: pointer;
-  background-color: $dark-grey;
-  border: 1px solid $dark-grey;
+  background-color: $darker-grey;
+  border: 1px solid $darker-grey;
   text-align: center;
   padding: 8px;
   &.square, &%square {
