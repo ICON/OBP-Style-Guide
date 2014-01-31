@@ -174,7 +174,7 @@ img {
   }
 }
 @media only screen and (min-width:640px) and (max-width:#{$medium-screen}) {
-  .sidebar {
+  .sidebar, .scroll-gradient {
     width: 200px;
   }
 }
@@ -185,5 +185,15 @@ img {
   }
   #components .scroll-gradient {
     display: block !important;
+  }
+}
+@media only screen and (max-height:740px) {
+  .accordion .content {
+    max-height: 400px !important;
+  }
+}
+@media only screen and (max-height:650px) {
+  .accordion .content {
+    max-height: 350px !important;
   }
 }
