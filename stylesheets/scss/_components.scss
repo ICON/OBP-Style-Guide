@@ -14,6 +14,9 @@ h3.subheader, .subsection {
   strong {
     color: $medium-blue;
   }
+  .screenshot {
+    width: 60%;
+  }
 }
 .body-control-container {
   @include clearfix();
@@ -114,4 +117,10 @@ ul.control-list {
 .clear-image {
   @extend .clearfix;
   margin-top: 1rem;
+}
+
+@media only screen and (max-width:#{$tablet-screen}) {
+  .word .screenshot {
+    width: 100% !important;
+  }
 }

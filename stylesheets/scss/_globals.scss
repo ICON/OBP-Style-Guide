@@ -24,15 +24,6 @@ $medium-screen: emCalc(1280px);
 $large-screen: emCalc(1440px);
 $ps4-fullscreen: emCalc(1900px);
 
-$screen: "only screen";
-$mobile: "only screen and (min-width:'#{$mobile-screen}')";
-$small: "only screen and (min-width:'#{$small-screen}')";
-$medium: "only screen and (min-width:#{$medium-screen})";
-$large: "only screen and (min-width:'#{$large-screen}')";
-$landscape: "only screen and (orientation: landscape)";
-$portrait: "only screen and (orientation: portrait)";
-$maxMobile: "only screen and (max-width:'#{$mobile-screen}')";
-
 body, html {
   height: 100%;
   font-family: $body-font-family;
@@ -178,22 +169,28 @@ img {
     width: 200px;
   }
 }
-@media only screen and (max-height:800px) {
+// adds gradient to sidebar with media queries
+@media only screen and (max-height:920px) {
   .accordion .content {
-    max-height: 500px;
+    max-height: 600px;
     overflow-y: auto;
   }
   #components .scroll-gradient {
     display: block !important;
   }
 }
-@media only screen and (max-height:740px) {
+@media only screen and (max-height:840px) {
   .accordion .content {
-    max-height: 400px !important;
+    max-height: 500px !important;
   }
 }
-@media only screen and (max-height:650px) {
+@media only screen and (max-height:760px) {
   .accordion .content {
-    max-height: 350px !important;
+    max-height: 450px !important;
+  }
+}
+@media only screen and (max-height:700px) {
+  .accordion .content {
+    max-height: 400px !important;
   }
 }

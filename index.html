@@ -53,6 +53,12 @@
       </li>
       
       <li><label><a href="#components" ng-click="navSection('components');">Components</a></label></li>
+      <li><a ng-click="navSection('components', 'headers');">Breaks</a>
+        <ul>
+          <li><a ng-click="navSection('components', 'chapter-break');">Chapter Break</a></li>
+          <li><a ng-click="navSection('components', 'page-break');">Page Break</a></li>
+        </ul>
+      </li>
       <li><a ng-click="navSection('components', 'headers');">Headers</a>
        <ul>
          <li><a ng-click="navSection('components', 'a-head');">A-Head</a></li>
@@ -80,7 +86,6 @@
       <li><a ng-click="navSection('components', 'inline');">Inline</a>
        <ul>
          <li><a ng-click="navSection('components', 'inline-image');">Inline Image</a></li>
-         <li><a ng-click="navSection('components', 'inline-gif');">Inline Gif</a></li>
          <li><a ng-click="navSection('components', 'inline-video');">Inline Video</a></li>
       </ul>
       </li>
@@ -129,6 +134,12 @@
                 <a href="#components">Components</a>
                 <div id="components" class="content">
                   <ul class="side-nav">
+                    <li><a ng-click="navSection('components', 'headers');">Breaks</a>
+                      <ul>
+                        <li><a ng-click="navSection('components', 'chapter-break');">Chapter Break</a></li>
+                        <li><a ng-click="navSection('components', 'page-break');">Page Break</a></li>
+                      </ul>
+                    </li>
                     <li><a ng-click="navSection('components', 'headers');">Headers</a>
                       <ul>
                         <li><a ng-click="navSection('components', 'a-head');">A-Head</a></li>
@@ -156,7 +167,6 @@
                     <li><a ng-click="navSection('components', 'inline');">Inline</a>
                       <ul>
                         <li><a ng-click="navSection('components', 'inline-image');">Inline Image</a></li>
-                        <li><a ng-click="navSection('components', 'inline-gif');">Inline Gif</a></li>
                         <li><a ng-click="navSection('components', 'inline-video');">Inline Video</a></li>
                      </ul>
                    </li>
