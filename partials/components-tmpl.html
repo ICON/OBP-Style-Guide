@@ -131,14 +131,14 @@
 
   <h3 id="external-link" class="subheader">External Link</h3>
   <p>The CPT renders external links as <code class="no-bg"><span class="title">&lt;a&gt;</span></code> elements. A class of <code class="no-bg"><span class="class">.body-hyperlink</span></code> is assigned to the <code class="no-bg"><span class="title">&lt;a&gt;</span></code> tag and the href location is defined in the CPT. </p>
-  <p class="word"><strong>Docx:</strong> Enter the hyperlink copy. Then on the same line, with no space, enter the link URL inside &#91; <em>square brackets</em> &#93;. Assign the <span class="doc-class"># External Link</span> class to the entire link copy. <strong>Example:</strong> <a href="#"><u>Click Me[www.example.com]</a></u></p> 
+  <p class="word"><strong>Docx:</strong> Enter the hyperlink copy. Then on the same line, with or without a space, enter the link URL inside &#91; <em>square brackets</em> &#93;. Assign the <span class="doc-class"># External Link</span> class to the entire link copy. <strong>Example:</strong> <a href="#"><u>Click Me[www.example.com]</a></u></p> 
 </div>
 <!-- end content subsection-->
 
 <div class="subsection">
   <a id="control-items"></a>
   <h2>Control Items</h2>
-  <p>Control Items are Playstation<sup>TM</sup> specific icons in the form of an SVG font representing each in-game actions and the controller button used to execute them. They are used to illustrate game controls and play move instructions in manuals.</p>
+  <p>Control Items are Playstation<sup>TM</sup> specific icons in the form of an SVG font representing in-game actions and the controller buttons used to execute them. They are used to illustrate game controls and play move instructions in manuals.</p>
   <ul class="control-list small-block-grid-4">
     <li>S</li>
     <li>A</li>
@@ -156,6 +156,7 @@
   <p>Each manual's <em>Game Controls</em> chapter is laid out according to its printed counterpart; the leader dots spanning from the in-game action to control item icon is inserted with the CSS content property.</p>
   <p class="subheader"><strong>Example:</strong></p>
   <div class="body-control-container">
+    <h5>In-game action/move</h5>
     <dl class="body-control">
       <dt class="body-control-title"><span data-tooltip class="has-tip tip-top" data-options="disable_for_touch:true" title="Control Item Title">Button</span></dt>
       <dd class="body-control-action"><span data-tooltip class="has-tip tip-top" data-options="disable_for_touch:true" title="Control Item Icon">S</span></dd>
@@ -175,7 +176,7 @@
 }
 </style>
 </div>
-  <p class="word"><strong>Docx:</strong> Assign the <span class="doc-class"># Control Item</span> class to any in-game action and its corresponding control item title. For control item icons, enter their titles in all caps inside &#91;SQUARE BRACKETS&#93; and each respective SVG icons will rendered in the CVA.<br><br><strong>Control items:</strong> [X], [TRIANGLE], [SQUARE], [CIRCLE], [UP], [RIGHT], [DOWN], [LEFT], [L1], [L2], [R1], [R2], [L3], [R3], [PS], Right Stick, Left Stick, Touch Pad Button, SHARE, OPTIONS   
+  <p class="word"><strong>Docx:</strong> Assign the <span class="doc-class"># Control Item</span> class to any in-game action and its corresponding control item title. For control item icons, enter their titles inside &#91;square brackets&#93; and each of their respective SVG icons will be rendered in the CVA.<br><br><strong>Control items:</strong> [X], [TRIANGLE], [SQUARE], [CIRCLE], [UP], [RIGHT], [DOWN], [LEFT], [L1], [L2], [R1], [R2], [L3], [R3], [PS], [OPTIONS], [SHARE], right stick, left stick, touch pad, touch pad button   
   </p> 
 </div>
 <!-- end control items subsection -->
@@ -263,7 +264,14 @@
   <!-- end modal content -->
 </div>
 <!-- end modals subsection -->
-
+<div class="subsection">
+  <a id="tooltips"></a>
+  <h2>Tooltips</h2>
+  <p>A tooltip is a message that appears when a cursor or tabindex is positioned over a trigger function.</p> 
+  <p>Tooltip triggers are text preceded by an <span class="icon-info icon-small"></span> icon that activates the tooltip popover. The tooltip contents are wrapped within the tooltip contianer and can be any brief message styled with <span class="doc-class"># Body Normal</span> class that is typically only one or two sentences long, if you require a longer tooltip, consider using <a href="#modal-triggers">Modal Triggers</a>.</p>
+  <p class="word"><strong>Docx:</strong> Enter any word or string of words intended as the tooltip trigger immediately followed by the tooltip message inside &#91; <em>square brackets</em> &#93;. In the Styles pane, apply the <span class="doc-class"># Tooltip Trigger</span> class to both the trigger and tooltip content.</p>
+</div>
+<!-- end tooltips subsection -->
 <div class="subsection">
   <a id="inline"></a>
   <h2>Inline</h2>

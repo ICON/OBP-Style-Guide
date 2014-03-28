@@ -121,6 +121,9 @@
 .icon-expand:before {
   content: "\e007";
 }
+.icon-expand-circle:before {
+  content: "\e602";
+}
 .icon-tooltip:before {
   content: "\e01b";
 }
@@ -152,6 +155,7 @@
   font-size: 0.75rem !important;
   display: inline-block !important;
   padding: 4px !important;
+  color: $darker-grey;
 }
 .icon-xxsmall {
   font-size: 0.5rem;

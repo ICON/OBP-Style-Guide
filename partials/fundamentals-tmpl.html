@@ -51,12 +51,13 @@ $large: "only screen and (min-width:'#{$large-screen}')";
 
 <a id="unique-ids"></a>
 <h2>Unique Identifiers</h2>
-<p>Every element in the CVA includes a unique identifier rendered in a CSS class. Each class is named by the element type + sequential order of element on the current page, then nested after each parent element and always starting with the chapter.</p>
+<p>Every element in the CVA includes a unique identifier, or slug, assigned in a CSS class. Each class is named by the element type + sequential order of element on the current page, then nested after each parent element and always starting with the chapter.</p>
 <p class="subheader"><strong>Example</strong></p>
 <div hljs language="scss">
-.ch-1-pg-1-body-image-1-image-1
+.ch-1-pg-1-bh-1-img-1
 </div>
-<p>These unique IDs were introduced as a way to style specific instances of an element type without affecting the rest of its siblings. Use the unique class as a direct or parent selector in any CSS rules.</p>
+</table>
+<p>These unique IDs were introduced as a way to style specific instances of an element type without affecting the rest of its siblings. Use the unique class as a direct or parent selector in any CSS rule.</p>
 <!-- end unique identifiers -->
 <hr>
 
