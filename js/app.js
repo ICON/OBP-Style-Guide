@@ -35,7 +35,7 @@ app.config( function ($routeProvider, $sceDelegateProvider) {
 	.when('/',
 	{
 		title: 'Home',
-		templateUrl: 'partials/fundamentals-tmpl.html',
+		templateUrl: 'partials/general-tmpl.html',
 		controller: routeCtrl
 	})
 	.when('/:slug',

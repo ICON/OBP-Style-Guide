@@ -23,7 +23,11 @@ $tablet-screen: emCalc(1024px);
 $medium-screen: emCalc(1280px);
 $large-screen: emCalc(1440px);
 $ps4-fullscreen: emCalc(1900px);
+$tab-grad-top: #559eca;
+$tab-grad-bottom: #3482c1;
 
+$border-color: #cccccc;
+$btn-container-background: #d7efff;
 body, html {
   height: 100%;
   font-family: $body-font-family;
@@ -56,42 +60,50 @@ ul, ol, dl {
     font-size: remCalc(12px) !important;
   }
   li {
+    margin-bottom: 1rem;
+    &:last-child {
+      margin-bottom: 0;
+    }
     &.heading a {
       color: #333;
     }
   }
 }
+.no-margin {
+  margin-bottom: 0;
+}
 form input {
   margin: 0 !important;
 }
 code {
-  display: block;
-  background: $light-grey;
-  line-height: 1.3rem;
-  margin: 1rem 0;
-  padding: 1rem;
-  overflow: auto;
   font-weight: normal;
-  &.no-bg {
-    background: none;
-    padding: 0;
-    display: inline;
-    .string {
-      color: #d14;
-    }
-    .value, .class {
-      color: #bb260d;
-    }
-    .attr {
-      color: #008080;
-    }
-    .symbol {
-      color: #990073;
-    }
-    .title {
-      color: #000080;
-    }
+  color: #d14;
+  &.string {
+    color: #d14;
   }
+  &.value, &.class, .hljs-class, .hljs-value {
+    color: #d14;
+  }
+  &.attr {
+    color: #008080;
+  }
+  &.symbol {
+    color: #990073;
+  }
+  &.title, &.tag {
+    color: #000080;
+  }
+  &.block {
+    display: block;
+    background: $light-grey;
+    line-height: 1.3rem;
+    margin: 1rem 0;
+    padding: 1rem;
+    overflow: auto;
+  }
+}
+.codeblock {
+  @include border-radius(5px);
 }
 .clearfix:after {
   content: " ";
@@ -115,6 +127,19 @@ code {
   }
   ul.side-nav {
     padding: 0 !important;
+  }
+}
+.header-row {
+  background: $light-grey;
+  padding: 1rem;
+  margin: 1rem 0;
+  vertical-align: middle;
+  * {
+    margin: 0;
+  }
+  h1, h3 {
+    color: #4a4a4a;
+    font-weight: bold;
   }
 }
 .scroll-gradient {
@@ -144,11 +169,18 @@ img {
   margin-top: 1rem;
 }
 .subsection {
-  padding: 1rem;
+  @include clearfix;
+  padding: 1.5rem;
   border: 1px solid $light-grey;
-  margin-bottom: 2rem;
+  margin: 1rem 0;
   @include border-radius(5px);
-  @include box-shadow($medium-grey 2px 2px 5px);
+  // /@include box-shadow($medium-grey 1px 1px 5px);
+  p {
+    margin-bottom: 0;
+  }
+}
+.row {
+  margin-bottom: 1rem !important;
 }
 .left-justify {
   text-align: left;
@@ -159,6 +191,41 @@ img {
 .top-space {
   margin-top: 1rem;
 }
+.pad-rt {
+  padding-right: 5px;
+}
+.pad-lt {
+  padding-left: 5px;
+}
+.mrg-lt {
+  margin-left: 0.5rem;
+}
+.mrg-rt {
+  margin-right: 0.5rem;
+}
+.rowspace {
+  margin-bottom: 1rem;
+}
+.pull-left {
+  float: left;
+}
+.pull-right {
+  float: right;
+}
+.align-right {
+  text-align: right;
+}
+.align-center {
+  text-align: center;
+}
+.rowspace {
+  margin-bottom: 1rem;
+}
+// .feature {
+//   border: 1px solid $medium-grey;
+//   @include border-radius(5px);
+//   padding: 2rem;
+// }
 @media only screen and (min-width:#{$medium-screen}) {
   .sidebar {
     width: 220px;

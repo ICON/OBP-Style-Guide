@@ -3,10 +3,11 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Gaming Docs Style Guide - v1.0 Manatee</title>
+  <title>CPT Style Guide - v2.0 Narwhal</title>
   <link rel="stylesheet" href="stylesheets/app.css" type="text/css" />
   <script src="bower_components/modernizr/modernizr.js"></script>
   <link rel="stylesheet" href="stylesheets/hljs/github.css">
+  <link rel="stylesheet" href="font-awesome/css/font-awesome.min.css">
 </head>
 <body>
 <div class="off-canvas-wrap">
@@ -14,7 +15,7 @@
       <nav class="top-bar docs-bar hide-for-small fixed" data-topbar="">
         <ul class="title-area">
           <li class="name">
-            <h1><a href="http://foundation.zurb.com/">Gaming Docs Style Guide - v1.0 Manatee</a></h1>
+            <h1><a href="http://foundation.zurb.com/">CPT Style Guide - v2.0 Narwhal</a></h1>
           </li>
         </ul>
         <section class="top-bar-section">
@@ -28,29 +29,29 @@
           <a class="left-off-canvas-toggle menu-icon" ><span></span></a>
         </section>
         <section class="middle tab-bar-section">
-          <h1 class="title">Gaming Docs Style Guide - 1.0 Manatee</h1>
+          <h1 class="title">CPT Style Guide - v2.0 Narwhal</h1>
         </section>
       </nav>
   </div>
     <!-- mobile menu -->
   <aside class="left-off-canvas-menu" ng-controller="navCtrl"> 
     <ul class="off-canvas-list">
-      <li><label><a href="#fundamentals" ng-click="navSection('fundamentals');">Fundamentals</a></label></li>
+      <!-- <li><label><a href="#fundamentals" ng-click="navSection('fundamentals');">Fundamentals</a></label></li>
       <li><a ng-click="navSection('fundamentals', 'stylesheets');">Stylesheets</a></li>
       <li><a ng-click="navSection('fundamentals', 'media-queries');">Media Queries</a></li>
       <li><a ng-click="navSection('fundamentals', 'unique-ids');">Unique Identifiers</a></li>
       <li><a ng-click="navSection('fundamentals', 'default-colors');">Default Colors</a></li>
       <li><a ng-click="navSection('fundamentals', 'type');">Type</a></li>
-      <li><a ng-click="navSection('fundamentals', 'icons');">Icons</a></li>
+      <li><a ng-click="navSection('fundamentals', 'icons');">Icons</a></li> -->
       
-      <li><label><a href="#layout" ng-click="navSection('layout');">Layout</a></label></li>
+      <!-- <li><label><a href="#layout" ng-click="navSection('layout');">Layout</a></label></li>
       <li><a ng-click="navSection('layout', 'top-bar');">Top Bar</a></li>
       <li><a ng-click="navSection('layout', 'toc');">Table of Contents</a></li>
       <li><a ng-click="navSection('layout', 'content-area');">Content Area</a>
         <ul>
           <li><a ng-click="navSection('layout', 'backgrounds');">Backgrounds</a></li>
         </ul>
-      </li>
+      </li> -->
       
       <li><label><a href="#components" ng-click="navSection('components');">Components</a></label></li>
       <li><a ng-click="navSection('components', 'headers');">Breaks</a>
@@ -105,33 +106,37 @@
           <nav>
             <dl class="accordion" data-accordion>
               <dd>
-                <a href="#fundamentals" ng-click="navSection('fundamentals');">Fundamentals</a>
-                <div id="fundamentals" class="content active">
+                <a href="#general" ng-click="navSection('general');">General</a>
+                <div id="general" class="content">
                   <ul class="side-nav">
-                    <li><a ng-click="navSection('fundamentals', 'stylesheets');">Stylesheets</a></li>
-                    <li><a ng-click="navSection('fundamentals', 'media-queries');">Media Queries</a></li>
-                    <li><a ng-click="navSection('fundamentals', 'unique-ids');">Unique Identifiers</a></li>
-                    <li><a ng-click="navSection('fundamentals', 'default-colors');">Default Colors</a></li>
-                    <li><a ng-click="navSection('fundamentals', 'type');">Type</a></li>
-                    <li><a ng-click="navSection('fundamentals', 'icons');">Icons</a></li>
+                    <li><a ng-click="navSection('general', 'languages');">Languages</a></li>
+                    <li><a ng-click="navSection('general', 'grid');">Grid</a></li>
                   </ul>
                 </div>
               </dd>
               <dd>
-                <a href="#layout" ng-click="navSection('layout');">Layout</a>
-                <div id="layout" class="content">
+                <a href="#styling" ng-click="navSection('styling');">Styling</a>
+                <div id="styling" class="content">
                   <ul class="side-nav">
-                    <li><a ng-click="navSection('layout', 'top-bar');">Top Bar</a></li>
-                    <li><a ng-click="navSection('layout', 'toc');">Table of Contents</a></li>
-                    <li><a ng-click="navSection('layout', 'content-area');">Content Area</a>
+                    <li><a ng-click="navSection('styling', 'headers');">Headers</a>
                       <ul>
-                        <li><a ng-click="navSection('layout', 'backgrounds');">Backgrounds</a></li>
+                        <li><a ng-click="navSection('styling', 'page-header');">Page Header</a></li>
+                        <li><a ng-click="navSection('styling', 'section-header');">Section Header</a></li>
+                        <li><a ng-click="navSection('styling', 'theme-section-header');">Theme Section Header</a></li>
                       </ul>
                     </li>
+                    <li><a ng-click="navSection('styling', 'spacing');">Spacing</a></li>
+                    <li><a ng-click="navSection('styling', 'alignment');">Alignment</a>
+                      <ul>
+                        <li><a ng-click="navSection('styling', 'text-align');">Text-align</a></li>
+                        <li><a ng-click="navSection('styling', 'floats');">Floats</a></li>
+                      </ul>
+                    </li>
+                    <li><a ng-click="navSection('styling', 'buttons');">Buttons</a></li>
                   </ul>
                 </div>
               </dd>
-              <dd>
+              <!-- <dd>
                 <a href="#components">Components</a>
                 <div id="components" class="content">
                   <ul class="side-nav">
@@ -176,7 +181,7 @@
                   </ul>
                   <div class="scroll-gradient"></div>
                 </div>
-              </dd>
+              </dd> -->
             </dl>
           </nav>
         </div>

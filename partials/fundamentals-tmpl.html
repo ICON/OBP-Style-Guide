@@ -1,22 +1,11 @@
 <h1>Fundamentals</h1>
-<p>This is documentation on the Gaming Docs CVA (Content Viewing Application), otherwise referred to as "Reader." The CVA is based on the <a href="http://foundation.zurb.com/" target="blank">Foundation</a> front-end framework for its stylesheets and grids, and Angular client-side framework for its dynamic templating and data-binding features. It has a fluid, responsive layout using the CSS3 module <a href="http://www.w3.org/TR/css3-mediaqueries/" target="_blank">Media Queries</a> to set the @media type and features. Technical manuals in the form of Microsoft Word documents are formatted with specific classes and uploaded through the CPT (Content Publishing Tool). Its contents are parsed into mark-up and rendered in the CVA framework. Although there are limitations to the front-end styling, almost everything is customizable with theme overrides for each individual manual. This document, like the product, is a work in progress; it will be continuously evolving and updated as we refine our codebase.</p>
+<p>This is documentation on the Gaming Docs Content Publisher Tool (CPT)</p>
 <hr>
 <!-- end overview -->
 
-<a id="stylesheets"></a>
-<h2>Stylesheets</h2>
-<p>Stylesheets in the CVA are written in <a href="http://sass-lang.com" target="_blank">SCSS</a> and compiled into a master CSS file; it supports <a href="http://www.w3schools.com/css/css3_intro.asp" target="_blank">CSS3</a> and <a href="http://compass-style.org/" target="_blank">Compass</a> helpers. Some of the default Foundation styles are in use, but most of the CSS is custom. Default CSS for the base template can be overwritten by theme templates for individual manuals. SCSS files are separated into partials according to its contents and included to the <strong>main.scss</strong> file, which then is compiled into a standard CSS file: <strong>main.css</strong>. Stylesheets will not be rendered unless they are imported.</p>
-<p><strong>File location:</strong> <em>/cva/digireader/app/styles/scss/main.scss</em></p>
-<div hljs language="scss">
-@import "example-partial";
-</div>
-<p>If custom theme styles are being overwritten by the default CSS, add the <code class="no-bg"><span class="value">!important</span></code> rule to the end of the declarations.</p>
-<hr>
-<!-- end stylesheets -->
-
 <a id="media-queries"></a>
 <h2>Media Queries</h2>
-<p>The Gaming Docs digital manual reader has a responsive layout based on <a href="http://foundation.zurb.com/" target="blank">Foundation</a>'s 12-column nestable grid. The breakpoints below determine which layout styling is rendered in the browser. CSS declarations can be media-specific by wrapping them in the @media syntax:</p>
+<p>The CPT is built with the <a href="http://getbootstrap.com/css/" target="blank">Bootstrap</a> framework and includes a responsive 12-column fluid grid layout. The breakpoints below determine which layout styling is rendered in the browser. CSS declarations can be media-specific by wrapping them in the @media syntax:</p>
 <div hljs language="scss">
 @media screen and (media features) and (additional features) {
   [media specific CSS]
