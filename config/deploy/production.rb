@@ -1,7 +1,7 @@
 set :stage, :production
 set :branch, 'master'
 
-server 'obp-styles.digiman.us', user: 'cpt', roles: %w{web app}
+server 'cva-styles.digiman.us', user: 'cpt', roles: %w{web app}
 
  set :ssh_options, {
    keys: %w(~/.ssh/staging.pem),
