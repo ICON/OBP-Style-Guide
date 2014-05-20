@@ -1,5 +1,5 @@
-set :application, 'OBP-style-guide'
-set :repo_url, 'git@github.com:OffBase/OBP-style-guide.git'
+set :application, 'cva-style-guide'
+set :repo_url, 'git@github.com:OffBase/cva-style-guide.git'
 set :user, 'cpt'
 set :deploy_to, "/home/#{fetch(:user)}/#{fetch(:application)}"
 set :releases_directory, "/home/#{fetch(:user)}/#{fetch(:application)}/releases"
